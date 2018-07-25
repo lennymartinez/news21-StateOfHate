@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='map' class='contain'></div>
+    <script>
+    var PhoenixLocationStart = [-111.093735,  34.048927];
+    var PhoenixLocationEnd = [-112.074037, 33.448377];
+    // var lastQueryTime = 0;
+    // var lastAtRestaurant = 0;
+    // var keepTrack = [];
+    // var currentSchedule = [];
+    // var currentRoute = null;
+    // var pointHopper = {};
+    // var pause = true;
+    // var speedFactor = 50;
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGVubnltYXJ0aW5lemQiLCJhIjoiY2prMWNxbnZqM2V4cTN2b2Z5a2N4aWwydCJ9.fgyGtxZ8NMuRLhyzwkYv9g';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v10',
+      center: [-111.093735,  34.048927],
+      zoom: 3
+    });
+    // this is where the code from the next step will go
+    map.on('load', function() {
+  getRoute();
+});
+
+function getRoute() {
+  var start = [-111.093735,  34.048927];
+  var end = [-112.074037, 33.448377];
+  var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+  $.ajax({
+    method: 'GET',
+    url: directionsRequest,
+  }).done(function(data) {
+    var route = data.routes[0].geometry;
+    map.addLayer({
+      id: 'route',
+      type: 'line',
+      source: {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          geometry: route
+        }
+      },
+      paint: {
+        'line-width': 5,
+        'line-color' : "#FFF"
+      }
+    });
+    // this is where the code from the next step will go
+  });
+}    
+        
+    </script>
+  </body>
+</html>
