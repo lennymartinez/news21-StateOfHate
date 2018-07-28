@@ -1,0 +1,34 @@
+body{
+	background-color: #efeee8;
+	color: #171717;
+}
+.filler {
+	background-color: yellow;
+	height:600px;
+
+}
+.filler-vid {
+	height:800px;
+	background-color: #F9423A;
+	width:100%;
+	z-index:0;
+}
+
+.content-stop {
+	border: 1px solid blue;
+}
+
+#map-stand {
+	position: fixed;
+	width: 475px;
+	height: 400px;
+	top: 50px;
+	right: 15px;
+	background-color: blue;
+	z-index: 0;
+}
+
+.frames {
+	width: 100%;
+	height: 250px;
+}

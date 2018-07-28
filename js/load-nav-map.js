@@ -1,4 +1,11 @@
-﻿{
+mapboxgl.accessToken = 'pk.eyJ1IjoibGVubnltYXJ0aW5lemQiLCJhIjoiY2prMWZqNDJlMDBsMzNrb3h6dXZ1Zm50NyJ9.K_9DxP150GAPZI9CbLsJfQ';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
+  center: [-99.95223783,  38.24814853],
+  zoom: 4
+});
+var geojson = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -11,8 +18,7 @@
     },
     "properties": {
       "population": "1,555,324",
-      "city": "Phoenix",
-    "state": "Arizona",
+      "title": "Phoenix, Arizona",
       "marker": "phoenix"
     },
     "type": "Feature"
@@ -27,8 +33,7 @@
     },
     "properties": {
       "population": "26,452",
-      "city": "Twentynine Palms",
-    "state": "California",
+      "title": "Twentynine Palms, California",
       "marker": "twenty-nine-palms"
     },
     "type": "Feature"
@@ -43,8 +48,7 @@
     },
     "properties": {
       "population": "203",
-      "city": "Olancha",
-    "state": "California",
+      "title": "Olancha, California",
       "marker": "manzanar"
     },
     "type": "Feature"
@@ -59,9 +63,8 @@
     },
     "properties": {
       "population": "---",
-      "city": "Manzanar",
-    "state": "California",
-      "tag": "manzanar"
+      "title": "Manzanar, California",
+      "tag:" "manzanar"
     },
     "type": "Feature"
     },
@@ -75,8 +78,7 @@
     },
     "properties": {
       "population": "3760",
-      "city": "Bishop",
-    "state": "California",
+      "title": "Bishop, California",
       "marker": "bishop"
     },
     "type": "Feature"
@@ -91,8 +93,7 @@
     },
     "properties": {
       "population": "711",
-      "city": "Virginia City",
-    "state": "Nevada",
+      "title": "Virginia City, Nevada",
       "marker": "virginia-city"
     },
     "type": "Feature"
@@ -107,8 +108,7 @@
     },
     "properties": {
       "population": "1,703",
-      "city": "Stagecoach",
-    "state": "Nevada",
+      "title": "Stagecoach, Nevada",
       "marker": "stagecoach"
     },
     "type": "Feature"
@@ -123,8 +123,7 @@
     },
     "properties": {
     "population": "191,446",
-    "city": "Salt Lake City",
-    "state": "Utah",
+    "title": "Salt Lake City, Utah",
     "marker": "salt-lake-city"
     },
     "type": "Feature"
@@ -139,8 +138,7 @@
     },
     "properties": {
     "population": "86",
-    "city": "Little America",
-    "state": "Wyoming",
+    "title": "Little America, Wyoming",
     "marker": "little-america"
     },
     "type": "Feature"
@@ -155,8 +153,7 @@
     },
     "properties": {
     "population": "32,096",
-    "city": "Laramie",
-    "state": "Wyoming",
+    "title": "Laramie, Wyoming",
     "marker": "laramie"
     },
     "type": "Feature"
@@ -171,8 +168,7 @@
     },
     "properties": {
     "population": "318",
-    "city": "Keystone",
-    "state": "South Dakota",
+    "title": "Keystone, South Dakota",
     "marker": "keystone"
     },
     "type": "Feature"
@@ -187,8 +183,7 @@
     },
     "properties": {
     "population": "15,610",
-    "city": "Mitchell",
-    "state": "South Dakota",
+    "title": "Mitchell, South Dakota",
     "marker": "mitchell"
     },
     "type": "Feature"
@@ -203,8 +198,7 @@
     },
     "properties": {
     "population": "1,662",
-    "city": "Tekamah",
-    "state": "Nebraska",
+    "title": "Tekamah, Nebraska",
     "marker": "tekamah"
     },
     "type": "Feature"
@@ -219,8 +213,7 @@
     },
     "properties": {
     "population": "7,876",
-    "city": "Perry",
-    "state": "Iowa",
+    "title": "Perry, Iowa",
     "marker": "perry"
     },
     "type": "Feature"
@@ -235,8 +228,7 @@
     },
     "properties": {
     "population": "380",
-    "city": "Carbon Hill",
-    "state": "Illinois",
+    "title": "Carbon Hill, Illinois",
     "marker": "carbon-hill"
     },
     "type": "Feature"
@@ -251,8 +243,7 @@
     },
     "properties": {
     "population": "16,388",
-    "city": "Fremont",
-    "state": "Ohio",
+    "title": "Fremont, Ohio",
     "marker": "fremont"
     },
     "type": "Feature"
@@ -267,8 +258,7 @@
     },
     "properties": {
     "population": "49,160",
-    "city": "Harrisburg",
-    "state": "Pennsylvania",
+    "title": "Harrisburg, Pennsylvania",
     "marker": "harrisburg"
         },
     "type": "Feature"
@@ -283,8 +273,7 @@
     },
     "properties": {
     "population": "7,643",
-    "city": "Gettysburg",
-    "state": "Pennsylvania",
+    "title": "Gettysburg, Pennsylvania",
     "marker": "gettysburg"
     },
     "type": "Feature"
@@ -299,8 +288,7 @@
     },
     "properties": {
     "population": "659,009",
-    "city": "Washington, D.C.",
-    "state": "",
+    "title": "Washington, D.C."
     "marker": "washington-dc"
     },
     "type": "Feature"
@@ -315,8 +303,7 @@
     },
     "properties": {
     "population": "17,348",
-    "city": "Beckley",
-    "state": "West Virginia",
+    "title": "Beckley, West Virginia",
     "marker": "beckley"
     },
     "type": "Feature"
@@ -331,8 +318,7 @@
     },
     "properties": {
     "population": "15,884",
-    "city": "Mallie",
-    "state": "Kentucky",
+    "title": "Mallie, Kentucky",
     "marker": "mallie"
     },
     "type": "Feature"
@@ -347,8 +333,7 @@
     },
     "properties": {
     "population": "8,111",
-    "city": "London",
-    "state": "Kentucky",
+    "title": "London, Kentucky",
     "marker": "london"
     },
     "type": "Feature"
@@ -363,8 +348,7 @@
     },
     "properties": {
     "population": "655,857",
-    "city": "Memphis",
-    "state": "Tennessee",
+    "title": "Memphis, Tennessee",
     "marker": "memphis"
     },
     "type": "Feature"
@@ -379,8 +363,7 @@
     },
     "properties": {
     "population": "23,155",
-    "city": "Van Buren",
-    "state": "Arkansas",
+    "title": "Van Buren, Arkansas",
     "marker": "van-buren"
     },
     "type": "Feature"
@@ -395,8 +378,7 @@
     },
     "properties": {
     "population": "620,015",
-    "city": "Oklahoma City",
-    "state": "Oklahoma",
+    "title": "Oklahoma City, Oklahoma",
     "marker": "oklahoma-city"
     },
     "type": "Feature"
@@ -411,8 +393,7 @@
     },
     "properties": {
     "population": "12,426",
-    "city": "Elk City",
-    "state": "Oklahoma",
+    "title": "Elk City, Oklahoma",
     "marker": "elk-city"
     },
     "type": "Feature"
@@ -427,8 +408,7 @@
     },
     "properties": {
     "population": "197,570",
-    "city": "Amarillo",
-    "state": "Texas",
+    "title": "Amarillo, Texas",
     "marker": "amarillo"
     },
     "type": "Feature"
@@ -443,8 +423,7 @@
     },
     "properties": {
     "population": "556,859",
-    "city": "Albuquerque",
-    "state": "New Mexico",
+    "title": "Albuquerque, New Mexico",
     "marker": "albuquerque"
     },
     "type": "Feature"
@@ -459,8 +438,7 @@
     },
     "properties": {
     "population": "9,263",
-    "city": "Grant",
-    "state":"New Mexico",
+    "title": "Grant, New Mexico",
     "marker": "grant"
     },
     "type": "Feature"
@@ -475,11 +453,93 @@
     },
     "properties": {
       "population": "574",
-      "city": "Sanders",
-      "state":"Arizona",
+      "title": "Sanders, Arizona"
       "marker": "sanders"
     },  
     "type": "Feature"
     }
     ]
     };
+
+map.on('load', function() {
+getStops();
+for(i=0;i<30;i++){
+getRouteBetweenStops(i);
+}
+});
+
+var routes = {type:"LineString", coordinates: [] };
+var groupCoords = [];
+
+function getRouteBetweenStops(j) {
+var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
+var longEnd = [-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794, -112.074037];
+var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
+var latEnd = [34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143,33.448377];
+var routeID = ["route1","route2","route3","route4","route5","route6","route7","route8","route9","route10","route11","route12","route13","route14","route15","route16","route17","route18","route19","route20","route21","route22","route23","route24","route25","route26","route27","route28","route29","route30"];
+
+var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[j] + ',' + latStart[j] + ';' + longEnd[j] + ',' + latEnd[j] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+$.ajax({
+method:'GET',
+url: directionsRequest,
+}).done(function(data) {
+var route = data.routes[0].geometry;
+map.addLayer({
+id: routeID[j],
+type: 'line',
+source: {
+type: 'geojson',
+data: {
+type: 'Feature',
+geometry: route
+}
+},
+paint: {
+'line-width': 5,
+'line-color' : '#FFF'
+}
+});
+});
+}
+
+function getRoute() {
+var start = [-112.074037,  34.048927];
+var end = [-106.675461, 35.226997];
+var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+$.ajax({
+method: 'GET',
+url: directionsRequest,
+}).done(function(data) {
+var route = data.routes[0].geometry;
+map.addLayer({
+id: 'route',
+type: 'line',
+source: {
+type: 'geojson',
+data: {
+type: 'Feature',
+geometry: route
+}
+},
+paint: {
+'line-width': 5,
+'line-color' : "#FFF"
+}
+});
+// this is where the code from the next step will go
+});
+}    
+function getStops() {
+geojson.features.forEach(function(marker) {
+
+// create a HTML element for each feature
+var el = document.createElement('div');
+el.className = 'marker';
+el.id = marker.properties.marker;
+i++;
+// make a marker for each feature and add to the map
+new mapboxgl.Marker(el)
+.setLngLat(marker.geometry.coordinates)
+.addTo(map);
+});
+}    
