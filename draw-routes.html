@@ -13,7 +13,7 @@
         padding: 0;
       }
 
-      #map {
+      #nav-map {
         position: absolute;
         top: 0;
         bottom:0;
@@ -29,14 +29,14 @@
     </style>
   </head>
   <body>
-    <div id='map'></div>
+    <div id='nav-map'></div>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoibGVubnltYXJ0aW5lemQiLCJhIjoiY2prMWZqNDJlMDBsMzNrb3h6dXZ1Zm50NyJ9.K_9DxP150GAPZI9CbLsJfQ';
     var map = new mapboxgl.Map({
-      container: 'map',
+      container: 'nav-map',
       style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
       center: [-99.95223783,  38.24814853],
-      zoom: 4
+      zoom: 4.80
     });
         var geojson = {
             "type": "FeatureCollection",
@@ -526,14 +526,12 @@
 
     map.on('load', function() {
       getStops();
-      for(i=0;i<30;i++){
-        getRouteBetweenStops(i);
-      }
+      // for(i=0;i<30;i++){
+      //   getRouteBetweenStops(i);
+      // }
+      drawRoadTripRoute();
     });
     
-    var routes = {type:"LineString", coordinates: [] };
-    var groupCoords = [];
-
     function getRouteBetweenStops(j) {
       var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
       var longEnd = [-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794, -112.074037];
@@ -563,35 +561,7 @@
           }
         });
       });
-      }
-
-    function getRoute() {
-      var start = [-112.074037,  34.048927];
-      var end = [-106.675461, 35.226997];
-      var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
-      $.ajax({
-        method: 'GET',
-        url: directionsRequest,
-      }).done(function(data) {
-        var route = data.routes[0].geometry;
-        map.addLayer({
-          id: 'route',
-          type: 'line',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'Feature',
-              geometry: route
-            }
-          },
-          paint: {
-            'line-width': 5,
-            'line-color' : "#FFF"
-          }
-        });
-        // this is where the code from the next step will go
-      });
-    }    
+      }   
     function getStops() {
     geojson.features.forEach(function(marker) {
 
@@ -606,8 +576,58 @@
     .setHTML('<h3>' + marker.properties.city + '<br>'+marker.properties.state+'</h3><p>Population:&nbsp;' + marker.properties.population + '</p>'))
     .addTo(map);
     });
-    }     
-      
+    }
+
+function drawRoadTripRoute() {
+var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
+var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
+var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[0] + ',' + latStart[0] + ';' + longStart[1] + ',' + latStart[1] + ';' + longStart[2] + ',' + latStart[2] + ';' + longStart[3] + ',' + latStart[3] + ';' + longStart[4] + ',' + latStart[4] + ';' + longStart[5] + ',' + latStart[5] + ';' + longStart[6] + ',' + latStart[6] + ';' + longStart[7] + ',' + latStart[7] + ';' + longStart[8] + ',' + latStart[8] + ';' + longStart[9] + ',' + latStart[9] + ';' + longStart[10] + ',' + latStart[10] + ';' + longStart[11] + ',' + latStart[11] + ';' + longStart[12] + ',' + latStart[12] + ';' + longStart[13] + ',' + latStart[13] + ';' + longStart[14] + ',' + latStart[14] + ';' + longStart[15] + ',' + latStart[15] + ';' + longStart[16] + ',' + latStart[16] + ';' + longStart[17] + ',' + latStart[17] + ';' + longStart[18] + ',' + latStart[18] + ';' + longStart[19] + ',' + latStart[19] + ';' + longStart[20] + ',' + latStart[20] + ';' + longStart[21] + ',' + latStart[21] + ';' + longStart[22] + ',' + latStart[22] + ';' + longStart[23] + ',' + latStart[23] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+var directionsRequest2 = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[23] + ',' + latStart[23] + ';' + longStart[24] + ',' + latStart[24] + ';' + longStart[25] + ',' + latStart[25] + ';' + longStart[26] + ',' + latStart[26] + ';' + longStart[27] + ',' + latStart[27] + ';' + longStart[28] + ',' + latStart[28] + ';' + longStart[29] + ',' + latStart[29] + ';' + longStart[0] + ',' + latStart[0] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+$.ajax({
+      method:'GET',
+      url: directionsRequest,
+      }).done(function(data) {
+      var route = data.routes[0].geometry;
+      map.addLayer({
+            id: 'part1',
+            type: 'line',
+            source: {
+                  type: 'geojson',
+            data: {
+                  type: 'Feature',
+                  geometry: route
+            }
+            },
+            paint: {
+                  'line-width': 5,
+                  'line-color' : '#FFF'
+            }
+      });
+      })
+
+
+      $.ajax({
+            method:'GET',
+            url: directionsRequest2,
+            }).done(function(data) {
+            var route = data.routes[0].geometry;
+            map.addLayer({
+                  id: 'part2',
+                  type: 'line',
+                  source: {
+                        type: 'geojson',
+                        data: {
+                              type: 'Feature',
+                              geometry: route
+                        }
+                  },
+                  paint: {
+                        'line-width': 5,
+                        'line-color' : '#FFF'
+                  }
+            });
+            });
+      }
     </script>
   </body>
 </html>
