@@ -31,7 +31,12 @@
 			<div class="col-lg-3">
 				&nbsp;
 				<div id="map-nav">
-					<div id="map"></div>
+					<div id="map"></div><br>
+					<div class="travel-info">
+						<p><span id="city-name">Phoenix</span>,&nbsp;<span id="state-name">Arizona</span></p>
+						<p>Highway: <span id="highway-name">Interstate 10 West</span></p>
+						<p>Population: <span id="stop-population">1,555,324</span></p>
+					</div>
 				</div>
 			</div><!--end of interactive map columns-->
 		</div>	<!--end of cluster2 div-->
@@ -980,351 +985,470 @@
         console.log('waypoint');
         map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
         map.setLayoutProperty('route1', 'visibility', 'visible');
-        $('#twenty-nine-palms').addClass('marker-active'); 
+        $('#twenty-nine-palms').addClass('marker-active');
+        $('#city-name').text('Twentyine Palms');
+        $('#state-name').text('California');
+        $('#stop-population').text('26,452');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[0],latStart[0]], zoom: 6, speed:1});
           map.setLayoutProperty('route1', 'visibility', 'none');
           $('#twenty-nine-palms').removeClass('marker-active');
+	    		$('#city-name').text('Phoenix');
+	        $('#state-name').text('Arizona');
+	        $('#stop-population').text('1,555,324');
         }
         }, {offset: '25%'});
 
 			$stop2.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[2],latStart[2]], zoom: 6, speed:1});
         map.setLayoutProperty('route2', 'visibility', 'visible');
         $('#olancha').addClass('marker-active');
         $('#twenty-nine-palms').removeClass('marker-active');
+        $('#highway-name').text('Highway 395 North');
+        $('#city-name').text('Olancha');
+        $('#stop-population').text('203');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
           map.setLayoutProperty('route2', 'visibility', 'none');
           $('#olancha').removeClass('marker-active');
-      		$('#twenty-nine-palms').addClass('marker-active'); 
+      		$('#twenty-nine-palms').addClass('marker-active');
+					$('#city-name').text('Twentyine Palms');
+					$('#stop-population').text('26,452');
+					$('#highway-name').text('Interstate 10 West');
         }
         }, {offset: '25%'});
 
 			$stop3.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[3],latStart[3]], zoom: 6, speed:1});
         map.setLayoutProperty('route3', 'visibility', 'visible');
         $('#manzanar').addClass('marker-active');
         $('#olancha').removeClass('marker-active');
+        $('#city-name').text('Manzanar National Historic Site');
+        $('#stop-population').text('---');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[2],latStart[2]], zoom: 6, speed:1});
           map.setLayoutProperty('route3', 'visibility', 'none');
           $('#manzanar').removeClass('marker-active');
-      		$('#olancha').addClass('marker-active'); 
+      		$('#olancha').addClass('marker-active');
+      		$('#city-name').text('Olancha');
+        	$('#stop-population').text('203'); 
         }
         }, {offset: '25%'});
 
 			$stop4.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[4],latStart[4]], zoom: 6, speed:1});
         map.setLayoutProperty('route4', 'visibility', 'visible');
         $('#bishop').addClass('marker-active');
         $('#manzanar').removeClass('marker-active');
+    		$('#city-name').text('Bishop');
+      	$('#stop-population').text('3,760');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[3],latStart[3]], zoom: 6, speed:1});
           map.setLayoutProperty('route4', 'visibility', 'none');
           $('#bishop').removeClass('marker-active');
-      		$('#manzanar').addClass('marker-active'); 
+      		$('#manzanar').addClass('marker-active');
+      		$('#city-name').text('Manzanar National Historic Site');
+        	$('#stop-population').text('--');
         }
         }, {offset: '25%'});
 
 			$stop5.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[5],latStart[5]], zoom: 6, speed:1});
         map.setLayoutProperty('route5', 'visibility', 'visible');
         $('#virginia-city').addClass('marker-active');
         $('#bishop').removeClass('marker-active');
+    		$('#city-name').text('Virginia City');
+    		$('#stop-population').text('711');
+    		$('#state-name').text('Nevada');
+    		$('#highway-name').text('Highway 50 East');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[4],latStart[4]], zoom: 6, speed:1});
           map.setLayoutProperty('route5', 'visibility', 'none');
           $('#virginia-city').removeClass('marker-active');
-      		$('#bishop').addClass('marker-active'); 
+      		$('#bishop').addClass('marker-active');
+      		$('#city-name').text('Bishop');
+      		$('#stop-population').text('3,760');
+      		$('#state-name').text('California');
+      		$('#highway-name').text('Highway 395 North');
         }
         }, {offset: '25%'});
 
 			$stop6.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[6],latStart[6]], zoom: 6, speed:1});
         map.setLayoutProperty('route6', 'visibility', 'visible');
         $('#stagecoach').addClass('marker-active');
         $('#virginia-city').removeClass('marker-active');
+    		$('#city-name').text('Stagecoach');
+    		$('#stop-population').text('1,703');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[5],latStart[5]], zoom: 6, speed:1});
           map.setLayoutProperty('route6', 'visibility', 'none');
           $('#stagecoach').removeClass('marker-active');
-      		$('#virginia-city').addClass('marker-active'); 
+      		$('#virginia-city').addClass('marker-active');
+					$('#city-name').text('Virginia City');
+    			$('#stop-population').text('711');
         }
         }, {offset: '25%'});
 
 			$stop7.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[7],latStart[7]], zoom: 6, speed:1});
         map.setLayoutProperty('route7', 'visibility', 'visible');
         $('#salt-lake-city').addClass('marker-active');
         $('#stagecoach').removeClass('marker-active');
+        $('#state-name').text('Utah');
+        $('#city-name').text('Salt Lake City');
+        $('#stop-population').text('191,446');
+        $('#highway-name').text('Interstate 80 East');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[6],latStart[6]], zoom: 6, speed:1});
           map.setLayoutProperty('route7', 'visibility', 'none');
           $('#stagecoach').removeClass('marker-active');
-      		$('#salt-lake-city').addClass('marker-active'); 
+      		$('#salt-lake-city').addClass('marker-active');
+      		$('#city-name').text('Stagecoach');
+    			$('#stop-population').text('1,703');
+    			$('#state-name').text('Nevada');
+    			$('#highway-name').text('Highway 50 East');
         }
         }, {offset: '25%'});
 
 			$stop8.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[8],latStart[8]], zoom: 6, speed:1});
         map.setLayoutProperty('route8', 'visibility', 'visible');
         $('#little-america').addClass('marker-active');
         $('#salt-lake-city').removeClass('marker-active');
+        $('#state-name').text('Wyoming');
+        $('#city-name').text('Little America');
+        $('#stop-population').text('86');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[7],latStart[7]], zoom: 6, speed:1});
           map.setLayoutProperty('route8', 'visibility', 'none');
           $('#little-america').removeClass('marker-active');
-      		$('#salt-lake-city').addClass('marker-active'); 
+      		$('#salt-lake-city').addClass('marker-active');
+      		$('#state-name').text('Utah');
+	        $('#city-name').text('Salt Lake City');
+	        $('#stop-population').text('191,446');
         }
         }, {offset: '25%'});
 
 			$stop9.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[9],latStart[9]], zoom: 6, speed:1});
         map.setLayoutProperty('route9', 'visibility', 'visible');
         $('#laramie').addClass('marker-active');
         $('#little-america').removeClass('marker-active');
+				$('#city-name').text('Laramie');
+				$('#stop-population').text('32,096');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[8],latStart[8]], zoom: 6, speed:1});
           map.setLayoutProperty('route9', 'visibility', 'none');
           $('#laramie').removeClass('marker-active');
-      		$('#little-america').addClass('marker-active'); 
+      		$('#little-america').addClass('marker-active');
+	        $('#city-name').text('Little America');
+        	$('#stop-population').text('86');
         }
         }, {offset: '25%'});
 
 			$stop10.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[10],latStart[10]], zoom: 6, speed:1});
         map.setLayoutProperty('route10', 'visibility', 'visible');
         $('#keystone').addClass('marker-active');
         $('#laramie').removeClass('marker-active');
+        $('#state-name').text('South Dakota');
+        $('#city-name').text('Keystone');
+        $('#stop-population').text('318');
+        $('#highway-name').text('Interstate 90 East');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[9],latStart[9]], zoom: 6, speed:1});
           map.setLayoutProperty('route10', 'visibility', 'none');
           $('#keystone').removeClass('marker-active');
-      		$('#laramie').addClass('marker-active'); 
+      		$('#laramie').addClass('marker-active');
+					$('#city-name').text('Laramie');
+					$('#stop-population').text('32,096');
+					$('#highway-name').text('Interstate 80 East');
+					$('#state-name').text('Wyoming');
         }
         }, {offset: '25%'});
 
 			$stop11.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[11],latStart[11]], zoom: 6, speed:1});
         map.setLayoutProperty('route11', 'visibility', 'visible');
         $('#mitchell').addClass('marker-active');
         $('#keystone').removeClass('marker-active');
+        $('#city-name').text('Mitchell');
+        $('#stop-population').text('15,610');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[10],latStart[10]], zoom: 6, speed:1});
           map.setLayoutProperty('route11', 'visibility', 'none');
           $('#mitchell').removeClass('marker-active');
-      		$('#keystone').addClass('marker-active'); 
+      		$('#keystone').addClass('marker-active');
+					$('#city-name').text('Keystone');
+					$('#stop-population').text('318');
         }
         }, {offset: '25%'});
 
 			$stop12.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[12],latStart[12]], zoom: 6, speed:1});
         map.setLayoutProperty('route12', 'visibility', 'visible');
         $('#tekamah').addClass('marker-active');
         $('#mitchell').removeClass('marker-active');
+        $('#state-name').text('Nebraska');
+        $('#city-name').text('Tekamah');
+        $('#highway-name').text('Highway 79 South');
+        $('#stop-population').text('1,662');
+
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[11],latStart[11]], zoom: 6, speed:1});
           map.setLayoutProperty('route12', 'visibility', 'none');
           $('#tekamah').removeClass('marker-active');
-      		$('#mitchell').addClass('marker-active'); 
+      		$('#mitchell').addClass('marker-active');
+					$('#city-name').text('Mitchell');
+					$('#stop-population').text('318');
+					$('#highway-name').text('Interstate 90 East');
+					$('#state-name').text('South Dakota');
         }
         }, {offset: '25%'});
 
 			$stop13.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[13],latStart[13]], zoom: 6, speed:1});
         map.setLayoutProperty('route13', 'visibility', 'visible');
         $('#perry').addClass('marker-active');
         $('#tekamah').removeClass('marker-active');
+        $('#state-name').text('Iowa');
+        $('#city-name').text('Perry');
+        $('#highway-name').text('Highway 80 East');
+        $('#stop-population').text('7,876');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[12],latStart[12]], zoom: 6, speed:1});
           map.setLayoutProperty('route13', 'visibility', 'none');
           $('#perry').removeClass('marker-active');
-      		$('#tekamah').addClass('marker-active'); 
+      		$('#tekamah').addClass('marker-active');
+	        $('#state-name').text('Nebraska');
+	        $('#city-name').text('Tekamah');
+	        $('#highway-name').text('Highway 79 South');
+	        $('#stop-population').text('1,662');
         }
         }, {offset: '25%'});
 
 			$stop14.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[14],latStart[14]], zoom: 6, speed:1});
         map.setLayoutProperty('route14', 'visibility', 'visible');
         $('#carbon-hill').addClass('marker-active');
         $('#perry').removeClass('marker-active');
+        $('#state-name').text('Illinois');
+	      $('#city-name').text('Carbon Hill');
+	      $('#stop-population').text('380');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[13],latStart[13]], zoom: 6, speed:1});
           map.setLayoutProperty('route14', 'visibility', 'none');
           $('#carbon-hill').removeClass('marker-active');
-      		$('#perry').addClass('marker-active'); 
+      		$('#perry').addClass('marker-active');
+					$('#state-name').text('Iowa');
+					$('#city-name').text('Perry');
+					$('#stop-population').text('7,876');
         }
         }, {offset: '25%'});
 
 			$stop15.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[15],latStart[15]], zoom: 6, speed:1});
         map.setLayoutProperty('route15', 'visibility', 'visible');
         $('#fremont').addClass('marker-active');
         $('#carbon-hill').removeClass('marker-active');
+    		$('#state-name').text('Ohio');
+      	$('#city-name').text('Fremont');
+      	$('#stop-population').text('16,388');
+      	$('#highway-name').text('Interstate 90 East');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[14],latStart[14]], zoom: 6, speed:1});
           map.setLayoutProperty('route15', 'visibility', 'none');
           $('#fremont').removeClass('marker-active');
-      		$('#carbon-hill').addClass('marker-active'); 
+      		$('#carbon-hill').addClass('marker-active');
+      		$('#state-name').text('Illinois');
+	      	$('#city-name').text('Carbon Hill');
+	      	$('#stop-population').text('380');
+	      	$('#highway-name').text('Interstate 80 East');
         }
         }, {offset: '25%'});
 
 			$stop16.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[16],latStart[16]], zoom: 6, speed:1});
         map.setLayoutProperty('route16', 'visibility', 'visible');
         $('#harrisburg').addClass('marker-active');
         $('#fremont').removeClass('marker-active');
+    		$('#state-name').text('Pennsylvania');
+      	$('#city-name').text('Harrisburg');
+      	$('#stop-population').text('49,160');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[15],latStart[15]], zoom: 6, speed:1});
           map.setLayoutProperty('route16', 'visibility', 'none');
           $('#harrisburg').removeClass('marker-active');
-      		$('#fremont').addClass('marker-active'); 
+      		$('#fremont').addClass('marker-active');
+					$('#state-name').text('Ohio');
+					$('#city-name').text('Fremont');
+					$('#stop-population').text('16,388');
         }
         }, {offset: '25%'});
 
 			$stop17.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[17],latStart[17]], zoom: 6, speed:1});
         map.setLayoutProperty('route17', 'visibility', 'visible');
         $('#gettysburg').addClass('marker-active');
         $('#harrisburg').removeClass('marker-active');
+      	$('#city-name').text('Gettysburg');
+      	$('#stop-population').text('7,643');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[16],latStart[16]], zoom: 6, speed:1});
           map.setLayoutProperty('route17', 'visibility', 'none');
           $('#gettysburg').removeClass('marker-active');
-      		$('#harrisburg').addClass('marker-active'); 
+      		$('#harrisburg').addClass('marker-active');
+      		$('#city-name').text('Harrisburg');
+      		$('#stop-population').text('49,160');
         }
         }, {offset: '25%'});
 
 			$stop18.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[18],latStart[18]], zoom: 6, speed:1});
         map.setLayoutProperty('route18', 'visibility', 'visible');
         $('#washington-dc').addClass('marker-active');
         $('#gettysburg').removeClass('marker-active');
+        $('#state-name').text('District of Columbia');
+      	$('#city-name').text('Washington');
+      	$('#stop-population').text('659,009');
+      	$('#highway-name').text('Interstate 270 South');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[17],latStart[17]], zoom: 6, speed:1});
           map.setLayoutProperty('route18', 'visibility', 'none');
           $('#washington-dc').removeClass('marker-active');
-      		$('#gettysburg').addClass('marker-active'); 
+      		$('#gettysburg').addClass('marker-active');
+					$('#state-name').text('District of Columbia');
+					$('#city-name').text('Gettysburg');
+					$('#stop-population').text('7,643');
+					$('#highway-name').text('Interstate 90 East');
         }
         }, {offset: '25%'});
 
 			$stop19.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[19],latStart[19]], zoom: 6, speed:1});
         map.setLayoutProperty('route19', 'visibility', 'visible');
         $('#beckley').addClass('marker-active');
         $('#washington-dc').removeClass('marker-active');
+        $('#state-name').text('West Virginia');
+      	$('#city-name').text('Beckley');
+      	$('#stop-population').text('17,348');
+      	$('#highway-name').text('Interstate 64 East');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[18],latStart[18]], zoom: 6, speed:1});
           map.setLayoutProperty('route19', 'visibility', 'none');
           $('#beckley').removeClass('marker-active');
       		$('#washington-dc').addClass('marker-active'); 
+					$('#state-name').text('District of Columbia');
+					$('#city-name').text('Washington');
+					$('#stop-population').text('659,009');
+					$('#highway-name').text('Interstate 270 South');
         }
         }, {offset: '25%'});
 
 			$stop20.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[20],latStart[20]], zoom: 6, speed:1});
         map.setLayoutProperty('route20', 'visibility', 'visible');
         $('#mallie').addClass('marker-active');
         $('#beckley').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[19],latStart[19]], zoom: 6, speed:1});
           map.setLayoutProperty('route20', 'visibility', 'none');
           $('#mallie').removeClass('marker-active');
@@ -1335,14 +1459,14 @@
 			$stop21.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[21],latStart[21]], zoom: 6, speed:1});
         map.setLayoutProperty('route21', 'visibility', 'visible');
         $('#london').addClass('marker-active');
         $('#mallie').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[20],latStart[20]], zoom: 6, speed:1});
           map.setLayoutProperty('route21', 'visibility', 'none');
           $('#london').removeClass('marker-active');
@@ -1353,14 +1477,14 @@
 			$stop22.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[22],latStart[22]], zoom: 6, speed:1});
         map.setLayoutProperty('route22', 'visibility', 'visible');
         $('#memphis').addClass('marker-active');
         $('#london').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[21],latStart[21]], zoom: 6, speed:1});
           map.setLayoutProperty('route22', 'visibility', 'none');
           $('#memphis').removeClass('marker-active');
@@ -1371,14 +1495,14 @@
 			$stop23.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[23],latStart[23]], zoom: 6, speed:1});
         map.setLayoutProperty('route23', 'visibility', 'visible');
         $('#van-buren').addClass('marker-active');
         $('#memphis').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[22],latStart[22]], zoom: 6, speed:1});
           map.setLayoutProperty('route23', 'visibility', 'none');
           $('#van-buren').removeClass('marker-active');
@@ -1389,14 +1513,14 @@
 			$stop24.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[24],latStart[24]], zoom: 6, speed:1});
         map.setLayoutProperty('route24', 'visibility', 'visible');
         $('#oklahoma-city').addClass('marker-active');
         $('#van-buren').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[23],latStart[23]], zoom: 6, speed:1});
           map.setLayoutProperty('route24', 'visibility', 'none');
           $('#oklahoma-city').removeClass('marker-active');
@@ -1407,14 +1531,14 @@
 			$stop25.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[25],latStart[25]], zoom: 6, speed:1});
         map.setLayoutProperty('route25', 'visibility', 'visible');
         $('#elk-city').addClass('marker-active');
         $('#oklahoma-city').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[24],latStart[24]], zoom: 6, speed:1});
           map.setLayoutProperty('route25', 'visibility', 'none');
           $('#elk-city').removeClass('marker-active');
@@ -1425,14 +1549,14 @@
 			$stop26.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[26],latStart[26]], zoom: 6, speed:1});
         map.setLayoutProperty('route26', 'visibility', 'visible');
         $('#amarillo').addClass('marker-active');
         $('#elk-city').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[25],latStart[25]], zoom: 6, speed:1});
           map.setLayoutProperty('route26', 'visibility', 'none');
           $('#amarillo').removeClass('marker-active');
@@ -1443,14 +1567,14 @@
 			$stop27.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[27],latStart[27]], zoom: 6, speed:1});
         map.setLayoutProperty('route27', 'visibility', 'visible');
         $('#albuquerque').addClass('marker-active');
         $('#amarillo').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[26],latStart[26]], zoom: 6, speed:1});
           map.setLayoutProperty('route27', 'visibility', 'none');
           $('#albuquerque').removeClass('marker-active');
@@ -1461,14 +1585,14 @@
 			$stop28.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[28],latStart[28]], zoom: 6, speed:1});
         map.setLayoutProperty('route28', 'visibility', 'visible');
         $('#grants').addClass('marker-active');
         $('#albuquerque').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[27],latStart[27]], zoom: 6, speed:1});
           map.setLayoutProperty('route28', 'visibility', 'none');
           $('#grants').removeClass('marker-active');
@@ -1479,14 +1603,14 @@
 			$stop29.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[29],latStart[29]], zoom: 6, speed:1});
         map.setLayoutProperty('route29', 'visibility', 'visible');
         $('#sanders').addClass('marker-active');
         $('#grants').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[28],latStart[28]], zoom: 6, speed:1});
           map.setLayoutProperty('route29', 'visibility', 'none');
           $('#sanders').removeClass('marker-active');
@@ -1497,14 +1621,14 @@
 			$stop30.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
-        console.log(' waypoint');
+        console.log('going through');
         map.flyTo({center: [longStart[0],latStart[0]], zoom: 6, speed:1});
         map.setLayoutProperty('route30', 'visibility', 'visible');
         $('#phoenix').addClass('marker-active');
         $('#sanders').removeClass('marker-active');
     	} else
         {
-          console.log('all the way up');
+          console.log('going back');
           map.flyTo({center: [longStart[29],latStart[29]], zoom: 6, speed:1});
           map.setLayoutProperty('route30', 'visibility', 'none');
           $('#phoenix').removeClass('marker-active');
