@@ -1446,13 +1446,19 @@
         map.setLayoutProperty('route20', 'visibility', 'visible');
         $('#mallie').addClass('marker-active');
         $('#beckley').removeClass('marker-active');
+        $('#state-name').text('Kentucky');
+      	$('#city-name').text('Mallie');
+      	$('#stop-population').text('15,884');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[19],latStart[19]], zoom: 6, speed:1});
           map.setLayoutProperty('route20', 'visibility', 'none');
           $('#mallie').removeClass('marker-active');
-      		$('#beckley').addClass('marker-active'); 
+      		$('#beckley').addClass('marker-active');
+					$('#state-name').text('West Virginia');
+					$('#city-name').text('Beckley');
+					$('#stop-population').text('17,348');
         }
         }, {offset: '25%'});
 
@@ -1464,13 +1470,17 @@
         map.setLayoutProperty('route21', 'visibility', 'visible');
         $('#london').addClass('marker-active');
         $('#mallie').removeClass('marker-active');
+        $('#city-name').text('London');
+      	$('#stop-population').text('8,111');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[20],latStart[20]], zoom: 6, speed:1});
           map.setLayoutProperty('route21', 'visibility', 'none');
           $('#london').removeClass('marker-active');
-      		$('#mallie').addClass('marker-active'); 
+      		$('#mallie').addClass('marker-active');
+      		$('#city-name').text('Mallie');
+      		$('#stop-population').text('15,884'); 
         }
         }, {offset: '25%'});
 
@@ -1482,13 +1492,21 @@
         map.setLayoutProperty('route22', 'visibility', 'visible');
         $('#memphis').addClass('marker-active');
         $('#london').removeClass('marker-active');
+        $('#city-name').text('Memphis');
+        $('#state-name').text('Tennessee');
+        $('#highway-name').text('Interstate 40 West');
+      	$('#stop-population').text('655,857');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[21],latStart[21]], zoom: 6, speed:1});
           map.setLayoutProperty('route22', 'visibility', 'none');
           $('#memphis').removeClass('marker-active');
-      		$('#london').addClass('marker-active'); 
+      		$('#london').addClass('marker-active');
+        	$('#city-name').text('London');
+      		$('#stop-population').text('8,111');
+      		$('#state-name').text('Kentucky');
+      		$('#highway-name').text('Interstate 64 East');
         }
         }, {offset: '25%'});
 
@@ -1500,13 +1518,19 @@
         map.setLayoutProperty('route23', 'visibility', 'visible');
         $('#van-buren').addClass('marker-active');
         $('#memphis').removeClass('marker-active');
+        $('#city-name').text('Van Buren');
+        $('#state-name').text('Arkansas');
+      	$('#stop-population').text('23,1555');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[22],latStart[22]], zoom: 6, speed:1});
           map.setLayoutProperty('route23', 'visibility', 'none');
           $('#van-buren').removeClass('marker-active');
-      		$('#memphis').addClass('marker-active'); 
+      		$('#memphis').addClass('marker-active');
+					$('#city-name').text('Memphis');
+					$('#state-name').text('Tennessee');
+					$('#stop-population').text('655,857');
         }
         }, {offset: '25%'});
 
@@ -1518,13 +1542,21 @@
         map.setLayoutProperty('route24', 'visibility', 'visible');
         $('#oklahoma-city').addClass('marker-active');
         $('#van-buren').removeClass('marker-active');
+        $('#city-name').text('Oklahoma City');
+        $('#state-name').text('Oklahoma');
+      	$('#stop-population').text('620,015');
+      	$('#highway-name').text('Route 66 West');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[23],latStart[23]], zoom: 6, speed:1});
           map.setLayoutProperty('route24', 'visibility', 'none');
           $('#oklahoma-city').removeClass('marker-active');
-      		$('#van-buren').addClass('marker-active'); 
+      		$('#van-buren').addClass('marker-active');
+	        $('#city-name').text('Van Buren');
+        	$('#state-name').text('Arkansas');
+      		$('#stop-population').text('23,1555');
+      		$('#highway-name').text('Interstate 40 West');
         }
         }, {offset: '25%'});
 
@@ -1536,13 +1568,17 @@
         map.setLayoutProperty('route25', 'visibility', 'visible');
         $('#elk-city').addClass('marker-active');
         $('#oklahoma-city').removeClass('marker-active');
+				$('#city-name').text('Elk City');
+      	$('#stop-population').text('12,426');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[24],latStart[24]], zoom: 6, speed:1});
           map.setLayoutProperty('route25', 'visibility', 'none');
           $('#elk-city').removeClass('marker-active');
-      		$('#oklahoma-city').addClass('marker-active'); 
+      		$('#oklahoma-city').addClass('marker-active');
+					$('#city-name').text('Oklahoma City');
+					$('#stop-population').text('620,015');
         }
         }, {offset: '25%'});
 
@@ -1554,13 +1590,20 @@
         map.setLayoutProperty('route26', 'visibility', 'visible');
         $('#amarillo').addClass('marker-active');
         $('#elk-city').removeClass('marker-active');
+        $('#city-name').text('Amarillo');
+        $('#state-name').text('Texas');
+      	$('#stop-population').text('197,570');
+
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[25],latStart[25]], zoom: 6, speed:1});
           map.setLayoutProperty('route26', 'visibility', 'none');
           $('#amarillo').removeClass('marker-active');
-      		$('#elk-city').addClass('marker-active'); 
+      		$('#elk-city').addClass('marker-active');
+					$('#city-name').text('Elk City');
+					$('#stop-population').text('12,426');
+					$('#state-name').text('Oklahoma');
         }
         }, {offset: '25%'});
 
@@ -1572,13 +1615,19 @@
         map.setLayoutProperty('route27', 'visibility', 'visible');
         $('#albuquerque').addClass('marker-active');
         $('#amarillo').removeClass('marker-active');
+        $('#city-name').text('Albuquerque');
+        $('#state-name').text('New Mexico');
+      	$('#stop-population').text('556,859');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[26],latStart[26]], zoom: 6, speed:1});
           map.setLayoutProperty('route27', 'visibility', 'none');
           $('#albuquerque').removeClass('marker-active');
-      		$('#amarillo').addClass('marker-active'); 
+      		$('#amarillo').addClass('marker-active');
+					$('#city-name').text('Amarillo');
+					$('#state-name').text('Texas');
+					$('#stop-population').text('197,570');
         }
         }, {offset: '25%'});
 
@@ -1590,13 +1639,17 @@
         map.setLayoutProperty('route28', 'visibility', 'visible');
         $('#grants').addClass('marker-active');
         $('#albuquerque').removeClass('marker-active');
+        $('#city-name').text('Grants');
+      	$('#stop-population').text('9,263');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[27],latStart[27]], zoom: 6, speed:1});
           map.setLayoutProperty('route28', 'visibility', 'none');
           $('#grants').removeClass('marker-active');
-      		$('#albuquerque').addClass('marker-active'); 
+      		$('#albuquerque').addClass('marker-active');
+					$('#city-name').text('Albuquerque');
+					$('#stop-population').text('556,859');
         }
         }, {offset: '25%'});
 
@@ -1608,13 +1661,18 @@
         map.setLayoutProperty('route29', 'visibility', 'visible');
         $('#sanders').addClass('marker-active');
         $('#grants').removeClass('marker-active');
+        $('#city-name').text('Sanders');
+        $('#state-name').text('Arizona');
+      	$('#stop-population').text('574');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[28],latStart[28]], zoom: 6, speed:1});
           map.setLayoutProperty('route29', 'visibility', 'none');
           $('#sanders').removeClass('marker-active');
-      		$('#grants').addClass('marker-active'); 
+      		$('#grants').addClass('marker-active');
+					$('#city-name').text('Grants');
+					$('#stop-population').text('9,263'); 
         }
         }, {offset: '25%'});
 
@@ -1626,13 +1684,19 @@
         map.setLayoutProperty('route30', 'visibility', 'visible');
         $('#phoenix').addClass('marker-active');
         $('#sanders').removeClass('marker-active');
+				$('#city-name').text('Phoenix');
+    		$('#stop-population').text('26452');
+    		$('#highway-name').text('Highway 87 South');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[29],latStart[29]], zoom: 6, speed:1});
           map.setLayoutProperty('route30', 'visibility', 'none');
           $('#phoenix').removeClass('marker-active');
-      		$('#sanders').addClass('marker-active'); 
+      		$('#sanders').addClass('marker-active');
+					$('#city-name').text('Sanders');
+        	$('#highway-name').text('Route 66 West');
+      		$('#stop-population').text('574');
         }
         }, {offset: '50%'});
     </script>
