@@ -10,9 +10,48 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/interactive.css">
   <script src="./js/jquery.waypoints.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+		.modal-nav .modal-xl{
+			max-width: 1500px !important;
+		}
 
+		.modal-nav .modal-open .modal{
+			padding: 0px 20px 0px 20px !important;
+		}
+
+		.modal-nav #map2{
+/*			width:100% !important;
+*/			height:700px;
+
+		}
+  </style>
 </head>
 <body>
+
+<div class="modal modal-nav" id="navigationModal" tabindex="-1" role="dialog" aria-label="navigationModal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="container-fluid">
+				<div class="row">
+				<div class="col-12">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		</button>
+					<h4>State of Hate Road Trip</h4>
+					<p>Explainer of how to use this map to navigate the content</p>
+					<div id="map2" >
+					<!--<iframe src="draw-routes.html" style="width:100%;max-height:800px;border:0px;"></iframe>-->
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 	<div class="container-fluid">
 		<div class="row" id="cluster1">
 			<div class="col-12">
@@ -25,19 +64,22 @@
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="twenty-nine-palms-ca">
 					<h2 class="text-left">2. Content for Twentynine Palms will go here</h2>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#navigationModal">
+					  Launch demo modal
+					</button>
 					<div class="filler">&nbsp;</div><br>
 				</div>
 			</div> <!--end of content column-->
 			<div class="col-lg-3">
-				&nbsp;
-				<div id="map-nav">
-					<div id="map"></div><br>
-					<div class="travel-info">
-						<p><span id="city-name">Phoenix</span>,&nbsp;<span id="state-name">Arizona</span></p>
-						<p>Highway: <span id="highway-name">Interstate 10 West</span></p>
-						<p>Population: <span id="stop-population">1,555,324</span></p>
+					<div id="map-nav">
+						<div id="map"></div><br>
+						<div class="travel-info">
+							<p><span id="city-name">Phoenix</span>,&nbsp;<span id="state-name">Arizona</span></p>
+							<p>Highway: <span id="highway-name">Interstate 10 West</span></p>
+							<p>Population: <span id="stop-population">1,555,324</span></p>
+						</div>
 					</div>
-				</div>
+				</button>
 			</div><!--end of interactive map columns-->
 		</div>	<!--end of cluster2 div-->
 
@@ -54,7 +96,8 @@
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="olancha-ca">
 					<h2 class="text-left">4. Content for Olancha will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<div class="filler">&nbsp;</div>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal</button><br><br>
 				</div>
 				<div class="content-stop" id="manzanar-ca">
 					<h2 class="text-left">5. Content for Manzanar will go here</h2>
@@ -343,8 +386,525 @@
 	<script>
 		var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
 		var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
-    
+    var geojson={
+"type": "FeatureCollection",
+"features": [
+{
+"geometry": {
+"coordinates": [
+-112.074037,
+33.448377
+],
+"type": "Point"
+},
+"properties": {
+"population": "1,555,324",
+"city": "Phoenix",
+"state": "Arizona",
+"marker": "phoenix",
+"pageID": "phoenix-az"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-116.054169,
+34.135558
+],
+"type": "Point"
+},
+"properties": {
+"population": "26,452",
+"city": "Twentynine Palms",
+"state": "California",
+"marker": "twenty-nine-palms",
+"pageID": "twenty-nine-palms-ca"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-118.006472,
+36.281883
+],
+"type": "Point"
+},
+"properties": {
+"population": "203",
+"city": "Olancha",
+"state": "California",
+"marker": "olancha",
+"pageID": "olancha-ca"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-118.152789,
+36.727229
+],
+"type": "Point"
+},
+"properties": {
+"population": "---",
+"city": "Manzanar",
+"state": "California",
+"marker": "manzanar",
+"pageID": "manzanar-ca"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-118.399664,
+37.361424
+],
+"type": "Point"
+},
+"properties": {
+"population": "3760",
+"city": "Bishop",
+"state": "California",
+"marker": "bishop",
+"pageID": "bishop-ca"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-119.649979,
+39.309514
+],
+"type": "Point"
+},
+"properties": {
+"population": "711",
+"city": "Virginia City",
+"state": "Nevada",
+"marker": "virginia-city",
+"pageID": "virginia-city-nv"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-119.374057,
+39.373804
+],
+"type": "Point"
+},
+"properties": {
+"population": "1,703",
+"city": "Stagecoach",
+"state": "Nevada",
+"marker": "stagecoach",
+"pageID": "stagecoach-nv"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-111.891047,
+40.760779
+],
+"type": "Point"
+},
+"properties": {
+"population": "191,446",
+"city": "Salt Lake City",
+"state": "Utah",
+"marker": "salt-lake-city",
+"pageID": "salt-lake-city-ut"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-109.859034,
+41.543569
+],
+"type": "Point"
+},
+"properties": {
+"population": "86",
+"city": "Little America",
+"state": "Wyoming",
+"marker": "little-america",
+"pageID": "little-america-wy"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-105.591101,
+41.311367
+],
+"type": "Point"
+},
+"properties": {
+"population": "32,096",
+"city": "Laramie",
+"state": "Wyoming",
+"marker": "laramie",
+"pageID": "laramie-wy"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-103.418246,
+43.895544
+],
+"type": "Point"
+},
+"properties": {
+"population": "318",
+"city": "Keystone",
+"state": "South Dakota",
+"marker": "keystone",
+"pageID": "keystone-sd"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-98.029799,
+43.709428
+],
+"type": "Point"
+},
+"properties": {
+"population": "15,610",
+"city": "Mitchell",
+"state": "South Dakota",
+"marker": "mitchell",
+"pageID": "mitchell-sd"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-96.221128,
+41.778322
+],
+"type": "Point"
+},
+"properties": {
+"population": "1,662",
+"city": "Tekamah",
+"state": "Nebraska",
+"marker": "tekamah",
+"pageID": "keystone-ne"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-94.10718,
+41.838596
+],
+"type": "Point"
+},
+"properties": {
+"population": "7,876",
+"city": "Perry",
+"state": "Iowa",
+"marker": "perry",
+"pageID": "perry-ia"
+
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-88.300063,
+41.296976
+],
+"type": "Point"
+},
+"properties": {
+"population": "380",
+"city": "Carbon Hill",
+"state": "Illinois",
+"marker": "carbon-hill",
+"pageID": "carbon-hill-il"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-83.121863,
+41.35033
+],
+"type": "Point"
+},
+"properties": {
+"population": "16,388",
+"city": "Fremont",
+"state": "Ohio",
+"marker": "fremont",
+"pageID": "fremont-oh"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-76.886701,
+40.273191
+],
+"type": "Point"
+},
+"properties": {
+"population": "49,160",
+"city": "Harrisburg",
+"state": "Pennsylvania",
+"marker": "harrisburg",
+"pageID": "harrisburg-pa"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-77.231095,
+39.830929
+],
+"type": "Point"
+},
+"properties": {
+"population": "7,643",
+"city": "Gettysburg",
+"state": "Pennsylvania",
+"marker": "gettysburg",
+"pageID": "gettysburg-pa"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-77.036871,
+38.907192
+],
+"type": "Point"
+},
+"properties": {
+"population": "659,009",
+"city": "Washington, D.C.",
+"state": "",
+"marker": "washington-dc",
+"pageID": "dc"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-81.188156,
+37.77817
+],
+"type": "Point"
+},
+"properties": {
+"population": "17,348",
+"city": "Beckley",
+"state": "West Virginia",
+"marker": "beckley",
+"pageID": "beckley-wv"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-82.910524,
+37.274667
+],
+"type": "Point"
+},
+"properties": {
+"population": "15,884",
+"city": "Mallie",
+"state": "Kentucky",
+"marker": "mallie",
+"pageID": "mallie-ky"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-84.083265,
+37.128977
+],
+"type": "Point"
+},
+"properties": {
+"population": "8,111",
+"city": "London",
+"state": "Kentucky",
+"marker": "london",
+"pageID": "london-ky"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-90.04898,
+35.149534
+],
+"type": "Point"
+},
+"properties": {
+"population": "655,857",
+"city": "Memphis",
+"state": "Tennessee",
+"marker": "memphis",
+"pageID": "memphis-tn"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-94.348268,
+35.436756
+],
+"type": "Point"
+},
+"properties": {
+"population": "23,155",
+"city": "Van Buren",
+"state": "Arkansas",
+"marker": "van-buren",
+"pageID": "van-buren-ar"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-97.516428,
+35.46756
+],
+"type": "Point"
+},
+"properties": {
+"population": "620,015",
+"city": "Oklahoma City",
+"state": "Oklahoma",
+"marker": "oklahoma-city",
+"pageID": "oklahoma-city-ok"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-99.404259,
+35.411994
+],
+"type": "Point"
+},
+"properties": {
+"population": "12,426",
+"city": "Elk City",
+"state": "Oklahoma",
+"marker": "elk-city",
+"pageID": "elk-city-ok"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-101.831297,
+35.221997
+],
+"type": "Point"
+},
+"properties": {
+"population": "197,570",
+"city": "Amarillo",
+"state": "Texas",
+"marker": "amarillo",
+"pageID": "amarillo-tx"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-106.650422,
+35.084386
+],
+"type": "Point"
+},
+"properties": {
+"population": "556,859",
+"city": "Albuquerque",
+"state": "New Mexico",
+"marker": "albuquerque",
+"pageID": "albuquerque-nm"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-107.851447,
+35.14726
+],
+"type": "Point"
+},
+"properties": {
+"population": "9,263",
+"city": "Grants",
+"state":"New Mexico",
+"marker": "grants",
+"pageID": "grants-nm"
+},
+"type": "Feature"
+},
+{
+"geometry": {
+"coordinates": [
+-109.328794,
+35.209143
+],
+"type": "Point"
+},
+"properties": {
+"population": "574",
+"city": "Sanders",
+"state":"Arizona",
+"marker": "sanders",
+"pageID": "sanders-az"
+},  
+"type": "Feature"
+}
+]
+};;
+
     mapboxgl.accessToken = 'pk.eyJ1IjoibGVubnltYXJ0aW5lemQiLCJhIjoiY2prMWZqNDJlMDBsMzNrb3h6dXZ1Zm50NyJ9.K_9DxP150GAPZI9CbLsJfQ';
+
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
@@ -352,498 +912,26 @@
       interactive: false,
       zoom: 6
     });
-        var geojson = {
-            "type": "FeatureCollection",
-            "features": [
-            {
-            "geometry": {
-            "coordinates": [
-            -112.074037,
-            33.448377
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "1,555,324",
-            "city": "Phoenix",
-            "state": "Arizona",
-            "marker": "phoenix"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -116.054169,
-            34.135558
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "26,452",
-            "city": "Twentynine Palms",
-            "state": "California",
-            "marker": "twenty-nine-palms"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -118.006472,
-            36.281883
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "203",
-            "city": "Olancha",
-            "state": "California",
-            "marker": "olancha"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -118.152789,
-            36.727229
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "---",
-            "city": "Manzanar",
-            "state": "California",
-            "marker": "manzanar"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -118.399664,
-            37.361424
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "3760",
-            "city": "Bishop",
-            "state": "California",
-            "marker": "bishop"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -119.649979,
-            39.309514
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "711",
-            "city": "Virginia City",
-            "state": "Nevada",
-            "marker": "virginia-city"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -119.374057,
-            39.373804
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "1,703",
-            "city": "Stagecoach",
-            "state": "Nevada",
-            "marker": "stagecoach"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -111.891047,
-            40.760779
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "191,446",
-            "city": "Salt Lake City",
-            "state": "Utah",
-            "marker": "salt-lake-city"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -109.859034,
-            41.543569
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "86",
-            "city": "Little America",
-            "state": "Wyoming",
-            "marker": "little-america"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -105.591101,
-            41.311367
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "32,096",
-            "city": "Laramie",
-            "state": "Wyoming",
-            "marker": "laramie"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -103.418246,
-            43.895544
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "318",
-            "city": "Keystone",
-            "state": "South Dakota",
-            "marker": "keystone"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -98.029799,
-            43.709428
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "15,610",
-            "city": "Mitchell",
-            "state": "South Dakota",
-            "marker": "mitchell"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -96.221128,
-            41.778322
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "1,662",
-            "city": "Tekamah",
-            "state": "Nebraska",
-            "marker": "tekamah"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -94.10718,
-            41.838596
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "7,876",
-            "city": "Perry",
-            "state": "Iowa",
-            "marker": "perry"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -88.300063,
-            41.296976
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "380",
-            "city": "Carbon Hill",
-            "state": "Illinois",
-            "marker": "carbon-hill"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -83.121863,
-            41.35033
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "16,388",
-            "city": "Fremont",
-            "state": "Ohio",
-            "marker": "fremont"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -76.886701,
-            40.273191
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "49,160",
-            "city": "Harrisburg",
-            "state": "Pennsylvania",
-            "marker": "harrisburg"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -77.231095,
-            39.830929
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "7,643",
-            "city": "Gettysburg",
-            "state": "Pennsylvania",
-            "marker": "gettysburg"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -77.036871,
-            38.907192
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "659,009",
-            "city": "Washington, D.C.",
-            "state": "",
-            "marker": "washington-dc"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -81.188156,
-            37.77817
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "17,348",
-            "city": "Beckley",
-            "state": "West Virginia",
-            "marker": "beckley"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -82.910524,
-            37.274667
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "15,884",
-            "city": "Mallie",
-            "state": "Kentucky",
-            "marker": "mallie"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -84.083265,
-            37.128977
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "8,111",
-            "city": "London",
-            "state": "Kentucky",
-            "marker": "london"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -90.04898,
-            35.149534
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "655,857",
-            "city": "Memphis",
-            "state": "Tennessee",
-            "marker": "memphis"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -94.348268,
-            35.436756
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "23,155",
-            "city": "Van Buren",
-            "state": "Arkansas",
-            "marker": "van-buren"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -97.516428,
-            35.46756
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "620,015",
-            "city": "Oklahoma City",
-            "state": "Oklahoma",
-            "marker": "oklahoma-city"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -99.404259,
-            35.411994
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "12,426",
-            "city": "Elk City",
-            "state": "Oklahoma",
-            "marker": "elk-city"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -101.831297,
-            35.221997
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "197,570",
-            "city": "Amarillo",
-            "state": "Texas",
-            "marker": "amarillo"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -106.650422,
-            35.084386
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "556,859",
-            "city": "Albuquerque",
-            "state": "New Mexico",
-            "marker": "albuquerque"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -107.851447,
-            35.14726
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "9,263",
-            "city": "Grants",
-            "state":"New Mexico",
-            "marker": "grants"
-            },
-            "type": "Feature"
-            },
-            {
-            "geometry": {
-            "coordinates": [
-            -109.328794,
-            35.209143
-            ],
-            "type": "Point"
-            },
-            "properties": {
-            "population": "574",
-            "city": "Sanders",
-            "state":"Arizona",
-            "marker": "sanders"
-            },  
-            "type": "Feature"
-            }
-            ]
-            };
-    
+
+    var map2 = new mapboxgl.Map({
+      container: 'map2',
+      style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
+      center: [-99.95223783,  38.24814853],
+      minZoom:4,
+      maxZoom:24
+    });
 
     map.on('load', function() {
     	getStops();
       for(i=0;i<30;i++){
     		getRouteBetweenStops(i);
     	}
+    });
+
+    map2.on('load', function() {
+    	console.log('20');
+    	getStops2();
+      drawRoadTripRoute(longStart,latStart);
     });
 
     function getRouteBetweenStops(j) {
@@ -891,7 +979,7 @@
 		      url: directionsRequest,
 		      }).done(function(data) {
 		      var route = data.routes[0].geometry;
-		      map.addLayer({
+		      map2.addLayer({
 		            id: 'part1',
 		            type: 'line',
 		            source: {
@@ -907,14 +995,12 @@
 		            }
 		      });
 		      })
-
-
 		      $.ajax({
 		            method:'GET',
 		            url: directionsRequest2,
 		            }).done(function(data) {
 		            var route = data.routes[0].geometry;
-		            map.addLayer({
+		            map2.addLayer({
 		                  id: 'part2',
 		                  type: 'line',
 		                  source: {
@@ -944,10 +1030,25 @@
     	new mapboxgl.Marker(el)
     		.setLngLat(marker.geometry.coordinates)
     		.addTo(map);
-    	//console.log("added to map");
-
     	});
     }
+
+    function getStops2() {
+    	//console.log("eh3");
+    	geojson.features.forEach(function(marker) {
+    	//console.log(marker.properties.marker);
+    	// create a HTML element for each feature
+    	var el = document.createElement('div');
+    	el.className = 'marker '+ marker.properties.marker;
+    	// make a marker for each feature and add to the map
+    	new mapboxgl.Marker(el)
+    		.setLngLat(marker.geometry.coordinates)
+		    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    		.setHTML('<h4>' + marker.properties.city + '<br>'+marker.properties.state+'</h4><p>Population:&nbsp;' + marker.properties.population + '</p><p><a href="#'+marker.properties.pageID+'">@@Go there@@</a></p>'))
+    		.addTo(map2);
+    	});
+    }
+
 			var $stop1 = $('#twenty-nine-palms-ca');
 			var $stop2 = $('#olancha-ca');
 			var $stop3 = $('#manzanar-ca');
@@ -999,7 +1100,7 @@
 	        $('#state-name').text('Arizona');
 	        $('#stop-population').text('1,555,324');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop2.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1023,7 +1124,7 @@
 					$('#stop-population').text('26,452');
 					$('#highway-name').text('Interstate 10 West');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop3.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1045,7 +1146,7 @@
       		$('#city-name').text('Olancha');
         	$('#stop-population').text('203'); 
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop4.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1067,7 +1168,7 @@
       		$('#city-name').text('Manzanar National Historic Site');
         	$('#stop-population').text('--');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop5.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1093,7 +1194,7 @@
       		$('#state-name').text('California');
       		$('#highway-name').text('Highway 395 North');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop6.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1115,7 +1216,7 @@
 					$('#city-name').text('Virginia City');
     			$('#stop-population').text('711');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop7.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1141,7 +1242,7 @@
     			$('#state-name').text('Nevada');
     			$('#highway-name').text('Highway 50 East');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop8.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1165,7 +1266,7 @@
 	        $('#city-name').text('Salt Lake City');
 	        $('#stop-population').text('191,446');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop9.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1187,7 +1288,7 @@
 	        $('#city-name').text('Little America');
         	$('#stop-population').text('86');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop10.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1213,7 +1314,7 @@
 					$('#highway-name').text('Interstate 80 East');
 					$('#state-name').text('Wyoming');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop11.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1235,7 +1336,7 @@
 					$('#city-name').text('Keystone');
 					$('#stop-population').text('318');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop12.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1262,7 +1363,7 @@
 					$('#highway-name').text('Interstate 90 East');
 					$('#state-name').text('South Dakota');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop13.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1288,7 +1389,7 @@
 	        $('#highway-name').text('Highway 79 South');
 	        $('#stop-population').text('1,662');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop14.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1312,7 +1413,7 @@
 					$('#city-name').text('Perry');
 					$('#stop-population').text('7,876');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop15.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1338,7 +1439,7 @@
 	      	$('#stop-population').text('380');
 	      	$('#highway-name').text('Interstate 80 East');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop16.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1362,7 +1463,7 @@
 					$('#city-name').text('Fremont');
 					$('#stop-population').text('16,388');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop17.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1384,7 +1485,7 @@
       		$('#city-name').text('Harrisburg');
       		$('#stop-population').text('49,160');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop18.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1410,7 +1511,7 @@
 					$('#stop-population').text('7,643');
 					$('#highway-name').text('Interstate 90 East');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop19.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1436,7 +1537,7 @@
 					$('#stop-population').text('659,009');
 					$('#highway-name').text('Interstate 270 South');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop20.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1460,7 +1561,7 @@
 					$('#city-name').text('Beckley');
 					$('#stop-population').text('17,348');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop21.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1482,7 +1583,7 @@
       		$('#city-name').text('Mallie');
       		$('#stop-population').text('15,884'); 
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop22.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1508,7 +1609,7 @@
       		$('#state-name').text('Kentucky');
       		$('#highway-name').text('Interstate 64 East');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop23.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1532,7 +1633,7 @@
 					$('#state-name').text('Tennessee');
 					$('#stop-population').text('655,857');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop24.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1558,7 +1659,7 @@
       		$('#stop-population').text('23,1555');
       		$('#highway-name').text('Interstate 40 West');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop25.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1580,7 +1681,7 @@
 					$('#city-name').text('Oklahoma City');
 					$('#stop-population').text('620,015');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop26.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1605,7 +1706,7 @@
 					$('#stop-population').text('12,426');
 					$('#state-name').text('Oklahoma');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop27.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1629,7 +1730,7 @@
 					$('#state-name').text('Texas');
 					$('#stop-population').text('197,570');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop28.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1651,7 +1752,7 @@
 					$('#city-name').text('Albuquerque');
 					$('#stop-population').text('556,859');
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop29.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1674,7 +1775,7 @@
 					$('#city-name').text('Grants');
 					$('#stop-population').text('9,263'); 
         }
-        }, {offset: '25%'});
+        }, {offset: '15%'});
 
 			$stop30.waypoint(function(direction) {    	
     	if(direction == 'down')

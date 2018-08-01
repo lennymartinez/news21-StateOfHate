@@ -48,3 +48,15 @@ height: 30px;
 .travel-info {
 	padding-left: 20px;
 }
+
+.modal-nav .modal-xl{
+	max-width: 6000px !important;
+}
+
+.modal-nav .modal-open .modal{
+	padding: 0px 20px 0px 20px !important;
+}
+
+#map2{
+	width: 100% !important;
+}

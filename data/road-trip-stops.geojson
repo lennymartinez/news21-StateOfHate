@@ -13,7 +13,8 @@
 "population": "1,555,324",
 "city": "Phoenix",
 "state": "Arizona",
-"marker": "phoenix"
+"marker": "phoenix",
+"pageID": "phoenix-az"
 },
 "type": "Feature"
 },
@@ -29,7 +30,8 @@
 "population": "26,452",
 "city": "Twentynine Palms",
 "state": "California",
-"marker": "twenty-nine-palms"
+"marker": "twenty-nine-palms",
+"pageID": "twenty-nine-palms-ca"
 },
 "type": "Feature"
 },
@@ -45,7 +47,8 @@
 "population": "203",
 "city": "Olancha",
 "state": "California",
-"marker": "manzanar"
+"marker": "olancha",
+"pageID": "olancha-ca"
 },
 "type": "Feature"
 },
@@ -61,7 +64,8 @@
 "population": "---",
 "city": "Manzanar",
 "state": "California",
-"tag": "manzanar"
+"marker": "manzanar",
+"pageID": "manzanar-ca"
 },
 "type": "Feature"
 },
@@ -77,7 +81,8 @@
 "population": "3760",
 "city": "Bishop",
 "state": "California",
-"marker": "bishop"
+"marker": "bishop",
+"pageID": "bishop-ca"
 },
 "type": "Feature"
 },
@@ -93,7 +98,8 @@
 "population": "711",
 "city": "Virginia City",
 "state": "Nevada",
-"marker": "virginia-city"
+"marker": "virginia-city",
+"pageID": "virginia-city-nv"
 },
 "type": "Feature"
 },
@@ -109,7 +115,8 @@
 "population": "1,703",
 "city": "Stagecoach",
 "state": "Nevada",
-"marker": "stagecoach"
+"marker": "stagecoach",
+"pageID": "stagecoach-nv"
 },
 "type": "Feature"
 },
@@ -125,7 +132,8 @@
 "population": "191,446",
 "city": "Salt Lake City",
 "state": "Utah",
-"marker": "salt-lake-city"
+"marker": "salt-lake-city",
+"pageID": "salt-lake-city-ut"
 },
 "type": "Feature"
 },
@@ -141,7 +149,8 @@
 "population": "86",
 "city": "Little America",
 "state": "Wyoming",
-"marker": "little-america"
+"marker": "little-america",
+"pageID": "little-america-wy"
 },
 "type": "Feature"
 },
@@ -157,7 +166,8 @@
 "population": "32,096",
 "city": "Laramie",
 "state": "Wyoming",
-"marker": "laramie"
+"marker": "laramie",
+"pageID": "laramie-wy"
 },
 "type": "Feature"
 },
@@ -173,7 +183,8 @@
 "population": "318",
 "city": "Keystone",
 "state": "South Dakota",
-"marker": "keystone"
+"marker": "keystone",
+"pageID": "keystone-sd"
 },
 "type": "Feature"
 },
@@ -189,7 +200,8 @@
 "population": "15,610",
 "city": "Mitchell",
 "state": "South Dakota",
-"marker": "mitchell"
+"marker": "mitchell",
+"pageID": "mitchell-sd"
 },
 "type": "Feature"
 },
@@ -205,7 +217,8 @@
 "population": "1,662",
 "city": "Tekamah",
 "state": "Nebraska",
-"marker": "tekamah"
+"marker": "tekamah",
+"pageID": "keystone-ne"
 },
 "type": "Feature"
 },
@@ -221,7 +234,9 @@
 "population": "7,876",
 "city": "Perry",
 "state": "Iowa",
-"marker": "perry"
+"marker": "perry",
+"pageID": "perry-ia"
+
 },
 "type": "Feature"
 },
@@ -237,7 +252,8 @@
 "population": "380",
 "city": "Carbon Hill",
 "state": "Illinois",
-"marker": "carbon-hill"
+"marker": "carbon-hill",
+"pageID": "carbon-hill-il"
 },
 "type": "Feature"
 },
@@ -253,7 +269,8 @@
 "population": "16,388",
 "city": "Fremont",
 "state": "Ohio",
-"marker": "fremont"
+"marker": "fremont",
+"pageID": "fremont-oh"
 },
 "type": "Feature"
 },
@@ -269,7 +286,8 @@
 "population": "49,160",
 "city": "Harrisburg",
 "state": "Pennsylvania",
-"marker": "harrisburg"
+"marker": "harrisburg",
+"pageID": "harrisburg-pa"
 },
 "type": "Feature"
 },
@@ -285,7 +303,8 @@
 "population": "7,643",
 "city": "Gettysburg",
 "state": "Pennsylvania",
-"marker": "gettysburg"
+"marker": "gettysburg",
+"pageID": "gettysburg-pa"
 },
 "type": "Feature"
 },
@@ -301,7 +320,8 @@
 "population": "659,009",
 "city": "Washington, D.C.",
 "state": "",
-"marker": "washington-dc"
+"marker": "washington-dc",
+"pageID": "dc"
 },
 "type": "Feature"
 },
@@ -317,7 +337,8 @@
 "population": "17,348",
 "city": "Beckley",
 "state": "West Virginia",
-"marker": "beckley"
+"marker": "beckley",
+"pageID": "beckley-wv"
 },
 "type": "Feature"
 },
@@ -333,7 +354,8 @@
 "population": "15,884",
 "city": "Mallie",
 "state": "Kentucky",
-"marker": "mallie"
+"marker": "mallie",
+"pageID": "mallie-ky"
 },
 "type": "Feature"
 },
@@ -349,7 +371,8 @@
 "population": "8,111",
 "city": "London",
 "state": "Kentucky",
-"marker": "london"
+"marker": "london",
+"pageID": "london-ky"
 },
 "type": "Feature"
 },
@@ -365,7 +388,8 @@
 "population": "655,857",
 "city": "Memphis",
 "state": "Tennessee",
-"marker": "memphis"
+"marker": "memphis",
+"pageID": "memphis-tn"
 },
 "type": "Feature"
 },
@@ -381,7 +405,8 @@
 "population": "23,155",
 "city": "Van Buren",
 "state": "Arkansas",
-"marker": "van-buren"
+"marker": "van-buren",
+"pageID": "van-buren-ar"
 },
 "type": "Feature"
 },
@@ -397,7 +422,8 @@
 "population": "620,015",
 "city": "Oklahoma City",
 "state": "Oklahoma",
-"marker": "oklahoma-city"
+"marker": "oklahoma-city",
+"pageID": "oklahoma-city-ok"
 },
 "type": "Feature"
 },
@@ -413,7 +439,8 @@
 "population": "12,426",
 "city": "Elk City",
 "state": "Oklahoma",
-"marker": "elk-city"
+"marker": "elk-city",
+"pageID": "elk-city-ok"
 },
 "type": "Feature"
 },
@@ -429,7 +456,8 @@
 "population": "197,570",
 "city": "Amarillo",
 "state": "Texas",
-"marker": "amarillo"
+"marker": "amarillo",
+"pageID": "amarillo-tx"
 },
 "type": "Feature"
 },
@@ -445,7 +473,8 @@
 "population": "556,859",
 "city": "Albuquerque",
 "state": "New Mexico",
-"marker": "albuquerque"
+"marker": "albuquerque",
+"pageID": "albuquerque-nm"
 },
 "type": "Feature"
 },
@@ -459,9 +488,10 @@
 },
 "properties": {
 "population": "9,263",
-"city": "Grant",
+"city": "Grants",
 "state":"New Mexico",
-"marker": "grant"
+"marker": "grants",
+"pageID": "grants-nm"
 },
 "type": "Feature"
 },
@@ -477,7 +507,8 @@
 "population": "574",
 "city": "Sanders",
 "state":"Arizona",
-"marker": "sanders"
+"marker": "sanders",
+"pageID": "sanders-az"
 },  
 "type": "Feature"
 }
