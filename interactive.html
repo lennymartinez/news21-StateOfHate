@@ -38,7 +38,9 @@
 		<span aria-hidden="true">&times;</span>
 		</button>
 					<h4>State of Hate Road Trip</h4>
-					<p>Explainer of how to use this map to navigate the content</p>
+					<p>Explainer of how to use this map to navigate the content: <a href="#phoenix-az" onclick="$('#navigationModal').modal('hide')">click</a>
+						
+</p>
 					<div id="map2" >
 					<!--<iframe src="draw-routes.html" style="width:100%;max-height:800px;border:0px;"></iframe>-->
 					</div>
@@ -606,7 +608,7 @@
 "city": "Tekamah",
 "state": "Nebraska",
 "marker": "tekamah",
-"pageID": "keystone-ne"
+"pageID": "tekamah-ne"
 },
 "type": "Feature"
 },
@@ -1038,6 +1040,8 @@
     		.addTo(map);
     	});
     }
+    var cow = "$('#navigationModal').modal('hide');$('.mapboxgl-popup').hide();";
+    var cow2 = "onClick";
     function getStops2() {
     	//console.log("eh3");
     	geojson.features.forEach(function(marker) {
@@ -1049,10 +1053,11 @@
     	new mapboxgl.Marker(el)
     		.setLngLat(marker.geometry.coordinates)
 		    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    		.setHTML('<h5>' + marker.properties.city + '<br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '</p><p><a href="#'+marker.properties.pageID+'">@@GOHERE@@</a></p>'))
+    		.setHTML('<h5>' + marker.properties.city + '<br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '</p><p><a href="#'+marker.properties.pageID+'" onclick="'+cow+'">click22</a></p>'))
     		.addTo(map2);
     	});
     }
+    // var a = 'href="#'+marker.properties.pageID+'";; $('+'#navigationModal'+').modal('+'hide'+')"
     // $(".modalcloser").click(function(){
   		// console.log('mooo');
   		// $('#navigationModal').modal('hide');
