@@ -12,17 +12,16 @@
   <script src="./js/jquery.waypoints.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <style>
-		.navigation-mapscreen .modal-xl-lenny{
-			max-width: 1500px !important;
-		}
-
-		.navigation-mapscreen .modal-open .modal{
-			padding: 0px 20px 0px 20px !important;
-		}
-
-		.navigation-mapscreen #map2{
-			height:700px;
-		}
+  .road-video-segment {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	}
+	.driving-video {
+		position: relative;
+		z-index: 20;
+		width: 100%;
+		max-height: 1200px;
+	}
   </style>
 </head>
 <body>
@@ -54,9 +53,11 @@
 
 	<div class="container-fluid">
 		<div class="row" id="cluster1">
-			<div class="col-12">
-				<h2 class="text-left">1. Interstate 10 W video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/1-10WEST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -76,11 +77,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster3">
-			<div class="col-12">
-				
-				<h2 class="text-left">3. Highway 395 N video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
-				</div>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/3-395NORTH.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -106,9 +107,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster5">
-			<div class="col-12">
-				<h2 class="text-left">7. Highway 50 E video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/7-50EAST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -129,9 +132,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster7">
-			<div class="col-12">
-				<h2 class="text-left">10. Interstate 80 E video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/10-80EAST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -156,9 +161,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster9">
-			<div class="col-12">
-				<h2 class="text-left">14. Interstate 90 E video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/14-90EAST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -179,9 +186,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster11">
-			<div class="col-12">
-				<h2 class="text-left">17. Highway 79 S video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/17-79SOUTH.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -198,9 +207,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster13">
-			<div class="col-12">
-				<h2 class="text-left">19. Interstate 80 E video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/19-80EAST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -221,9 +232,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster15">
-			<div class="col-12">
-				<h2 class="text-left">22. Interstate 90 E video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/22-90EAST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -248,9 +261,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster17">
-			<div class="col-12">
-				<h2 class="text-left">26. Interstate 270 S video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/26-270SOUTH.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -267,9 +282,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster19">
-			<div class="col-12">
-				<h2 class="text-left">28. Interstate 64 E video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/28-64EAST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -294,9 +311,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster21">
-			<div class="col-12">
-				<h2 class="text-left">32. Interstate 40 W video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/32-40WEST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -317,9 +336,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster23">
-			<div class="col-12">
-				<h2 class="text-left">35. Route 66 W video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/35-66WEST.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -356,9 +377,11 @@
 		</div>	<!--end of cluster2 div-->
 
 		<div class="row" id="cluster25">
-			<div class="col-12">
-				<h2 class="text-left">35. Highway 87 S video will go here</h2>
-				<div class="filler-vid">&nbsp;</div><br>
+			<div class="col-12 road-video-segment">
+				<video class="driving-video" muted autoplay loop>
+				  <source src="./assets/video/42-87SOUTH.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -1041,7 +1064,6 @@
     	});
     }
     var cow = "$('#navigationModal').modal('hide');$('.mapboxgl-popup').hide();";
-    var cow2 = "onClick";
     function getStops2() {
     	//console.log("eh3");
     	geojson.features.forEach(function(marker) {

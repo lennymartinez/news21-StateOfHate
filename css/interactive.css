@@ -16,7 +16,6 @@ body{
 }
 
 .content-stop {
-	border: 1px solid blue;
 }
 
 #map-nav {
@@ -59,7 +58,18 @@ height: 30px;
 	padding: 0px 20px 0px 20px !important;
 }
 
+@media (max-width: 1024px){
+	#map-nav{
+		display: none;
+	}
+}
+
 #map2{
-	overflow: visible;
-	width: 100% !important;
+	height:700px;
+	width:100% !important;
+}
+
+.driving-video {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
