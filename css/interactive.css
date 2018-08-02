@@ -16,13 +16,14 @@ body{
 }
 
 .content-stop {
+	margin-top: 50px;
 }
 
 #map-nav {
 	position: fixed;
 	width: 400px;
-	top: 50px;
-	right: 15px;
+	top: 100px;
+	right: 20px;
 	z-index:1;
 	border: 1px solid black;
 }
@@ -67,9 +68,4 @@ height: 30px;
 #map2{
 	height:700px;
 	width:100% !important;
-}
-
-.driving-video {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
 }
