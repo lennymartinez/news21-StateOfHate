@@ -1038,7 +1038,6 @@
     		.addTo(map);
     	});
     }
-    // var cow = 'onclick="$(''#myModal'').modal(''hide'')"'
     function getStops2() {
     	//console.log("eh3");
     	geojson.features.forEach(function(marker) {
@@ -1050,14 +1049,14 @@
     	new mapboxgl.Marker(el)
     		.setLngLat(marker.geometry.coordinates)
 		    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    		.setHTML('<h5>' + marker.properties.city + '<br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '</p><p><a class="modalcloser" href="#'+marker.properties.pageID+'" data-dismiss="modal">@@GOHERE@@</a></p>'))
+    		.setHTML('<h5>' + marker.properties.city + '<br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '</p><p><a href="#'+marker.properties.pageID+'">@@GOHERE@@</a></p>'))
     		.addTo(map2);
     	});
     }
-    $(".modalcloser").click(function(){
-  		console.log('mooo');
-  		$('#navigationModal').modal('hide');
-    });
+    // $(".modalcloser").click(function(){
+  		// console.log('mooo');
+  		// $('#navigationModal').modal('hide');
+    // });
 
 			var $stop1 = $('#twenty-nine-palms-ca');
 			var $stop2 = $('#olancha-ca');
