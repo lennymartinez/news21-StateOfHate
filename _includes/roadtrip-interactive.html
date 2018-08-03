@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset='utf-8' />
-  <title>State of Hate, Interactive</title>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="./js/jquery.waypoints.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-  <style>
-  .road-video-segment {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-	}
-	.driving-video {
-		position: relative;
-		z-index: 20;
-		width: 100vw;
-	}
-  </style>
-  <link rel="stylesheet" href="./css/interactive.css">
-
-</head>
-<body>
-
 <div class="modal fade navigation-mapscreen" id="navigationModal" tabindex="-1" role="dialog" aria-label="navigationModal" aria-hidden="false" >
 	<div class="modal-dialog modal-dialog-centered modal-xl-lenny" role="document">
 		<div class="modal-content">
@@ -36,10 +8,8 @@
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 		</button>
-					<h4>State of Hate Road Trip</h4>
-					<p>Explainer of how to use this map to navigate the content: <a href="#phoenix-az" onclick="$('#navigationModal').modal('hide')">click</a>
-						
-</p>
+					<h3>@@State of Hate Road Trip@@</h3>
+					<p>@@Explainer of how to use this map to navigate the content.@@</p>
 					<div id="map2" >
 					<!--<iframe src="draw-routes.html" style="width:100%;max-height:800px;border:0px;"></iframe>-->
 					</div>
@@ -51,14 +21,11 @@
 	</div>
 </div>
 
-	<div class="container-fluid">
+	<div class="container-fluid" id="roadtrip-page">
 		<div class="row" id="cluster1">
 			<div class="col-12 road-video-segment" style="position:relative;">
-				<h1 style="position: absolute;color:white;top:30%;left:50%;z-index: 21; transform:translate(-50%,-50%);font-size: 100px;">State of Hate</h1>
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/1-10WEST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+				<h1 style="position: absolute;color:white;top:30%;left:50%;z-index: 21; transform:translate(-50%,-30%);font-size: 100px;">State of Hate</h1>
+				{% include roadtrip-video.html video="01_10WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -66,21 +33,11 @@
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="twenty-nine-palms-ca">
 					<h2 class="text-left">The Virginian Cocktails</h2>
-					<img class="img-fluid" src="./assets/images/Martinez_TwentyninePalms_4.jpg" style="max-width: 1200px;">
-					<p class="img-caption">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.<br>Lenny Martinez/News21</p>
+					{% include roadtrip-location.html image="martinez_twentyninepalms" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
 					<br>
-{% include roadtrip-talkie.html name="Moove over" image="Martinez_TwentyninePalms_1" description="describe the people in the talkie" %}
+					{% include roadtrip-talkie.html name="Kari Wilson" image="martinez_talkie_twentyninepalms_1" description="Kari Wilson, 26, is a bartender at The Virginian Bar in Twentynine Palms, California." %}
 					<br>
-					<div class="row">
-						<div class="col-6">
-						<img class="img-fluid" src="./assets/images/Martinez_TwentyninePalms_3.jpg">	
-						</div>
-						<div class="col-6">
-							<h3>Meet Laurette Rogers and Wedda Warrick</h3>
-							<p>Laurette Rogers (left) and Wedda Warrick have been drinking partners for close to three years.</p>
-							<button class="btn btn-primary">SOUND CITE &THORN;</button>
-						</div>
-					</div><!--end of talkie row-->
+					{% include roadtrip-talkie.html name="Laurette Rogers and Wedda Warrick" image="martinez_talkie_twentyninepalms_2" description="Laurette Rogers (left) and Wedda Warrick have been drinking partners for close to three years." %}
 					<br>
 				</div>
 			</div> <!--end of content column-->
@@ -91,50 +48,34 @@
 
 		<div class="row" id="cluster3">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/3-395NORTH.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
-			</div> <!--end of columns-->
+			{% include roadtrip-video.html video="02_395NORTH" %}
+			</div> <!-- end of road-video-segment -->
 		</div>	<!--end of cluster1 div-->
 
 		<div class="row" id="cluster4">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="olancha-ca">
-					<h2 class="text-left">Gus's Fresh Jerky</h2>
-					<img class="img-fluid" src="http://via.placeholder.com/1200x675" style="max-width: 1200px;">
-					<p class="img-caption">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.<br>Lenny Martinez/News21</p>
+					<h2 class="text-left ">Gus's Fresh Jerky</h2>
+					{% include roadtrip-location.html image="martinez_olancha" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
 					<br>
-					<div class="row">
-						<div class="col-6">
-						<img class="img-fluid" src="http://via.placeholder.com/1200x675">	
-						</div>
-						<div class="col-6">
-							<h3>Meet Nora</h3>
-							<p>@@.</p>
-							<button class="btn btn-primary">SOUND CITE &THORN;</button>
-						</div>
-					</div> <!--end of content row-->
-					<br>
-					<div class="row">
-						<div class="col-6">
-						<img class="img-fluid" src="./assets/images/Martinez_TwentyninePalms_3.jpg">	
-						</div>
-						<div class="col-6">
-							<h3>Meet Laurette Rogers and Wedda Warrick</h3>
-							<p>Laurette Rogers (left) and Wedda Warrick have been drinking partners for close to three years.</p>
-							<button class="btn btn-primary">SOUND CITE &THORN;</button>
-						</div>
-					</div>
+					{% include roadtrip-talkie.html name="Nora Berguem" image="martinez_talkie_olancha_1" description="She’s a sociology major at Whittier College in Whittier, Calif. She spends her summers working at Gus’s Fresh Jerky as a cashier." %}
 					<br>
 				</div><!--end of content stop-->
 				<div class="content-stop" id="manzanar-ca">
-					<h2 class="text-left">5. Content for Manzanar will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<h2 class="text-left">Manzanar National Historic Site</h2>
+					{% include roadtrip-location.html image="martinez_manzanar" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
+					<br>
+					{% include roadtrip-talkie.html name="Elizabeth and Terry Vance" image="martinez_talkie_manzanar_1" description="Elizabeth and Terry Vance have been divorced for more than 20 years, but they still travel together. A recent trip brought them to Manzanar Historic Site." %}
+					<br>
+					{% include roadtrip-talkie.html name="Mina Monden" image="martinez_talkie_manzanar_2" description="Mina Monden visited the Manzanar Historic Site with her nephews, who were traveling from Japan." %}
+					<br>
+				
 				</div><!--end of content stop-->
 				<div class="content-stop" id="bishop-ca">
 					<h2 class="text-left">6. Content for Bishop will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					{% include roadtrip-location.html image="Martinez_Bishop_4" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
+					<br>
+					<p>@@ STEPHEN's VIDEO WILL GO HERE@@</p>
 				</div><!--end of content stop-->
 			</div> <!--end of content column-->
 			<div class="col-lg-3">
@@ -144,10 +85,7 @@
 
 		<div class="row" id="cluster5">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/7-50EAST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="03_50EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -169,10 +107,7 @@
 
 		<div class="row" id="cluster7">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/10-80EAST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="04_90EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -198,10 +133,7 @@
 
 		<div class="row" id="cluster9">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/14-90EAST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="05_80EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -223,10 +155,7 @@
 
 		<div class="row" id="cluster11">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/17-79SOUTH.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="06_79SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -244,10 +173,7 @@
 
 		<div class="row" id="cluster13">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/19-80EAST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="07_80EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -269,10 +195,7 @@
 
 		<div class="row" id="cluster15">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/22-90EAST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="08_90EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -298,10 +221,7 @@
 
 		<div class="row" id="cluster17">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/26-270SOUTH.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="09_270SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -319,10 +239,7 @@
 
 		<div class="row" id="cluster19">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/28-64EAST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="10_64EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -348,10 +265,7 @@
 
 		<div class="row" id="cluster21">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/32-40WEST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="11_40WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -373,10 +287,7 @@
 
 		<div class="row" id="cluster23">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/35-66WEST.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="12_66WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -414,10 +325,7 @@
 
 		<div class="row" id="cluster25">
 			<div class="col-12 road-video-segment">
-				<video class="driving-video" muted autoplay loop>
-				  <source src="./assets/video/roadvideo/42-87SOUTH.mp4" type="video/mp4">
-				  Your browser does not support HTML5 video.
-				</video>
+			{% include roadtrip-video.html video="13_87SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -1874,6 +1782,3 @@
         }
         }, {offset: '50%'});
     </script>
-   
-</body>
-</html>

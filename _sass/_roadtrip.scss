@@ -1,7 +1,15 @@
-body{
-	background-color: #efeee8;
-	color: #171717;
-}
+$sansserif: Roboto, 'Helvetica Neue', helvetica, arial, sans-serif;
+$herofont: Roboto, 'Helvetica Neue', helvetica, arial, sans-serif;
+$captionfont: 'Roboto Condensed', Georgia, Times, serif;
+$bodytext: 'EB Garamond',  Georgia, Times, serif;
+
+$font-frank: 'Frank Ruhl Libre', Georgia, Times, serif;;
+$font-avheavy: 'AvenirNext-Heavy', arial, sans-serif;
+$font-avbold: 'AvenirNext-Bold', arial, sans-serif;
+$font-source: 'Source Code Pro', monospace;
+$font-oswald: 'Oswald', helvetica, arial, sans-serif;
+$font-garamond: 'EB Garamond',  Georgia, Times, serif;
+
 .filler {
 	background-color: yellow;
 	height:600px;
@@ -72,12 +80,44 @@ height: 30px;
 	width:100% !important;
 }
 
-  .road-video-segment {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
+.road-video-segment {
+padding-left: 0px !important;
+padding-right: 0px !important;
+}
+
+.driving-video {
+	position: relative;
+	z-index: 20;
+	width: 100vw;
+}
+
+.img-caption {
+	font-style: italic; 
+}
+
+#roadtrip-page {
+	font-family: $font-garamond;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-avheavy;
+		text-transform: uppercase;
+		letter-spacing: 0.01rem;
 	}
-	.driving-video {
-		position: relative;
-		z-index: 20;
-		width: 100vw;
+	h2 {
+	font-size: 3em;
 	}
+	p {
+	line-height: 1.5;
+	}
+
+	.travel-info {
+		line-height: 1.5;
+			span#city-name {
+				font-family: $font-avbold !important;
+			}
+	}
+	.talkie-head {
+	font-family: $font-oswald;
+	}
+}
+

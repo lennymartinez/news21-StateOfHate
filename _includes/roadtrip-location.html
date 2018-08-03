@@ -1,0 +1,9 @@
+{% comment %}
+
+To include in story: {% include roadtrip-location.html image="Name of the people in the talkie" caption="caption goes here; it's used for alt text too." byline="who took the photo" %}
+
+
+{% endcomment %}
+
+<img class="img-fluid" src="/img/roadtrip/locations/{{ include.image }}.jpg" style="width:100%;" alt="{{ include.caption }}">
+<p><span class="img-caption">{{ include.caption }}</span><br>{{ include.byline }}/News21</p>
