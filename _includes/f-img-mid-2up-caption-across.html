@@ -1,0 +1,29 @@
+{% comment %}
+To include in story: {% include f-img-mid-2up-caption-across.html image1="coast" image2="coast2" link="blah" text="Very nice story" %} 
+
+{% endcomment %}
+
+
+
+<div class="container front-text story-body" style="padding-bottom: 20px;">
+  <div class="row">
+
+	<div class="col-sm-4 col-sm-offset-2" style="padding-bottom: 10px;">
+
+      <img src="/img/front/{{ include.image1 }}.jpg" class="img-responsive" alt="" />
+    </div>
+
+
+    <div class="col-sm-4">
+
+<img src="/img/front/{{ include.image2 }}.jpg" class="img-responsive" alt="" />
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+    <p class="caption"><a href="{{ include.link }}">{{ include.text }}</a></p>
+  </div>
+</div>
+

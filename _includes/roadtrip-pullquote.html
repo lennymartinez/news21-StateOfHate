@@ -1,0 +1,16 @@
+{% comment %}
+
+To include in story: {% include roadtrip-pullquote.html name="Name of the people in the pullquote piece" image="image name in roadtrip/talkie directory" pullquote="describe the people in the talkie" %}
+
+
+{% endcomment %}
+
+<div class="row">
+	<div class="col-6">
+	<img src="/img/roadtrip/talkie/{{ include.image }}.jpg" class="img-fluid" alt="" />
+	</div>
+	<div class="col-6">
+		<h3 class="talkie-head">Meet {{ include.name }}</h3>
+		<p>{{ include.pullquote }}</p>
+	</div>
+</div><!--end of talkie row-->

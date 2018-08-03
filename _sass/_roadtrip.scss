@@ -112,9 +112,10 @@ padding-right: 0px !important;
 
 	.travel-info {
 		line-height: 1.5;
-			span#city-name {
+			span#city-name, span#state-name, span#population {
 				font-family: $font-avbold !important;
 			}
+
 	}
 	.talkie-head {
 	font-family: $font-oswald;
