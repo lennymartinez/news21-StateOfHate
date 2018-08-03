@@ -1,0 +1,18 @@
+{% comment %}
+
+To include in story: {% include m-interactive-js.html path="blah" %}
+
+{% endcomment %}
+
+
+
+<style>
+    iframe {
+        width:100%;
+    }
+</style>
+<div class="container-full">
+
+<iframe src="/interactives/{{ include.path }}.html" scrolling="yes" frameborder="0" height="{{ include.height }}"></iframe>
+
+</div>

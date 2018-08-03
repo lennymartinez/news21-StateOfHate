@@ -1,0 +1,21 @@
+{% comment %}
+
+To include in story: {% include s-vid-full.html video="102417490" caption="I am the caption" %}
+
+{% endcomment %}
+
+{% include boxbreaker.html %}
+<div class="pusher">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="//player.vimeo.com/video/{{ include.video }}?title=0&amp;byline=0&amp;portrait=0&amp;color=a0181d" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+  </div>
+  {% if include.caption %}
+  <div class="container">
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1">
+  <p class="caption">{{ include.caption }}</p>
+  {% include boxbreaker.html %}
+  {% endif %}
+</div>
+{% include boxenter.html %}

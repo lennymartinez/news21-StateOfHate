@@ -1,0 +1,25 @@
+{% comment %}
+To include in story: {% include f-img-lead.html image1="coast" image2="coast2" %} 
+
+{% endcomment %}
+
+
+
+<div class="container-fluid" style="padding-bottom: 20px; padding-top: 10px;">
+  <div class="row">
+
+	<div class="col-sm-6" style="padding: 0;">
+
+      <img src="/img/front/{{ include.image1 }}.jpg" class="img-responsive" alt="" />
+    </div>
+
+
+    <div class="col-sm-6" style="padding: 0;">
+
+<img src="/img/front/{{ include.image2 }}.jpg" class="img-responsive" alt="" />
+
+    </div>
+
+</div>
+</div>
+

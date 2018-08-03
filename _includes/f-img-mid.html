@@ -1,0 +1,25 @@
+{% comment %}
+
+To include in story: {% include f-img-mid.html image="blah" caption="I am the caption" link="/blah/" %}
+
+{% endcomment %}
+
+
+{% include boxbreaker.html %}
+
+
+<div class="container pusher">
+<div class="row">
+<div class="col-md-8 col-md-offset-2 front-text story-body">
+
+  <img src="/img/front/{{ include.image }}.jpg" class="img-responsive" alt="" />
+
+
+  {% if include.caption %}
+  <p class="caption"><a href="{{ include.link }}">{{ include.caption }}</a></p>
+  {% endif %}
+</div></div></div>
+
+
+
+{% include boxenter-front.html %}

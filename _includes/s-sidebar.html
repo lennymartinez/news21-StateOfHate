@@ -1,0 +1,20 @@
+{% comment %}
+
+To include: {% include s-sidebar.html slug="example" %}
+
+Make sure there's an entry in the file _data/sidebars.yml with the slug, title and link.
+
+{% endcomment %}
+
+<div class="sections pull-right col-sm-offset-1">
+
+<h3>Related Stories</h3>
+
+<ul>
+{% for title in site.data.sidebars.[include.slug] %}
+
+<li><a href="/{{ title['link'] }}">{{ title['title'] }}</a></li>
+
+{% endfor %}
+</ul>
+</div>

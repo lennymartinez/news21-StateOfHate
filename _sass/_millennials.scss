@@ -1,0 +1,50 @@
+.panel {
+	margin-bottom: 0;
+	border: none;
+}
+
+.panel-heading {
+	border-bottom: none;
+	background-color: $background;
+	padding: 0;
+}
+
+.panel-default {
+	background-color: $background;
+}
+
+.panel-default>.panel-heading {
+	background-color: $background;	
+}
+
+.m-top-overlay {
+	position: relative;
+}
+
+.m-overlay h2 {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 90%;
+  background-color: rgba(255,255,255,0.4);
+  padding-left: 20px;
+}
+.m-overlay a {
+  color: $accent;
+  font-family: $herofont;
+}
+
+.chevron-overlay {
+	position: absolute;
+	bottom: 10px;
+	right: 30px;
+}
+
+.chevron-overlay p {
+	font-size: 42px;
+}
+
+.millennials-story {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

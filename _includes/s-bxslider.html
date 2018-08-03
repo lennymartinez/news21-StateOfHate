@@ -1,0 +1,24 @@
+{% comment %}
+
+To include: {% include bxslider.html uniqueid="nucla" %}
+
+{% endcomment %}
+
+{% include boxbreaker.html %}
+<div class="pusher">
+<ul class="{{ include.uniqueid }}">
+
+{% for pic in site.data.[include.uniqueid] %}
+  <li><img src="/slideshows/{{ include.uniqueid }}/{{ pic.image }}" title="{{ pic.caption }}"/></li>
+{% endfor %}
+
+</ul>
+<script>$(document).ready(function(){
+  $('.{{ include.uniqueid }}').bxSlider({
+    captions: true,
+	autoControls: true
+  });
+});</script>
+
+</div>
+{% include boxenter.html %}
