@@ -44,9 +44,6 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
 }
 
 .marker {
-  background-color: #F9423A;
-  width: 10px;
-  height: 10px;
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden !important;
@@ -55,6 +52,12 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
 background-color:blue;
 width: 30px;
 height: 30px;
+}
+
+.marker-visited {
+	background-color: #F9423A;
+  width: 10px;
+  height: 10px;
 }
 
 .travel-info {
@@ -71,6 +74,15 @@ height: 30px;
 
 @media (max-width: 1024px){
 	#map-nav{
+		display: none;
+	}
+	#modalNavigation{
+		display: none;
+	}
+}
+
+@media (min-width: 1025px){
+	#roadtrip-bar-mobile{
 		display: none;
 	}
 }
@@ -120,5 +132,18 @@ padding-right: 0px !important;
 	.talkie-head {
 	font-family: $font-oswald;
 	}
+
+	#roadtrip-bar-mobile{
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		height: 100px;
+		z-index: 22;
+		background-color: yellow;
+	}
 }
 
+.roadtrip-video {
+	width: 1200px;
+	height: 675px;
+}

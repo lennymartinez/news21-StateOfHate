@@ -21,11 +21,47 @@
 	</div>
 </div>
 
+<div class="modal fade navigation-mobile-modal" id="mobileModalNav" tabindex="-1" role="dialog" aria-label="mobileModalNav" aria-hidden="false" >
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="container-fluid">
+				<div class="row">
+				<div class="col-12">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		</button>
+					<h3>@@State of Hate Road Trip@@</h3>
+					<p>@@Explainer of how to use this map to navigate the content.@@</p>
+					<ul class="list-group">
+					  <li class="list-group-item">I-10 West</li>
+					  <li class="list-group-item">
+							<div class="list-group list-group-flush">
+							<a href="#twenty-nine-palms-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Twentynine Palms, California</a>
+							</div>
+						</li>
+						<li class="list-group-item">H-395 North</li>
+					  <li class="list-group-item">
+							<div class="list-group list-group-flush">
+							<a href="#olancha-ca" class="list-group-item list-group-item-action">Olancha, California</a>
+							<a href="#manzanar-ca" class="list-group-item list-group-item-action">Manzanar National Historic Site, California</a>
+							<a href="#bishop-ca" class="list-group-item list-group-item-action">Manzanar National Historic Site, California</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 	<div class="container-fluid" id="roadtrip-page">
 		<div class="row" id="cluster1">
 			<div class="col-12 road-video-segment" style="position:relative;">
-				<h1 style="position: absolute;color:white;top:30%;left:50%;z-index: 21; transform:translate(-50%,-30%);font-size: 100px;">State of Hate</h1>
-				{% include roadtrip-video.html video="01_10WEST" %}
+				<h1 style="position: absolute;color:white;top:30%;left:50%;z-index: 21; transform:translate(-50%,-30%);font-size: 5em;">State of Hate</h1>
+				{% include roadtrip-drivevideo.html video="01_10WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -48,7 +84,7 @@
 
 		<div class="row" id="cluster3">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="02_395NORTH" %}
+			{% include roadtrip-drivevideo.html video="02_395NORTH" %}
 			</div> <!-- end of road-video-segment -->
 		</div>	<!--end of cluster1 div-->
 
@@ -69,6 +105,8 @@
 					<br>
 					{% include roadtrip-talkie.html name="Mina Monden" image="martinez_talkie_manzanar_2" description="Mina Monden visited the Manzanar Historic Site with her nephews, who were traveling from Japan." %}
 					<br>
+					{% include roadtrip-talkie.html name="Bernadette Johnson" image="martinez_talkie_manzanar_3" description="Bernadette Johnson is the superintendent of the National Park Service at Manzanar." %}
+					<br>
 				
 				</div><!--end of content stop-->
 				<div class="content-stop" id="bishop-ca">
@@ -86,7 +124,7 @@
 
 		<div class="row" id="cluster5">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="03_50EAST" %}
+			{% include roadtrip-drivevideo.html video="03_50EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -115,23 +153,31 @@
 
 		<div class="row" id="cluster7">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="04_90EAST" %}
+			{% include roadtrip-drivevideo.html video="04_80EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
 		<div class="row" id="cluster8">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="salt-lake-city-ut">
-					<h2 class="text-left">11. Content for Salt Lake City City will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<h2 class="text-left">Salt Lake City, Utah</h2>
+					{% include roadtrip-video.html video="filler" %}
 				</div>
 				<div class="content-stop" id="little-america-wy">
-					<h2 class="text-left">12. Content for Little America will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<h2 class="text-left">Little America Hotel, Wyoming</h2>
+					{% include roadtrip-location.html image="martinez_littleamerica_4" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
+					<br>
+					{% include roadtrip-talkie.html name="Mike and Tirzah Smith" image="martinez_talkie_littleamerica" description="@@" %}
+					<br>
 				</div>
 				<div class="content-stop" id="laramie-wy">
-					<h2 class="text-left">13. Content for Laramie will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<h2 class="text-left">Laramie, Wyoming</h2>
+					{% include roadtrip-location.html image="martinez_laramie_3" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
+					<br>
+					{% include roadtrip-talkie.html name="Buck Ward" image="martinez_talkie_laramie_3" description="Buck is one of the Buckhorn Bar & Parlor's 3 managers." %}
+					<br>
+					@@ INSERT A diptych talkie of the couple. @@
+					<br>
 				</div>
 			</div> <!--end of content column-->
 			<div class="col-lg-3">
@@ -141,19 +187,23 @@
 
 		<div class="row" id="cluster9">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="05_80EAST" %}
+			{% include roadtrip-drivevideo.html video="05_90EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
 		<div class="row" id="cluster10">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="keystone-sd">
-					<h2 class="text-left">15. Content for Keystone will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<h2 class="text-left">Mount Rushmore</h2>
+					<iframe src="https://player.vimeo.com/video/133608685?color=99cd4f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/133608685">Eyeo 2015 &ndash; Amanda Cox</a> from <a href="https://vimeo.com/eyeofestival">Eyeo Festival  //  INSTINT</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 				</div>
 				<div class="content-stop" id="mitchell-sd">
-					<h2 class="text-left">16. Content for Mitchell will go here</h2>
-					<div class="filler">&nbsp;</div><br>
+					<h2 class="text-left">The Corn Palace</h2>
+					{% include roadtrip-location.html image="martinez_mitchell_1" caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." byline="Lenny Martinez Dominguez" %}
+					<br>
+					{% include roadtrip-talkie.html name="Lauren and Devon Langston" image="martinez_talkie_mitchell_1" description="Lauren and Devon were visiting the Corn Palace from Virginia." %}
+					<br>
 				</div>
 			</div> <!--end of content column-->
 			<div class="col-lg-3">
@@ -163,7 +213,7 @@
 
 		<div class="row" id="cluster11">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="06_79SOUTH" %}
+			{% include roadtrip-drivevideo.html video="06_79SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -181,7 +231,7 @@
 
 		<div class="row" id="cluster13">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="07_80EAST" %}
+			{% include roadtrip-drivevideo.html video="07_80EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -203,7 +253,7 @@
 
 		<div class="row" id="cluster15">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="08_90EAST" %}
+			{% include roadtrip-drivevideo.html video="08_90EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -229,7 +279,7 @@
 
 		<div class="row" id="cluster17">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="09_270SOUTH" %}
+			{% include roadtrip-drivevideo.html video="09_270SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -247,7 +297,7 @@
 
 		<div class="row" id="cluster19">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="10_64EAST" %}
+			{% include roadtrip-drivevideo.html video="10_64EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -273,7 +323,7 @@
 
 		<div class="row" id="cluster21">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="11_40WEST" %}
+			{% include roadtrip-drivevideo.html video="11_40WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -295,7 +345,7 @@
 
 		<div class="row" id="cluster23">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="12_66WEST" %}
+			{% include roadtrip-drivevideo.html video="12_66WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -333,7 +383,7 @@
 
 		<div class="row" id="cluster25">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-video.html video="13_87SOUTH" %}
+			{% include roadtrip-drivevideo.html video="13_87SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -358,8 +408,18 @@
 					</div>
 			</div><!--end of interactive map columns-->
 		</div>	<!--end of cluster2 div-->
-
+		<div class="row">
+			<div class="col-12" style="padding-left:0px !important;padding-right: 0px !important">
+				<a data-toggle="modal" data-target="#mobileModalNav">
+				<div id="roadtrip-bar-mobile">
+					<br>
+				<h4 class=text-center><span id="highway-name2">Interstate 10 W</span></h4>
+				</div>
+				</a>
+			</div>
+		</div>
 	</div> <!--end of container-fluid -->
+
 	<script>
 
 		var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
@@ -1075,21 +1135,24 @@
         console.log('waypoint');
         map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
         map.setLayoutProperty('route1', 'visibility', 'visible');
-        $('#twenty-nine-palms').addClass('marker-active');
+        $('#twenty-nine-palms').addClass('marker-active marker-visited');
         $('#city-name').text('Twentyine Palms');
         $('#state-name').text('California');
         $('#stop-population').text('26,452');
+        $('#highway-name2').text('Interstate 10 W');
     	} else
         {
           console.log('going back');
           map.flyTo({center: [longStart[0],latStart[0]], zoom: 6, speed:1});
           map.setLayoutProperty('route1', 'visibility', 'none');
           $('#twenty-nine-palms').removeClass('marker-active');
+          $('#phoenix').addClass('marker-visited');
 	    		$('#city-name').text('Phoenix');
 	        $('#state-name').text('Arizona');
 	        $('#stop-population').text('1,555,324');
+	        $('#highway-name2').text('Interstate 10 W');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop2.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1102,6 +1165,7 @@
         $('#highway-name').text('Highway 395 North');
         $('#city-name').text('Olancha');
         $('#stop-population').text('203');
+        $('#highway-name2').text('Highway 395 N');
     	} else
         {
           console.log('going back');
@@ -1112,8 +1176,9 @@
 					$('#city-name').text('Twentyine Palms');
 					$('#stop-population').text('26,452');
 					$('#highway-name').text('Interstate 10 West');
+					$('#highway-name2').text('Interstate 10 W');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop3.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1135,7 +1200,7 @@
       		$('#city-name').text('Olancha');
         	$('#stop-population').text('203'); 
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop4.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1157,13 +1222,13 @@
       		$('#city-name').text('Manzanar National Historic Site');
         	$('#stop-population').text('--');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop5.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
         console.log('going through');
-        map.flyTo({center: [longStart[5],latStart[5]], zoom: 6, speed:1});
+        map.flyTo({center: [longStart[5],latStart[5]], zoom: 8, speed:1});
         map.setLayoutProperty('route5', 'visibility', 'visible');
         $('#virginia-city').addClass('marker-active');
         $('#bishop').removeClass('marker-active');
@@ -1171,6 +1236,7 @@
     		$('#stop-population').text('711');
     		$('#state-name').text('Nevada');
     		$('#highway-name').text('Highway 50 East');
+    		$('#highway-name2').text('Highway 50 E');
     	} else
         {
           console.log('going back');
@@ -1182,14 +1248,15 @@
       		$('#stop-population').text('3,760');
       		$('#state-name').text('California');
       		$('#highway-name').text('Highway 395 North');
+      		$('#highway-name2').text('Highway 395 N');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop6.waypoint(function(direction) {    	
     	if(direction == 'down')
         {
         console.log('going through');
-        map.flyTo({center: [longStart[6],latStart[6]], zoom: 6, speed:1});
+        map.flyTo({center: [longStart[6],latStart[6]], zoom:8, speed:1});
         map.setLayoutProperty('route6', 'visibility', 'visible');
         $('#stagecoach').addClass('marker-active');
         $('#virginia-city').removeClass('marker-active');
@@ -1198,14 +1265,14 @@
     	} else
         {
           console.log('going back');
-          map.flyTo({center: [longStart[5],latStart[5]], zoom: 6, speed:1});
+          map.flyTo({center: [longStart[5],latStart[5]], zoom: 8, speed:1});
           map.setLayoutProperty('route6', 'visibility', 'none');
           $('#stagecoach').removeClass('marker-active');
       		$('#virginia-city').addClass('marker-active');
 					$('#city-name').text('Virginia City');
     			$('#stop-population').text('711');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop7.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1219,10 +1286,11 @@
         $('#city-name').text('Salt Lake City');
         $('#stop-population').text('191,446');
         $('#highway-name').text('Interstate 80 East');
+        $('#highway-name2').text('Interstate 80 E');
     	} else
         {
           console.log('going back');
-          map.flyTo({center: [longStart[6],latStart[6]], zoom: 6, speed:1});
+          map.flyTo({center: [longStart[6],latStart[6]], zoom: 8, speed:1});
           map.setLayoutProperty('route7', 'visibility', 'none');
           $('#stagecoach').removeClass('marker-active');
       		$('#salt-lake-city').addClass('marker-active');
@@ -1230,8 +1298,9 @@
     			$('#stop-population').text('1,703');
     			$('#state-name').text('Nevada');
     			$('#highway-name').text('Highway 50 East');
+    			$('#highway-name2').text('Highway 50 E');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop8.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1255,7 +1324,7 @@
 	        $('#city-name').text('Salt Lake City');
 	        $('#stop-population').text('191,446');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop9.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1277,7 +1346,7 @@
 	        $('#city-name').text('Little America');
         	$('#stop-population').text('86');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop10.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1291,6 +1360,7 @@
         $('#city-name').text('Keystone');
         $('#stop-population').text('318');
         $('#highway-name').text('Interstate 90 East');
+        $('#highway-name2').text('Interstate 90 E');
     	} else
         {
           console.log('going back');
@@ -1302,8 +1372,9 @@
 					$('#stop-population').text('32,096');
 					$('#highway-name').text('Interstate 80 East');
 					$('#state-name').text('Wyoming');
+					$('#highway-name2').text('Interstate 80 E');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop11.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1325,7 +1396,7 @@
 					$('#city-name').text('Keystone');
 					$('#stop-population').text('318');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop12.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1339,6 +1410,7 @@
         $('#city-name').text('Tekamah');
         $('#highway-name').text('Highway 79 South');
         $('#stop-population').text('1,662');
+        $('#highway-name2').text('Highway 79 S');
 
     	} else
         {
@@ -1351,8 +1423,9 @@
 					$('#stop-population').text('318');
 					$('#highway-name').text('Interstate 90 East');
 					$('#state-name').text('South Dakota');
+					$('#highway-name2').text('Interstate 90 E');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop13.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1364,8 +1437,9 @@
         $('#tekamah').removeClass('marker-active');
         $('#state-name').text('Iowa');
         $('#city-name').text('Perry');
-        $('#highway-name').text('Highway 80 East');
+        $('#highway-name').text('Interstate 80 East');
         $('#stop-population').text('7,876');
+        $('#highway-name2').text('Interstate 80 E');
     	} else
         {
           console.log('going back');
@@ -1377,8 +1451,9 @@
 	        $('#city-name').text('Tekamah');
 	        $('#highway-name').text('Highway 79 South');
 	        $('#stop-population').text('1,662');
+	        $('#highway-name2').text('Hgihway 79 S');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop14.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1402,7 +1477,7 @@
 					$('#city-name').text('Perry');
 					$('#stop-population').text('7,876');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop15.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1416,6 +1491,7 @@
       	$('#city-name').text('Fremont');
       	$('#stop-population').text('16,388');
       	$('#highway-name').text('Interstate 90 East');
+      	$('#highway-name2').text('Interstate 90 E');
     	} else
         {
           console.log('going back');
@@ -1427,8 +1503,9 @@
 	      	$('#city-name').text('Carbon Hill');
 	      	$('#stop-population').text('380');
 	      	$('#highway-name').text('Interstate 80 East');
+	      	$('#highway-name2').text('Interstate 80 E');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop16.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1452,7 +1529,7 @@
 					$('#city-name').text('Fremont');
 					$('#stop-population').text('16,388');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop17.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1474,7 +1551,7 @@
       		$('#city-name').text('Harrisburg');
       		$('#stop-population').text('49,160');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop18.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1488,6 +1565,7 @@
       	$('#city-name').text('Washington');
       	$('#stop-population').text('659,009');
       	$('#highway-name').text('Interstate 270 South');
+      	$('#highway-name2').text('Interstate 270 S');
     	} else
         {
           console.log('going back');
@@ -1499,8 +1577,9 @@
 					$('#city-name').text('Gettysburg');
 					$('#stop-population').text('7,643');
 					$('#highway-name').text('Interstate 90 East');
+					$('#highway-name2').text('Interstate 90 E');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop19.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1514,6 +1593,7 @@
       	$('#city-name').text('Beckley');
       	$('#stop-population').text('17,348');
       	$('#highway-name').text('Interstate 64 East');
+      	$('#highway-name2').text('Interstate 64 E');
     	} else
         {
           console.log('going back');
@@ -1525,8 +1605,9 @@
 					$('#city-name').text('Washington');
 					$('#stop-population').text('659,009');
 					$('#highway-name').text('Interstate 270 South');
+					$('#highway-name2').text('Interstate 270 S');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop20.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1550,7 +1631,7 @@
 					$('#city-name').text('Beckley');
 					$('#stop-population').text('17,348');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop21.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1572,7 +1653,7 @@
       		$('#city-name').text('Mallie');
       		$('#stop-population').text('15,884'); 
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop22.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1586,6 +1667,7 @@
         $('#state-name').text('Tennessee');
         $('#highway-name').text('Interstate 40 West');
       	$('#stop-population').text('655,857');
+      	$('#highway-name2').text('Interstate 40 W');
     	} else
         {
           console.log('going back');
@@ -1597,8 +1679,9 @@
       		$('#stop-population').text('8,111');
       		$('#state-name').text('Kentucky');
       		$('#highway-name').text('Interstate 64 East');
+      		$('#highway-name2').text('Interstate 64 E');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop23.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1622,7 +1705,7 @@
 					$('#state-name').text('Tennessee');
 					$('#stop-population').text('655,857');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop24.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1636,6 +1719,7 @@
         $('#state-name').text('Oklahoma');
       	$('#stop-population').text('620,015');
       	$('#highway-name').text('Route 66 West');
+      	$('#highway-name2').text('Route 66 W');
     	} else
         {
           console.log('going back');
@@ -1647,8 +1731,9 @@
         	$('#state-name').text('Arkansas');
       		$('#stop-population').text('23,1555');
       		$('#highway-name').text('Interstate 40 West');
+      		$('#highway-name2').text('Interstate 40 W');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop25.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1670,7 +1755,7 @@
 					$('#city-name').text('Oklahoma City');
 					$('#stop-population').text('620,015');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop26.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1695,7 +1780,7 @@
 					$('#stop-population').text('12,426');
 					$('#state-name').text('Oklahoma');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop27.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1719,7 +1804,7 @@
 					$('#state-name').text('Texas');
 					$('#stop-population').text('197,570');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop28.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1741,7 +1826,7 @@
 					$('#city-name').text('Albuquerque');
 					$('#stop-population').text('556,859');
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop29.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1764,7 +1849,7 @@
 					$('#city-name').text('Grants');
 					$('#stop-population').text('9,263'); 
         }
-        }, {offset: '15%'});
+        }, {offset: '45%'});
 
 			$stop30.waypoint(function(direction) {    	
     	if(direction == 'down')
@@ -1777,6 +1862,7 @@
 				$('#city-name').text('Phoenix');
     		$('#stop-population').text('26452');
     		$('#highway-name').text('Highway 87 South');
+    		$('#highway-name2').text('Highway 87 S');
     	} else
         {
           console.log('going back');
@@ -1787,6 +1873,7 @@
 					$('#city-name').text('Sanders');
         	$('#highway-name').text('Route 66 West');
       		$('#stop-population').text('574');
+      		$('#highway-name2').text('Route 66 W');
         }
         }, {offset: '50%'});
     </script>
