@@ -1,15 +1,15 @@
 {% comment %}
 
-To include in story: {% include roadtrip-talkie.html name="Name of the people in the talkie" image="image name in roadtrip/talkie directory" description="describe the people in the talkie" %}
+To include in story: {% include roadtrip-talkie.html name="Name of the people in the talkie" image="image name in roadtrip/talkie directory" description="describe the people in the talkie" caption="" %}
 
 
 {% endcomment %}
 
 <div class="row">
-	<div class="col-6">
-	<img src="/img/roadtrip/talkie/{{ include.image }}.jpg" class="img-fluid" alt="" />
+	<div class="col-lg-6 col-sm-12">
+	<img src="/img/roadtrip/talkie/{{ include.image }}.jpg" class="img-fluid" alt="{{ include.caption }}" />
 	</div>
-	<div class="col-6">
+	<div class="col-lg-6 col-sm-12">
 		<h3 class="talkie-head">Meet {{ include.name }}</h3>
 		<p>{{ include.description }}</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>

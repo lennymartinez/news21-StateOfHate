@@ -25,6 +25,7 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
 
 .content-stop {
 	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 #map-nav {
@@ -47,6 +48,9 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden !important;
+  background-color: #F9423A;
+  width: 10px;
+  height: 10px;
 }
 .marker-active{
 background-color:blue;
@@ -139,11 +143,17 @@ padding-right: 0px !important;
 		bottom: 0;
 		height: 100px;
 		z-index: 22;
-		background-color: yellow;
+		background-color: green;
 	}
 }
 
 .roadtrip-video {
 	width: 1200px;
 	height: 675px;
+}
+
+.missing-content {
+	width: 1200px;
+	height: 675px;
+	background-color: yellow
 }
