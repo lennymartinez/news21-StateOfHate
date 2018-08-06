@@ -1,11 +1,11 @@
 {% comment %}
 
-To include in story: {% include roadtrip-drivevideo.html video="Name of the people in the talkie" poster=""%}
+To include in story: {% include roadtrip-drivevideo.html video="name of the video file" %}
 
 
 {% endcomment %}
 
-<video class="driving-video" poster="/img/roadtrip/videoposter/{{ include.poster }}" muted autoplay loop preload>
+<video class="driving-video" poster="/img/roadtrip/videoposter/{{ include.video }}.jpg" muted autoplay loop preload>
   <source src="/img/roadtrip/roadvideo/{{ include.video }}.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
