@@ -1,27 +1,12 @@
-$sansserif: Roboto, 'Helvetica Neue', helvetica, arial, sans-serif;
-$herofont: Roboto, 'Helvetica Neue', helvetica, arial, sans-serif;
-$captionfont: 'Roboto Condensed', Georgia, Times, serif;
 $bodytext: 'EB Garamond',  Georgia, Times, serif;
 
 $font-frank: 'Frank Ruhl Libre', Georgia, Times, serif;;
 $font-avheavy: 'AvenirNext-Heavy', arial, sans-serif;
 $font-avbold: 'AvenirNext-Bold', arial, sans-serif;
-$font-source: 'Source Code Pro', monospace;
+$font-robomono: 'Roboto Mono', monospace;
 $font-oswald: 'Oswald', helvetica, arial, sans-serif;
 $font-garamond: 'EB Garamond',  Georgia, Times, serif;
 
-.filler {
-	background-color: yellow;
-	height:600px;
-
-}
-.filler-vid {
-	position:relative;
-	height:1080px;
-	background-color: #F9423A;
-	width:100%;
-	z-index:20;
-}
 
 .content-stop {
 	margin-top: 50px;
@@ -29,12 +14,13 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
 }
 
 #map-nav {
+	font-family: $font-robomono;
 	position: fixed;
 	width: 375px;
-	top: 100px;
+	top: 110px;
 	right: 20px;
 	z-index:1;
-	border: 1px solid #1717;
+	border: 1px solid #171717;
 	color: #fff;
 	background-color: #171717;
 }
@@ -53,19 +39,9 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
   height: 10px;
 }
 .marker-active{
-background-color:blue;
+background-color:#A10D03;
 width: 30px;
 height: 30px;
-}
-
-.marker-visited {
-	background-color: #F9423A;
-  width: 10px;
-  height: 10px;
-}
-
-.travel-info {
-	padding-left: 20px;
 }
 
 .navigation-mapscreen .modal-xl-lenny{
@@ -87,6 +63,9 @@ height: 30px;
 
 @media (min-width: 1025px){
 	#roadtrip-bar-mobile{
+		display: none;
+	}
+	#mobileModalNav {
 		display: none;
 	}
 }
@@ -114,10 +93,10 @@ padding-right: 0px !important;
 #roadtrip-page {
 	font-family: $font-garamond;
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3{
 		font-family: $font-avheavy;
 		text-transform: uppercase;
-		letter-spacing: 0.01rem;
+		letter-spacing: 0.25rem;	
 	}
 	h2 {
 	font-size: 3em;
@@ -128,11 +107,9 @@ padding-right: 0px !important;
 
 	.travel-info {
 		line-height: 1.5;
-			span#city-name, span#state-name, span#population {
-				font-family: $font-avbold !important;
-			}
-
+		font-family: $font-robomono !important;
 	}
+
 	.talkie-head {
 	font-family: $font-oswald;
 	}
@@ -143,7 +120,18 @@ padding-right: 0px !important;
 		bottom: 0;
 		height: 100px;
 		z-index: 22;
-		background-color: green;
+		color: #efeee8;
+		background-color: #171717;
+	}
+
+	.highway-sign {
+	height:30px;
+	}
+
+	.highway-name {
+	margin-top: -20px;
+	margin-bottom: 5px;
+	font-family: $font-robomono;
 	}
 }
 
@@ -156,4 +144,70 @@ padding-right: 0px !important;
 	width: 1200px;
 	height: 675px;
 	background-color: yellow
+}
+
+#mobileModalNav{
+	.roadtrip-mobile-nav-list {
+		font-family: $font-robomono;
+	}
+	.roadtrip-mobile-sign {
+		height:30px;
+	}
+	.roadtrip-mobile-highway {
+		font-weight: 700;
+		background-color: #171717;
+		color: #fff;
+	}
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip, .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+	border-top-color: #171717 !important;
+	border-bottom-color: #171717 !important;
+}
+.mapboxgl-popup-content {
+	font-family: $font-robomono;
+	background-color: #171717;
+	color: #fff;
+}
+.mapboxgl-popup-close-button {
+	color: #fff;
+}
+.roadtrip-popup-content {
+	color: #ffffff !important;
+	padding: 10px;
+	h5 {
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
+	.roadtrip-btn {
+		color:#ffffff;
+		background-color: #A10D03;
+		border-color: #A10D03;
+		font-weight: 500;
+		font-size: 0.6rem;
+	}
+	.roadtrip-btn:hover {
+		color: #A10D03;
+		background-color: #fff;
+	}
+}
+
+.roadtrip-buffer {
+	height:60px !important;
+}
+
+.roadtrip-cover-info {
+	position: absolute;
+	color: #fff !important;
+	top:30%;
+	left:50%;
+	z-index: 21;
+	transform:translate(-50%,-60%);
+	h1 {
+		font-size: 4rem !important;
+	}
+	.roadtrip-intro-deck {
+		font-size: 1.25rem !important;
+		font-family: $font-robomono;
+	}
 }
