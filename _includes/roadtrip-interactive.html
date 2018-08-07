@@ -141,7 +141,7 @@
 		<div class="row" id="cluster1">
 			<div class="col-12 road-video-segment" style="position:relative;">
 				<h1 style="position: absolute;color:white;top:30%;left:50%;z-index: 21; transform:translate(-50%,-30%);font-size: 5em;">State of Hate</h1>
-				{% include roadtrip-drivevideo.html video="01_10WEST" %}
+				{% include roadtrip-drivingvideo.html video="01_10WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -164,7 +164,7 @@
 
 		<div class="row" id="cluster3">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="02_395NORTH" %}
+			{% include roadtrip-drivingvideo.html video="02_395NORTH" %}
 			</div> <!-- end of road-video-segment -->
 		</div>	<!--end of cluster1 div-->
 
@@ -174,7 +174,7 @@
 					<h2 class="text-left ">Gus's Fresh Jerky</h2>
 					{% include roadtrip-location.html image="martinez_olancha" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez"%}
 					<br>
-					{% include roadtrip-talkie.html name="Nora Berguem" image="martinez_talkie_olancha_1" description="She’s a sociology major at Whittier College in Whittier, Calif. She spends her summers working at Gus’s Fresh Jerky as a cashier." caption="@@needs a caption@@"%}
+					{% include roadtrip-talkie.html name="Nora Berguem" image="martinez_talkie_olancha" description="She’s a sociology major at Whittier College in Whittier, Calif. She spends her summers working at Gus’s Fresh Jerky as a cashier." caption="@@needs a caption@@"%}
 					<br>
 				</div><!--end of content stop-->
 				<div class="content-stop" id="manzanar-ca">
@@ -203,7 +203,7 @@
 
 		<div class="row" id="cluster5">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="03_50EAST" %}
+			{% include roadtrip-drivingvideo.html video="03_50EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -211,18 +211,17 @@
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop" id="virginia-city-nv">
 					<h2 class="text-left">Virginia City, Nevada</h2>
-					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
-					<p>Jim's photo of Virginia City</p>
+					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Jim Tuttle" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Wayne Douglas Tarrant" image="martinez_talkie_virginiacity_3" pullquote="'We’re bringing in too many different races. We have too much diversity. Other countries don’t open their border like we do, but now we’re in trouble with Muslims. We don’t really have a problem (with racism) up here. The only time we have problem is when we have some Arabs up here in their dress. They’re in full burka and people get very nervous. They don’t know if they have explosives underneath those outfits. All the merchants up here get nervous. There is a lot of people up here with guns and they’re standing at the ready in case there is a problem. It’s not fear, we’re fearless… I think it’s politics causing the problems. The politicians are causing the problems because of greed.'" caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Wayne Douglas Tarrant" image="martinez_talkie_virginiacity_3" pullquote="@@pull quote text goes here@@" caption="@@needs a caption@@" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Paul Coombes" image="martinez_talkie_virginiacity_1" pullquote="I come from an ethnic family. My daughter, Zoe, is half African-American, so I am very sensitive to the topic of hate. I think all races have a lot of work to do. It’s better than it used to be, but we have a long way to go." caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Paul Coombes" image="martinez_talkie_virginiacity_1" pullquote="@@pullquote content goes here@@" caption="@@needs a caption@@" %}
 				</div>
 				<div class="content-stop" id="stagecoach-nv">
 					<h2 class="text-left">Stagecoach, Nevada</h2>
 					{% include roadtrip-location.html image="martinez_stagecoach_2" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
-					{% include roadtrip-talkie.html name='"Brian Baldwin"' image="martinez_talkie_stagecoach_1" description="Brian Baldwin was stocking produce at a gas station in Lyon County, Nevada when News21 met him. He said people are too 'politically sensitive' today, and recalled a time when America was 'pretty cool for a while there.'" caption="@@needs a caption@@" %}
+					{% include roadtrip-talkie.html name="Brian Baldwin" image="martinez_talkie_stagecoach_1" description="Brian Baldwin was stocking produce at a gas station in Lyon County, Nevada when News21 met him. He said people are too 'politically sensitive' today, and recalled a time when America was 'pretty cool for a while there.'" caption="@@needs a caption@@" %}
 					<br>
 				</div>
 			</div> <!--end of content column-->
@@ -233,7 +232,7 @@
 
 		<div class="row" id="cluster7">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="04_80EAST" %}
+			{% include roadtrip-drivingvideo.html video="04_80EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -245,9 +244,13 @@
 					<p>Soundscape video for SLC</p>
 					<br>
 					{% include roadtrip-pullquote.html name="Michelle Calwley" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
+					<br>
 					{% include roadtrip-pullquote.html name="Bradley DeNorris" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
+					<br>
 					{% include roadtrip-pullquote.html name="Lisa Corsetti" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
+					<br>
 					{% include roadtrip-pullquote.html name="Martin Turner IV" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
+					<br>
 				</div>
 				<div class="content-stop" id="little-america-wy">
 					<h2 class="text-left">Little America Hotel, Wyoming</h2>
@@ -260,9 +263,9 @@
 					<h2 class="text-left">Laramie, Wyoming</h2>
 					{% include roadtrip-location.html image="martinez_laramie_3" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Buck Ward" image="martinez_talkie_laramie_3" pullquote="Hate and friction is everywhere around us. Even here in the bar, we disagree about politics. I think Trump is a big (expletive). He’s out of touch with America and what Americans want. It’s the things he’s saying and not saying that is spurring hate." caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Buck Ward" image="martinez_talkie_laramie_3" pullquote="@@pull quote content goes here@@" caption="@@needs a caption@@" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Logan & Fred Lee" image="filler" pullquote="'There is a clear political and racial divide in America,' Logan Lee said. 'Being an interracial couple, we see the race thing. Talking about it and hyping it up makes it worse for us. People have made comments to us, but it’s a lot better in Wyoming than in South Carolina when we go back home. Here, there isn’t the history of racial tensions.'<br> Fred Lee said he doesn’t have any worries as an interracial couple and the media has a huge influence on the public perception of hate.<br>'The media is making things a bigger deal than they are', he said. 'Everything becomes more heightened when the media can reach millions of people on their phones.'" caption="@@needs a caption@@"%}
+					{% include roadtrip-pullquote.html name="Logan & Fred Lee" image="filler" pullquote="" caption="@@needs a caption@@"%}
 					<br>
 				</div>
 			</div> <!--end of content column-->
@@ -273,7 +276,7 @@
 
 		<div class="row" id="cluster9">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="05_90EAST" %}
+			{% include roadtrip-drivingvideo.html video="05_90EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -285,8 +288,6 @@
 					<p>Soundscape video for Mt Rushmore</p>
 					<br>
 					{% include roadtrip-pullquote.html name="Jeff & Janet Smith" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
-					<br>
-					{% include roadtrip-pullquote.html name="Jeremy Fitch" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
 					<br>
 					{% include roadtrip-pullquote.html name="Charles & Gale Smith" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
 					<br>
@@ -306,7 +307,7 @@
 
 		<div class="row" id="cluster11">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="06_79SOUTH" %}
+			{% include roadtrip-drivingvideo.html video="06_79SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -329,7 +330,7 @@
 
 		<div class="row" id="cluster13">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="07_80EAST" %}
+			{% include roadtrip-drivingvideo.html video="07_80EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -365,7 +366,7 @@
 
 		<div class="row" id="cluster15">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="08_90EAST" %}
+			{% include roadtrip-drivingvideo.html video="08_90EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -390,7 +391,7 @@
 					<br>
 				</div>
 				<div class="content-stop" id="gettysburg-pa">
-					<h2 class="text-left">Gettysburg</h2>
+					<h2 class="text-left">Gettysburg, Pennsylvania</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Stacy Video vignette</p>
 					<br>
@@ -409,7 +410,7 @@
 
 		<div class="row" id="cluster17">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="09_270SOUTH" %}
+			{% include roadtrip-drivingvideo.html video="09_270SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster17 div-->
 
@@ -437,7 +438,7 @@
 
 		<div class="row" id="cluster19">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="10_64EAST" %}
+			{% include roadtrip-drivingvideo.html video="10_64EAST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster19 div-->
 
@@ -447,11 +448,9 @@
 					<h2 class="text-left">Omelet Shoppe</h2>
 					{% include roadtrip-location.html image="marlatt_omeletshoppe_1" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
-					{% include roadtrip-talkie.html name="William" image="filler" description="@@needs a description@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-talkie.html name="Felicia Robertson" image="marlatt_talkie_omeletshoppe_1" description="@@needs a description@@" caption="@@needs a caption@@" %}
 					<br>
-					{% include roadtrip-talkie.html name="Felicia" image="marlatt_talkie_omeletshoppe_felicia" description="@@needs a description@@" caption="@@needs a caption@@" %}
-					<br>
-					{% include roadtrip-talkie.html name="George Bailey" image="marlatt_talkie_omeletshoppe_george" description="@@needs a description@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-talkie.html name="William Bailey" image="marlatt_talkie_omeletshoppe_2" description="@@needs a description@@" caption="@@needs a caption@@" %}
 					<br>
 					{% include roadtrip-location.html image="marlatt_omeletshoppe_murder_1" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
@@ -492,7 +491,7 @@
 
 		<div class="row" id="cluster21">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="11_40WEST" %}
+			{% include roadtrip-drivingvideo.html video="11_40WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -516,7 +515,7 @@
 
 		<div class="row" id="cluster23">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="12_66WEST" %}
+			{% include roadtrip-drivingvideo.html video="12_66WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
@@ -581,7 +580,7 @@
 
 		<div class="row" id="cluster25">
 			<div class="col-12 road-video-segment">
-			{% include roadtrip-drivevideo.html video="13_87SOUTH" %}
+			{% include roadtrip-drivingvideo.html video="13_87SOUTH" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
