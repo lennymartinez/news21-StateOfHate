@@ -1,5 +1,5 @@
 <div class="modal fade navigation-mapscreen" id="navigationModal" tabindex="-1" role="dialog" aria-label="navigationModal" aria-hidden="false">
-	<div class="modal-dialog modal-dialog-centered modal-xl-lenny" role="document" >
+	<div class="modal-dialog modal-dialog-centered modal-xl-lenny" role="document"  >
 		<div class="modal-content">
 			<div class="modal-body">
 				<div class="container-fluid">
@@ -8,7 +8,7 @@
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 		</button>
-					<h3>@@the State of Hate Road Trip@@</h3>
+					<h3>@@The State of Hate Road Trip@@</h3>
 					<p>@@Explainer of how to use this map to navigate the content.@@</p>
 					<div id="map2" >
 					</div>
@@ -32,29 +32,33 @@
 		</button>
 					<h3>@@the State of Hate Road Trip@@</h3>
 					<p>@@Explainer of how to use this map to navigate the content.@@</p>
-					<ul class="list-group">
-					  <li class="list-group-item">Interstate 10 West</li>
+					<ul class="list-group roadtrip-mobile-nav-list">
+					  <li class="list-group-item roadtrip-mobile-highway text-center">
+					  	<img src="{{site.url}}/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="roadtrip-mobile-sign">&nbsp;Interstate 10 West</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#twenty-nine-palms-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Twentynine Palms, California</a>
 							</div>
 						</li>
-						<li class="list-group-item">Highway 395 North</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/US-395.png" alt="Highway 395 North" class="roadtrip-mobile-sign">&nbsp;Highway 395 North</li>
 					  <li class="list-group-item">
-							<div class="list-group list-group-flush">
+							<div class="list-group list-group-flush" >
 							<a href="#olancha-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Olancha, California</a>
-							<a href="#manzanar-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Manzanar National Historic Site, California</a>
+							<a href="#manzanar-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Manzanar, California</a>
 							<a href="#bishop-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Bishop, California</a>
 							</div>
 						</li>
-						<li class="list-group-item">Highway 50 East</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/US-50.png" alt="Highway 50 East" class="roadtrip-mobile-sign">&nbsp;Highway 50 East</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush" onclick="$('#mobileModalNav').modal('hide');">
 							<a href="#virginia-city-nv" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Virginia City, Nevada</a>
 							<a href="#stagecoach-nv" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');"	>Stagecoach, Nevada</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 80 East</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-80.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Interstate 80 East</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#salt-lake-city-ut" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Salt Lake City, Utah</a>
@@ -62,27 +66,31 @@
 							<a href="#laramie-wy" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Laramie, Wyoming</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 90 East</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-90.png" alt="Interstate 90 East" class="roadtrip-mobile-sign">&nbsp;Interstate 90 East</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#keystone-sd" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Keystone, South Dakota</a>
 							<a href="#mitchell-sd" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Mitchell, South Dakota</a>
 							</div>
 						</li>
-						<li class="list-group-item">Highway 79 South</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/SD-79.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Highway 79 South</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#tekamah-ne" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Tekamah, Nebraska</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 80 East</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-80.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Interstate 80 East</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#perry-ia" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Perry, Iowa</a>
 							<a href="#carbon-hill-il" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Carbon Hill, Illinois</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 90 East</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-90.png" alt="Interstate 90 East" class="roadtrip-mobile-sign">&nbsp;Interstate 90 East</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#fremont-oh" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Fremont, Ohio</a>
@@ -90,13 +98,15 @@
 							<a href="#gettysburg-pa" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Gettysburg, Pennsylvania</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 270 South</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-270.png" alt="Interstate 270 East" class="roadtrip-mobile-sign">&nbsp;Interstate 270 South</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#dc" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Washington, D.C.</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 64 East</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-64.png" alt="Interstate 64 West" class="roadtrip-mobile-sign">&nbsp;Interstate 64 West</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#beckley-wv" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Beckley, West Virginia</a>
@@ -104,14 +114,16 @@
 							<a href="#london-ky" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">London, Kentucky</a>
 							</div>
 						</li>
-						<li class="list-group-item">Interstate 40 West</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/I-40.png" alt="Interstate 40 West" class="roadtrip-mobile-sign">&nbsp;Interstate 40 West</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#memphis-tn" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Memphis, Tennessee</a>
 							<a href="#van-buren-ar" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Van Buren, Arkansas</a>
 							</div>
 						</li>
-						<li class="list-group-item">Route 66 West</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/US-66.png" alt="Route 66 West" class="roadtrip-mobile-sign">&nbsp;Route 66 West</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#oklahoma-city-ok" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Oklahoma City, Oklahoma</a>
@@ -122,7 +134,8 @@
 							<a href="#sanders-az" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Sanders, Arizona</a>
 							</div>
 						</li>
-						<li class="list-group-item">Highway 87 South</li>
+						<li class="list-group-item roadtrip-mobile-highway text-center">
+							<img src="{{site.url}}/img/roadtrip/signs/png/AZ-87.png" alt="Highway 87 South" class="roadtrip-mobile-sign">&nbsp;Highway 87 South</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#phoenix-az" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Phoenix, Arizona</a>
@@ -140,14 +153,18 @@
 	<div class="container-fluid" id="roadtrip-page">
 		<div class="row" id="cluster1">
 			<div class="col-12 road-video-segment" style="position:relative;">
-				<h1 style="position: absolute;color:white;top:30%;left:50%;z-index: 21; transform:translate(-50%,-30%);font-size: 5em;">State of Hate</h1>
+				<div class="roadtrip-cover-info">
+					<h1 class="roadtrip-intro-head">The State of Hate</h1>
+					<p class="roadtrip-intro-deck">We traveled the country, this is what we found.</p>
+				</div>
 				{% include roadtrip-drivingvideo.html video="01_10WEST" %}
 			</div> <!--end of columns-->
 		</div>	<!--end of cluster1 div-->
 
 		<div class="row" id="cluster2">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="twenty-nine-palms-ca">
+				<div class="content-stop">
+					<div id="twenty-nine-palms-ca" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">The Virginian Cocktails</h2>
 					{% include roadtrip-location.html image="martinez_twentyninepalms" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
@@ -170,14 +187,16 @@
 
 		<div class="row" id="cluster4">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="olancha-ca">
+				<div class="content-stop">
+					<div id="olancha-ca" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left ">Gus's Fresh Jerky</h2>
 					{% include roadtrip-location.html image="martinez_olancha" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez"%}
 					<br>
 					{% include roadtrip-talkie.html name="Nora Berguem" image="martinez_talkie_olancha" description="She’s a sociology major at Whittier College in Whittier, Calif. She spends her summers working at Gus’s Fresh Jerky as a cashier." caption="@@needs a caption@@"%}
 					<br>
 				</div><!--end of content stop-->
-				<div class="content-stop" id="manzanar-ca">
+				<div class="content-stop">
+					<div id="manzanar-ca" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Manzanar National Historic Site</h2>
 					{% include roadtrip-location.html image="martinez_manzanar" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
@@ -189,7 +208,8 @@
 					<br>
 				
 				</div><!--end of content stop-->
-				<div class="content-stop" id="bishop-ca">
+				<div class="content-stop">
+					<div id="bishop-ca" class="roadtrip-buffer">&nbsp;</div>					
 					<h2 class="text-left">Bishop, California</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>STPEHEN's VIDEO</p>
@@ -209,15 +229,17 @@
 
 		<div class="row" id="cluster6">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="virginia-city-nv">
+				<div class="content-stop">
+					<div id="virginia-city-nv" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Virginia City, Nevada</h2>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Jim Tuttle" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Wayne Douglas Tarrant" image="martinez_talkie_virginiacity_3" pullquote="@@pull quote text goes here@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Wayne Douglas Tarrant" image="martinez_pullquote_virginiacity_3" pullquote="@@pull quote text goes here@@" caption="@@needs a caption@@" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Paul Coombes" image="martinez_talkie_virginiacity_1" pullquote="@@pullquote content goes here@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Paul Coombes" image="martinez_pullquote_virginiacity_1" pullquote="@@pullquote content goes here@@" caption="@@needs a caption@@" %}
 				</div>
-				<div class="content-stop" id="stagecoach-nv">
+				<div class="content-stop">
+					<div id="stagecoach-nv" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Stagecoach, Nevada</h2>
 					{% include roadtrip-location.html image="martinez_stagecoach_2" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
@@ -238,7 +260,8 @@
 
 		<div class="row" id="cluster8">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="salt-lake-city-ut">
+				<div class="content-stop" >
+					<div id="salt-lake-city-ut" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Salt Lake City, Utah</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Soundscape video for SLC</p>
@@ -252,20 +275,24 @@
 					{% include roadtrip-pullquote.html name="Martin Turner IV" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
-				<div class="content-stop" id="little-america-wy">
+				<div class="content-stop">
+					<div id="little-america-wy" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Little America Hotel, Wyoming</h2>
 					{% include roadtrip-location.html image="martinez_littleamerica_4" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
 					{% include roadtrip-talkie.html name="Mike and Tirzah Smith" image="martinez_talkie_littleamerica" description="@@needs a description@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
-				<div class="content-stop" id="laramie-wy">
+				<div class="content-stop">
+					<div id="laramie-wy" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Laramie, Wyoming</h2>
 					{% include roadtrip-location.html image="martinez_laramie_3" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Buck Ward" image="martinez_talkie_laramie_3" pullquote="@@pull quote content goes here@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Buck Ward" image="martinez_pullquote_laramie_3" pullquote="@@pull quote content goes here@@" caption="@@needs a caption@@" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Logan & Fred Lee" image="filler" pullquote="" caption="@@needs a caption@@"%}
+					{% include roadtrip-pullquote.html name="Buck Ward" image="martinez_pullquote_laramie_2" pullquote="@@pull quote content goes here@@" caption="@@needs a caption@@" %}
+					<br>
+					{% include roadtrip-pullquote.html name="Buck Ward" image="martinez_pullquote_laramie_1" pullquote="@@pull quote content goes here@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
 			</div> <!--end of content column-->
@@ -282,7 +309,8 @@
 
 		<div class="row" id="cluster10">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="keystone-sd">
+				<div class="content-stop">
+					<div id="keystone-sd" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Mount Rushmore</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Soundscape video for Mt Rushmore</p>
@@ -292,7 +320,8 @@
 					{% include roadtrip-pullquote.html name="Charles & Gale Smith" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
-				<div class="content-stop" id="mitchell-sd">
+				<div class="content-stop">
+					<div id="mitchell-sd" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">The Corn Palace</h2>
 					{% include roadtrip-location.html image="martinez_mitchell_1" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
@@ -313,7 +342,8 @@
 
 		<div class="row" id="cluster12">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="tekamah-ne">
+				<div class="content-stop" >
+					<div id="tekamah-ne" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Tekamah, Nebraska</h2>
 					{% include roadtrip-location.html image="martinez_tekamah_1" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
@@ -336,7 +366,8 @@
 
 		<div class="row" id="cluster14">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="perry-ia">
+				<div class="content-stop">
+					<div id="perry-ia" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Perry, Iowa</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Soundscape video for Perry</p>
@@ -349,13 +380,14 @@
 					<br>
 					{% include roadtrip-pullquote.html name="Connie Metzler" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
 				</div>
-				<div class="content-stop" id="carbon-hill-il">
+				<div class="content-stop">
+					<div id="carbon-hill-il" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Mustachio's Bar and Grill</h2>
 					{% include roadtrip-location.html image="martinez_carbonhill_1" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Lenny Martinez Dominguez" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Diane Eartly" image="martinez_talkie_carbonhill_1" pullquote="@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Diane Eartly" image="martinez_pullquote_carbonhill_1" pullquote="@@" caption="@@needs a caption@@" %}
 					<br>
-					{% include roadtrip-pullquote.html name="Stephanie Long" image="martinez_talkie_carbonhill_2" pullquote="@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-pullquote.html name="Stephanie Long" image="martinez_pullquote_carbonhill_2" pullquote="@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
 			</div> <!--end of content column-->
@@ -372,13 +404,15 @@
 
 		<div class="row" id="cluster16">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="fremont-oh">
+				<div class="content-stop">
+					<div id="fremont-oh" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Fremont, Ohio</h2>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Jim Tuttle" %}
 					<br>
 					{% include roadtrip-talkie.html name="Julie Chandra" image="filler" description="@@needs a description@@" caption="@@needs a caption@@" %}
 				</div>
-				<div class="content-stop" id="harrisburg-pa">
+				<div class="content-stop">
+					<div id="harrisburg-pa" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Harrisburg, Pennsylvania</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Soundscape video for Harrisburg, PA</p>
@@ -390,7 +424,8 @@
 					{% include roadtrip-pullquote.html name="Dave Robinson" image="filler" pullquote="@@her words@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
-				<div class="content-stop" id="gettysburg-pa">
+				<div class="content-stop">
+					<div id="gettysburg-pa" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Gettysburg, Pennsylvania</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Stacy Video vignette</p>
@@ -416,7 +451,8 @@
 
 		<div class="row" id="cluster18">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="dc">
+				<div class="content-stop">
+					<div id="dc" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Washington, D.C.</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>DC soundscapte</p>
@@ -444,7 +480,8 @@
 
 		<div class="row" id="cluster20">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="beckley-wv">
+				<div class="content-stop">
+					<div id="beckley-wv" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Omelet Shoppe</h2>
 					{% include roadtrip-location.html image="marlatt_omeletshoppe_1" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
@@ -462,14 +499,16 @@
 					{% include roadtrip-talkie.html name="Julie @@Last Name@@" image="filler" description="@@needs a description@@" caption="@@needs a caption@@" %}
 
 				</div>
-				<div class="content-stop" id="mallie-ky">
+				<div class="content-stop">
+					<div id="mallie-ky" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Mallie, Kentucky</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Rachel Vignette</p>
 					<br>
 					<p>@@Rachel Photo Slideshow@@</p>
 				</div>
-				<div class="content-stop" id="london-ky">
+				<div class="content-stop">
+					<div id="london-ky" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Tonic Room Barbershop</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Barbershop soundscape</p>
@@ -497,13 +536,15 @@
 
 		<div class="row" id="cluster22">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="memphis-tn">
+				<div class="content-stop">
+					<div id="memphis-tn" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Memphis, Tennessee</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>Randy video vignette</p>
 					<br>
 				</div>
-				<div class="content-stop" id="van-buren-ar">
+				<div class="content-stop">
+					<div id="van-buren-ar" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Van Buren, Arkansas</h2>
 					<p>WHERE ARE THE PHOTOS??</p>
 				</div>
@@ -521,7 +562,8 @@
 
 		<div class="row" id="cluster24">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="oklahoma-city-ok">
+				<div class="content-stop">
+					<div id="oklahoma-city-ok" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">36. Content for Oklahoma City will go here</h2>
 					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
 					<p>OKCity Soundscape</p>
@@ -532,7 +574,8 @@
 					<br>
 					<p>Figure out how to name the stops here for which we have photos and pullquote content (is it just stockyards and mccloud?)</p>
 				</div>
-				<div class="content-stop" id="elk-city-ok">
+				<div class="content-stop">
+					<div id="elk-city-ok" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Elk City, Oklahoma</h2>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
@@ -540,14 +583,16 @@
 					<br>
 					{% include roadtrip-talkie.html name="Steve Stout" image="marlatt_talkie_elkcity_2" description="@@needs a description@@" caption="@@needs a caption@@" %}
 				</div>
-				<div class="content-stop" id="amarillo-tx">
+				<div class="content-stop">
+					<div id="amarillo-tx" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Amarillo, Texas</h2>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
-					{% include roadtrip-talkie.html name="Boozefighter Whiff" image="marlatt_talkie_amarillo_whiff" description="@@needs a description@@" caption="@@needs a caption@@" %}
+					{% include roadtrip-talkie.html name="Boozefighter Whiff" image="marlatt_talkie_amarillo" description="@@needs a description@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
-				<div class="content-stop" id="albuquerque-nm">
+				<div class="content-stop">
+					<div id="albuquerque-nm" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Albuquerque, New Mexico</h2>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
@@ -555,8 +600,10 @@
 					<br>
 					{% include roadtrip-talkie.html name="Colten Ogle" image="filler" description="@@needs a description@@" caption="@@needs a caption@@" %}
 				</div>
-				<div class="content-stop" id="grants-nm">
+				<div class="content-stop">
+					<div id="grants-nm" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Grants, New Mexico</h2>
+					<br>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
 					{% include roadtrip-talkie.html name="Melonie" image="filler" description="@@needs a description@@" caption="@@needs a caption@@" %}
@@ -564,7 +611,8 @@
 					{% include roadtrip-talkie.html name="Stone" image="filler" description="@@needs a description@@" caption="@@needs a caption@@" %}
 					<br>
 				</div>
-				<div class="content-stop" id="sanders-az">
+				<div class="content-stop">
+					<div id="sanders-az" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Sanders, Arizona</h2>
 					{% include roadtrip-location.html image="filler" caption="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@" byline="Tilly Marlatt" %}
 					<br>
@@ -586,20 +634,31 @@
 
 		<div class="row" id="cluster26">
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
-				<div class="content-stop" id="phoenix-az">
+				<div class="content-stop">
+					<div id="phoenix-az" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Phoenix Arizona</h2>
-					<div class="filler">&nbsp;</div><br>
-					<div class="filler">&nbsp;</div><br>
+					<div class="missing-content">&nbsp;</div><br>
+					<div class="missing-content">&nbsp;</div><br>
 				</div>
 			</div> <!--end of content column-->
 			<div class="col-lg-3">
 						<div id="map-nav">
 						<a data-toggle="modal" data-target="#navigationModal">
+							<div>
+							<p class="text-center">Click here to explore:</p>
+							</div>
 						<div id="map"></div><br>
 						<div class="travel-info">
-							<h4 class="text-center"><span class="highway-name">Interstate 10 West</span></h4>
-							<p class="text-center"><span id="city-name">Phoenix</span>,&nbsp;<span id="state-name">Arizona</span><br>				
-							<span id="population">Population:&nbsp;<span id="stop-population">1,555,324</span></span></p>
+							<div class="text-center">
+									<img src="{{site.url}}/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="highway-sign">
+							</div>
+							<br>
+							<h4 class="highway-name text-center">Interstate 10 West</span></h4>
+							<p class="text-center">
+								<span id="city-name">Phoenix</span>,&nbsp;<span id="state-name">Arizona</span><br>
+								<span id="population">Population:&nbsp;<span id="stop-population">1,555,324</span>
+								</span>
+							</p>
 							<br>
 						</div>
 						</a>
@@ -611,7 +670,7 @@
 				<a data-toggle="modal" data-target="#mobileModalNav">
 				<div id="roadtrip-bar-mobile">
 					<br>
-				<h4 class=text-center><span class="highway-name">Interstate 10 West</span></h4>
+				<h4 class=text-center><img src="{{site.url}}/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="highway-sign" style="padding-right:10px;height:30px;"><span class="highway-name">Interstate 10 West</span></h4>
 				</div>
 				</a>
 			</div>
@@ -942,8 +1001,8 @@
 			},
 			"properties": {
 			"population": "659,009",
-			"city": "Washington, D.C.",
-			"state": "",
+			"city": "Washington",
+			"state": "D.C.",
 			"marker": "washington-dc",
 			"pageID": "dc"
 			},
@@ -1163,7 +1222,8 @@
       center: [-99.95223783,  38.24814853],
       minZoom: 3,
       maxZoom: 24,
-      maxBounds: [[-131,24],[-65,50]]
+      maxBounds: [[-131,24],[-65,50]],
+      pitchWithRotate: false
     });
 
     map2.on('load', function() {
@@ -1287,7 +1347,7 @@
     	new mapboxgl.Marker(el)
     		.setLngLat(marker.geometry.coordinates)
 		    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    		.setHTML('<h5>' + marker.properties.city + '<br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '</p><p><a href="#'+marker.properties.pageID+'" onclick="'+cow+'">click22</a></p>'))
+    		.setHTML('<div class="roadtrip-popup-content"><h5>' + marker.properties.city + ', <br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '<br><br><a href="#'+marker.properties.pageID+'" class="btn btn-primary btn-sm roadtrip-btn" onclick="'+cow+'">Visit this place</a></p></div>'))
     		.addTo(map2);
     	});
     }
@@ -1334,7 +1394,7 @@
         console.log('waypoint');
         map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
         map.setLayoutProperty('route1', 'visibility', 'visible');
-        $('#twenty-nine-palms').addClass('marker-active marker-visited');
+        $('#twenty-nine-palms').addClass('marker-active');
         $('#city-name').text('Twentyine Palms');
         $('#state-name').text('California');
         $('#stop-population').text('26,452');
@@ -1362,6 +1422,12 @@
         $('.highway-name').text('Highway 395 North');
         $('#city-name').text('Olancha');
         $('#stop-population').text('203');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/US-395.png',
+        	alt:'Highway 395 North'
+        });
+
+
     	} else
         {
           console.log('going back');
@@ -1372,6 +1438,10 @@
 					$('#city-name').text('Twentyine Palms');
 					$('#stop-population').text('26,452');
 					$('.highway-name').text('Interstate 10 West');
+					$('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-10.png',
+        	alt:'Interstate 10 West'
+        	});
         }
         }, {offset: '45%'});
 
@@ -1383,7 +1453,7 @@
         map.setLayoutProperty('route3', 'visibility', 'visible');
         $('#manzanar').addClass('marker-active');
         $('#olancha').removeClass('marker-active');
-        $('#city-name').text('Manzanar National Historic Site');
+        $('#city-name').text('Manzanar');
         $('#stop-population').text('---');
     	} else
         {
@@ -1393,7 +1463,7 @@
           $('#manzanar').removeClass('marker-active');
       		$('#olancha').addClass('marker-active');
       		$('#city-name').text('Olancha');
-        	$('#stop-population').text('203'); 
+        	$('#stop-population').text('203');
         }
         }, {offset: '45%'});
 
@@ -1431,6 +1501,10 @@
     		$('#stop-population').text('711');
     		$('#state-name').text('Nevada');
     		$('.highway-name').text('Highway 50 East');
+    		$('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/US-50.png',
+        	alt:'Highway 50 East'
+        });
     	} else
         {
           console.log('going back');
@@ -1442,6 +1516,10 @@
       		$('#stop-population').text('3,760');
       		$('#state-name').text('California');
       		$('.highway-name').text('Highway 395 North');
+      		$('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/US-395.png',
+        		alt:'Highway 395 North'
+        	});
         }
         }, {offset: '45%'});
 
@@ -1479,6 +1557,10 @@
         $('#city-name').text('Salt Lake City');
         $('#stop-population').text('191,446');
         $('.highway-name').text('Interstate 80 East');
+    		$('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-80.png',
+        	alt:'Interstate 80 East'
+        });
     	} else
         {
           console.log('going back');
@@ -1490,6 +1572,10 @@
     			$('#stop-population').text('1,703');
     			$('#state-name').text('Nevada');
     			$('.highway-name').text('Highway 50 East');
+	    		$('.highway-sign').attr({
+	        	src:'{{site.url}}/img/roadtrip/signs/png/US-50.png',
+	        	alt:'Highway 50 East'
+	        });
         }
         }, {offset: '45%'});
 
@@ -1551,6 +1637,10 @@
         $('#city-name').text('Keystone');
         $('#stop-population').text('318');
         $('.highway-name').text('Interstate 90 East');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-90.png',
+        	alt:'Interstate 90 East'
+        });
     	} else
         {
           console.log('going back');
@@ -1562,6 +1652,10 @@
 					$('#stop-population').text('32,096');
 					$('.highway-name').text('Interstate 80 East');
 					$('#state-name').text('Wyoming');
+	        $('.highway-sign').attr({
+	        	src:'{{site.url}}/img/roadtrip/signs/png/I-80.png',
+	        	alt:'Interstate 80 East'
+	        });
         }
         }, {offset: '45%'});
 
@@ -1599,6 +1693,10 @@
         $('#city-name').text('Tekamah');
         $('.highway-name').text('Highway 79 South');
         $('#stop-population').text('1,662');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/SD-79.png',
+        	alt:'Highway 79 South'
+        });
 
     	} else
         {
@@ -1611,6 +1709,10 @@
 					$('#stop-population').text('318');
 					$('.highway-name').text('Interstate 90 East');
 					$('#state-name').text('South Dakota');
+					$('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/I-90.png',
+        		alt:'Interstate 90 East'
+        	});
         }
         }, {offset: '45%'});
 
@@ -1626,6 +1728,10 @@
         $('#city-name').text('Perry');
         $('.highway-name').text('Interstate 80 East');
         $('#stop-population').text('7,876');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-80.png',
+        	alt:'Interstate 80 East'
+        });
     	} else
         {
           console.log('going back');
@@ -1637,6 +1743,10 @@
 	        $('#city-name').text('Tekamah');
 	        $('.highway-name').text('Highway 79 South');
 	        $('#stop-population').text('1,662');
+        	$('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/SD-79.png',
+        		alt:'Highway 79 South'
+        	});
         }
         }, {offset: '45%'});
 
@@ -1676,6 +1786,10 @@
       	$('#city-name').text('Fremont');
       	$('#stop-population').text('16,388');
       	$('.highway-name').text('Interstate 90 East');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-90.png',
+        	alt:'Interstate 90 East'
+        });
     	} else
         {
           console.log('going back');
@@ -1687,6 +1801,10 @@
 	      	$('#city-name').text('Carbon Hill');
 	      	$('#stop-population').text('380');
 	      	$('.highway-name').text('Interstate 80 East');
+        	$('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/I-80.png',
+        		alt:'Interstate 80 East'
+        	});
         }
         }, {offset: '45%'});
 
@@ -1748,6 +1866,10 @@
       	$('#city-name').text('Washington');
       	$('#stop-population').text('659,009');
       	$('.highway-name').text('Interstate 270 South');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-270.png',
+        	alt:'Interstate 270 South'
+        });
     	} else
         {
           console.log('going back');
@@ -1759,6 +1881,10 @@
 					$('#city-name').text('Gettysburg');
 					$('#stop-population').text('7,643');
 					$('.highway-name').text('Interstate 90 East');
+	        $('.highway-sign').attr({
+	        	src:'{{site.url}}/img/roadtrip/signs/png/I-90.png',
+	        	alt:'Interstate 90 East'
+	        });
         }
         }, {offset: '45%'});
 
@@ -1773,7 +1899,11 @@
         $('#state-name').text('West Virginia');
       	$('#city-name').text('Beckley');
       	$('#stop-population').text('17,348');
-      	$('.highway-name').text('Interstate 64 East');
+      	$('.highway-name').text('Interstate 64 West');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-64.png',
+        	alt:'Interstate 64 West'
+        });
     	} else
         {
           console.log('going back');
@@ -1785,6 +1915,10 @@
 					$('#city-name').text('Washington');
 					$('#stop-population').text('659,009');
 					$('.highway-name').text('Interstate 270 South');
+	        $('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/I-270.png',
+        		alt:'Interstate 270 South'
+        	});				
         }
         }, {offset: '45%'});
 
@@ -1846,6 +1980,10 @@
         $('#state-name').text('Tennessee');
         $('.highway-name').text('Interstate 40 West');
       	$('#stop-population').text('655,857');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/I-40.png',
+        	alt:'Interstate 40 West'
+        });
     	} else
         {
           console.log('going back');
@@ -1856,7 +1994,11 @@
         	$('#city-name').text('London');
       		$('#stop-population').text('8,111');
       		$('#state-name').text('Kentucky');
-      		$('.highway-name').text('Interstate 64 East');
+      		$('.highway-name').text('Interstate 64 West');
+          $('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/I-64.png',
+        		alt:'Interstate 64 West'
+       	 	});    		
         }
         }, {offset: '45%'});
 
@@ -1896,6 +2038,10 @@
         $('#state-name').text('Oklahoma');
       	$('#stop-population').text('620,015');
       	$('.highway-name').text('Route 66 West');
+        $('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/US-66.png',
+        	alt:'Route 66 West'
+        });
     	} else
         {
           console.log('going back');
@@ -1907,6 +2053,10 @@
         	$('#state-name').text('Arkansas');
       		$('#stop-population').text('23,1555');
       		$('.highway-name').text('Interstate 40 West');
+	        $('.highway-sign').attr({
+	        	src:'{{site.url}}/img/roadtrip/signs/png/I-40.png',
+	        	alt:'Interstate 40 West'
+	        });
         }
         }, {offset: '45%'});
 
@@ -2037,6 +2187,10 @@
 				$('#city-name').text('Phoenix');
     		$('#stop-population').text('26452');
     		$('.highway-name').text('Highway 87 South');
+    		$('.highway-sign').attr({
+        	src:'{{site.url}}/img/roadtrip/signs/png/AZ-87.png',
+        	alt:'Highway 87 South'
+        });
     	} else
         {
           console.log('going back');
@@ -2047,6 +2201,10 @@
 					$('#city-name').text('Sanders');
         	$('.highway-name').text('Route 66 West');
       		$('#stop-population').text('574');
+      		$('.highway-sign').attr({
+        		src:'{{site.url}}/img/roadtrip/signs/png/US-66.png',
+        		alt:'Route 66 West'
+        	});
         }
         }, {offset: '50%'});
     </script>
