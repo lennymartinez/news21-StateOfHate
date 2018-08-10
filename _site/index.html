@@ -6,35 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link href="http://localhost:4000/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://localhost:4000/css/animate.min.css" rel="stylesheet">
-    <link href="http://localhost:4000/css/mapbox-gl.css" rel="stylesheet"> <!--Lenny added this-->
-    <link href="http://localhost:4000/css/main.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/mapbox-gl.css" rel="stylesheet"> <!--Lenny added this-->
+    <link href="/css/main.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:700,900|Oswald:600,700|Roboto+Mono:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,600,700,800" rel="stylesheet">
 
 
-    <script src="http://localhost:4000/js/jquery.min.js"></script>
-	<script src="http://localhost:4000/js/bootstrap.min.js"></script>
-    <script src="http://localhost:4000/js/jquery.waypoints.js"></script>  <!--Lenny added this-->
-    <script src="http://localhost:4000/js/mapbox-gl.js"></script> <!--Lenny added this-->
 
+
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.waypoints.js"></script>  <!--Lenny added this-->
+    <script src="/js/mapbox-gl.js"></script> <!--Lenny added this-->
+    <script src="/js/roadtrip.js"></script>
     <style>
     
         @font-face {
             font-family: AvenirNext-Heavy;
-            src: url(http://localhost:4000/fonts/AvenirNext-Heavy-09.woff) format('woff'),
-                 url(http://localhost:4000/fonts/AvenirNext-Heavy-09.ttf) format('truetype');
+            src: url(/fonts/AvenirNext-Heavy-09.woff) format('woff'),
+                 url(/fonts/AvenirNext-Heavy-09.ttf) format('truetype');
             font-weight: 800;
                     }
         
         @font-face {
             font-family: AvenirNext-Bold;
-            src: url(http://localhost:4000/fonts/AvenirNext-Bold-01.woff) format('woff'),
-                 url(http://localhost:4000/fonts/AvenirNext-Bold-01.ttf) format('truetype');
+            src: url(/fonts/AvenirNext-Bold-01.woff) format('woff'),
+                 url(/fonts/AvenirNext-Bold-01.ttf) format('truetype');
             font-weight: 600;
                 }   
+        @font-face {
+            font-family: AvenirNext-Regular;
+            src: url(/fonts/AvenirNext-Regular.woff) format('woff'),
+                 url(/fonts/AvenirNext-Regular.ttf) format('truetype');
+            font-weight: 400;
+                } 
     </style>  
        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   
@@ -43,7 +51,7 @@
     
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="mx-auto order-0">
-     <a class="navbar-brand mx-auto" href="http://localhost:4000"><img src="http://localhost:4000/img/logos/Hate In America-02.png" alt="" width="150" /></a>
+     <a class="navbar-brand mx-auto" href=""><img src="/img/logos/Hate In America-02.png" alt="" width="100" style="padding-top:2px;" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span> </button>
     </div>
@@ -51,21 +59,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
       <ul class="ml-auto navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="http://localhost:4000/#">Documentary</a></li>
-        <li class="nav-item"><a class="nav-link" href="http://localhost:4000/#">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="http://localhost:4000/#">Stories</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#">Stories</a></li>
         <li class="nav-item"><a class="nav-link" href="http://blog.votingwars.news21.com" target="_blank">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="http://localhost:4000/about-voting-wars/">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about-voting-wars/">About</a></li>
 
         <li><div class="icon">
-    			<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/" class="social-share" target="_blank">
+    			<a href="https://www.facebook.com/sharer/sharer.php?u=/" class="social-share" target="_blank">
     				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
     					<path fill="#e0dfde" d="M58.1,37.3h-2.6c-1.7,0-4.7-0.2-4.7,1.5v3.4h9.5l-0.7,8.6h-8.8v22h-7.3v-22h-4.9v-8.6h6.1c0,0,0-0.7,0-5.5
     											c0-5.5,3-8,9.5-8h3.9V37.3z"></path>
     					<circle class="icon-outline" fill="none" stroke="#efefef" stroke-width="2" stroke-miterlimit="10" cx="50" cy="50" r="44"></circle>
     				</svg>
     			</a>
-    			<a href="https://twitter.com/share?url=http://localhost:4000/&text=California law opens door for minority representation" target="_blank" class="social-share">
+    			<a href="https://twitter.com/share?url=/&text=California law opens door for minority representation" target="_blank" class="social-share">
     				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
     					<path fill="#e0dfde" d="M67.3,42.4c0.5,12.1-8.5,25.7-24.6,25.7c-4.9,0-9.4-1.4-13.3-3.9c4.6,0.5,9.2-0.7,12.8-3.6
     											c-3.8-0.1-7-2.6-8.1-6c1.4,0.3,2.7,0.2,3.9-0.1c-4.2-0.8-7-4.6-6.9-8.6c1.2,0.7,2.5,1,3.9,1.1c-3.9-2.6-4.9-7.6-2.7-11.5
@@ -123,14 +129,14 @@
 					<p>@@Explainer of how to use this map to navigate the content.@@</p>
 					<ul class="list-group roadtrip-mobile-nav-list">
 					  <li class="list-group-item roadtrip-mobile-highway text-center">
-					  	<img src="http://localhost:4000/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="roadtrip-mobile-sign">&nbsp;Interstate 10 West</li>
+					  	<img src="/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="roadtrip-mobile-sign">&nbsp;Interstate 10 West</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#twenty-nine-palms-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Twentynine Palms, California</a>
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/US-395.png" alt="Highway 395 North" class="roadtrip-mobile-sign">&nbsp;Highway 395 North</li>
+							<img src="/img/roadtrip/signs/png/US-395.png" alt="Highway 395 North" class="roadtrip-mobile-sign">&nbsp;Highway 395 North</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush" >
 							<a href="#olancha-ca" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Olancha, California</a>
@@ -139,7 +145,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/US-50.png" alt="Highway 50 East" class="roadtrip-mobile-sign">&nbsp;Highway 50 East</li>
+							<img src="/img/roadtrip/signs/png/US-50.png" alt="Highway 50 East" class="roadtrip-mobile-sign">&nbsp;Highway 50 East</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush" onclick="$('#mobileModalNav').modal('hide');">
 							<a href="#virginia-city-nv" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Virginia City, Nevada</a>
@@ -147,7 +153,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-80.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Interstate 80 East</li>
+							<img src="/img/roadtrip/signs/png/I-80.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Interstate 80 East</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#salt-lake-city-ut" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Salt Lake City, Utah</a>
@@ -156,7 +162,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-90.png" alt="Interstate 90 East" class="roadtrip-mobile-sign">&nbsp;Interstate 90 East</li>
+							<img src="/img/roadtrip/signs/png/I-90.png" alt="Interstate 90 East" class="roadtrip-mobile-sign">&nbsp;Interstate 90 East</li>
 					  <li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#keystone-sd" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Keystone, South Dakota</a>
@@ -164,14 +170,14 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/SD-79.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Highway 79 South</li>
+							<img src="/img/roadtrip/signs/png/SD-79.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Highway 79 South</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#tekamah-ne" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Tekamah, Nebraska</a>
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-80.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Interstate 80 East</li>
+							<img src="/img/roadtrip/signs/png/I-80.png" alt="Interstate 80 East" class="roadtrip-mobile-sign">&nbsp;Interstate 80 East</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#perry-ia" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Perry, Iowa</a>
@@ -179,7 +185,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-90.png" alt="Interstate 90 East" class="roadtrip-mobile-sign">&nbsp;Interstate 90 East</li>
+							<img src="/img/roadtrip/signs/png/I-90.png" alt="Interstate 90 East" class="roadtrip-mobile-sign">&nbsp;Interstate 90 East</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#fremont-oh" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Fremont, Ohio</a>
@@ -188,14 +194,14 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-270.png" alt="Interstate 270 East" class="roadtrip-mobile-sign">&nbsp;Interstate 270 South</li>
+							<img src="/img/roadtrip/signs/png/I-270.png" alt="Interstate 270 East" class="roadtrip-mobile-sign">&nbsp;Interstate 270 South</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#dc" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Washington, D.C.</a>
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-64.png" alt="Interstate 64 West" class="roadtrip-mobile-sign">&nbsp;Interstate 64 West</li>
+							<img src="/img/roadtrip/signs/png/I-64.png" alt="Interstate 64 West" class="roadtrip-mobile-sign">&nbsp;Interstate 64 West</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#beckley-wv" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Beckley, West Virginia</a>
@@ -204,7 +210,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/I-40.png" alt="Interstate 40 West" class="roadtrip-mobile-sign">&nbsp;Interstate 40 West</li>
+							<img src="/img/roadtrip/signs/png/I-40.png" alt="Interstate 40 West" class="roadtrip-mobile-sign">&nbsp;Interstate 40 West</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#memphis-tn" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Memphis, Tennessee</a>
@@ -212,7 +218,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/US-66.png" alt="Route 66 West" class="roadtrip-mobile-sign">&nbsp;Route 66 West</li>
+							<img src="/img/roadtrip/signs/png/US-66.png" alt="Route 66 West" class="roadtrip-mobile-sign">&nbsp;Route 66 West</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#oklahoma-city-ok" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Oklahoma City, Oklahoma</a>
@@ -224,7 +230,7 @@
 							</div>
 						</li>
 						<li class="list-group-item roadtrip-mobile-highway text-center">
-							<img src="http://localhost:4000/img/roadtrip/signs/png/AZ-87.png" alt="Highway 87 South" class="roadtrip-mobile-sign">&nbsp;Highway 87 South</li>
+							<img src="/img/roadtrip/signs/png/AZ-87.png" alt="Highway 87 South" class="roadtrip-mobile-sign">&nbsp;Highway 87 South</li>
 						<li class="list-group-item">
 							<div class="list-group list-group-flush">
 							<a href="#phoenix-az" class="list-group-item list-group-item-action" onclick="$('#mobileModalNav').modal('hide');">Phoenix, Arizona</a>
@@ -263,8 +269,8 @@
 					<h2 class="text-left">The Virginian Cocktails</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_twentyninepalms.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_twentyninepalms.jpg" style="width:100%;" alt="The Virginian Cocktails in Twentynine Palms, Califonia is located on the corner of 29 Palms Highway and Cholla Avenue.">
+<p><span class="img-caption">The Virginian Cocktails in Twentynine Palms, Califonia is located on the corner of 29 Palms Highway and Cholla Avenue.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -273,8 +279,8 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_twentyninepalms_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Kari Wilson</h3>
-		<p class="roadtrip-talkie-description">Kari Wilson, 26, is a bartender at The Virginian Bar in Twentynine Palms, California.</p>
+		<h3 class="talkie-head">Kari Wilson</h3>
+		<p class="roadtrip-talkie-description">Kari Wilson, 26, is a bartender at The Virginian Cocktails in Twentynine Palms, California.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -286,8 +292,8 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_twentyninepalms_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Laurette Rogers and Wedda Warrick</h3>
-		<p class="roadtrip-talkie-description">Laurette Rogers (left) and Wedda Warrick have been drinking partners for close to three years.</p>
+		<h3 class="talkie-head">Laurette Rogers and Wedda Warrick</h3>
+		<p class="roadtrip-talkie-description">Laurette (left) and Wedda have been drinking partners for close to three years.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -318,8 +324,8 @@
 					<h2 class="text-left ">Gus's Fresh Jerky</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_olancha.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_olancha.jpg" style="width:100%;" alt="The first of Gus’s Fresh Jerky stores in Olancha, California, started in an old gas station in 1996.">
+<p><span class="img-caption">The first of Gus’s Fresh Jerky stores in Olancha, California, started in an old gas station in 1996.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -328,7 +334,7 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_olancha.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Nora Berguem</h3>
+		<h3 class="talkie-head">Nora Berguem</h3>
 		<p class="roadtrip-talkie-description">She’s a sociology major at Whittier College in Whittier, Calif. She spends her summers working at Gus’s Fresh Jerky as a cashier.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -340,8 +346,8 @@
 					<h2 class="text-left">Manzanar National Historic Site</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_manzanar.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_manzanar.jpg" style="width:100%;" alt="Moved to Manzanar National Historic Site in late 2002, the restored mess halls are the same type as those used by Japanese-Americans interned at Manzanar during World War II.">
+<p><span class="img-caption">Moved to Manzanar National Historic Site in late 2002, the restored mess halls are the same type as those used by Japanese-Americans interned at Manzanar during World War II.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -350,7 +356,7 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_manzanar_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Elizabeth and Terry Vance</h3>
+		<h3 class="talkie-head">Elizabeth and Terry Vance</h3>
 		<p class="roadtrip-talkie-description">Elizabeth and Terry Vance have been divorced for more than 20 years, but they still travel together. A recent trip brought them to Manzanar Historic Site.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -363,7 +369,7 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_manzanar_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Mina Monden</h3>
+		<h3 class="talkie-head">Mina Monden</h3>
 		<p class="roadtrip-talkie-description">Mina Monden visited the Manzanar Historic Site with her nephews, who were traveling from Japan.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -376,7 +382,7 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_manzanar_3.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Bernadette Johnson</h3>
+		<h3 class="talkie-head">Bernadette Johnson</h3>
 		<p class="roadtrip-talkie-description">Bernadette Johnson is the superintendent of the National Park Service at Manzanar.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -388,7 +394,7 @@
 					<div id="bishop-ca" class="roadtrip-buffer">&nbsp;</div>					
 					<h2 class="text-left">Bishop, California</h2>
 					<div class="embed-responsive embed-responsive-16by9">
-  				<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/283767758" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  				<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/283767758?color=a10d03" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
 					<br>
 				</div><!--end of content stop-->
@@ -417,8 +423,8 @@
 					<h2 class="text-left">Virginia City, Nevada</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/filler.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Jim Tuttle/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/tuttle_virginiacity.jpg" style="width:100%;" alt="Originally a boomtown built in the 1850s, Virginia City was built around mining silver and gold from the Comstock Lode that was discovered in the area. In the late 1870s the mines’ outputs decreased and the town’s population suffered. In recent year, it’s managed to survive as a tourist town.">
+<p><span class="img-caption">Originally a boomtown built in the 1850s, Virginia City was built around mining silver and gold from the Comstock Lode that was discovered in the area. In the late 1870s the mines’ outputs decreased and the town’s population suffered. In recent year, it’s managed to survive as a tourist town.&nbsp;(Jim Tuttle/News21)</span></p>
 					<br>
 					
 
@@ -428,7 +434,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Wayne Douglas Tarrant</h3>
-		<p class="roadtrip-pullquote">@@pull quote text goes here@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;We’re bringing in too many different races. We have too much diversity. Other countries don’t open their border like we do, but now we’re in trouble with Muslims. We don’t really have a problem (with racism) up here. The only time we have problem is when we have some Arabs up here in their dress. They’re in full burka and people get very nervous. They don’t know if they have explosives underneath those outfits. All the merchants up here get nervous. There is a lot of people up here with guns and they’re standing at the ready in case there is a problem. It’s not fear, we’re fearless… I think it’s politics causing the problems. The politicians are causing the problems because of greed.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -440,7 +446,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Paul Coombes</h3>
-		<p class="roadtrip-pullquote">@@pullquote content goes here@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;I come from an ethnic family. My daughter, Zoe, is half African-American, so I am very sensitive to the topic of hate. I think all races have a lot of work to do. It’s better than it used to be, but we have a long way to go.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 				</div>
@@ -449,8 +455,8 @@
 					<h2 class="text-left">Stagecoach, Nevada</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_stagecoach_2.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_stagecoach_2.jpg" style="width:100%;" alt="The gas station in Stagecoach, Nevada, where we found Brian Baldwin.">
+<p><span class="img-caption">The gas station in Stagecoach, Nevada, where we found Brian Baldwin.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -459,7 +465,7 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_stagecoach_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Brian Baldwin</h3>
+		<h3 class="talkie-head">Brian Baldwin</h3>
 		<p class="roadtrip-talkie-description">Brian Baldwin was stocking produce at a gas station in Lyon County, Nevada when News21 met him. He said people are too 'politically sensitive' today, and recalled a time when America was 'pretty cool for a while there.'</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -490,18 +496,18 @@
 					<div id="salt-lake-city-ut" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Salt Lake City, Utah</h2>
 					<div class="embed-responsive embed-responsive-16by9">
-  				<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/283769168" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  				<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/283769168?color=a10d03" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
 					<br>
 					
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_slc_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Michelle Calwley</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;I think we’re going backwards. Totally backwards, when a large majority of us just want to be together. We’re all the same.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -509,11 +515,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_slc_3.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Bradley DeNorris</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;When you have something like that, where the president is saying there is blame  on both sides, equivocating about straight up racism sides, then I think it gives people more license to be straight out racist. &nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -521,11 +527,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_slc_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Lisa Corsetti</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;I am not going to fly the American flag on the fourth of July, instead I am going to fly my resistance flag because I believe that this country needs to go forward not backwards. We don't want open borders, we just want people to be treated fairly and not cruelly when they come here. You know I think America the beautiful is what we should strive for and it should be both beautiful inside and out.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -533,11 +539,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_slc_4.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Martin Turner IV</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;The right number of Americans voted for Donald Trump to win the election because they need a change from Hillary Clinton was getting ready to deliver upon them. Every race causes problems for America. There are laws to keep civil order. If we don’t have civil order, our social order breaks down. So it’s not just the illegal immigrants that cause it a lot of problems.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -547,8 +553,8 @@
 					<h2 class="text-left">Little America Hotel, Wyoming</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_littleamerica_4.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_littleamerica_4.jpg" style="width:100%;" alt="Located off of Exit 68 on Interstate 80, Little America is a combination of hotel, gas station, and gift shop. It was intentionally built in a remote location to act as a haven for westward-bound travelers.">
+<p><span class="img-caption">Located off of Exit 68 on Interstate 80, Little America is a combination of hotel, gas station, and gift shop. It was intentionally built in a remote location to act as a haven for westward-bound travelers.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -557,8 +563,8 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_littleamerica.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Mike and Tirzah Smith</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Mike and Tirzah Smith</h3>
+		<p class="roadtrip-talkie-description">Mike, a technician from Orem, Utah, and his wife Tirzah, a second grade teacher, are returning from a pioneer trek to Martin’s cove with their youth group.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -569,8 +575,8 @@
 					<h2 class="text-left">Laramie, Wyoming</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_laramie_3.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_laramie_3.jpg" style="width:100%;" alt="Matt Mcomie (left) prepares for a game of pool with Kevin Farris (center left) while Kraig Smith and Buck Ward (right) converse at the the Buckhorn Bar & Parlor in Laramie, Wyoming.">
+<p><span class="img-caption">Matt Mcomie (left) prepares for a game of pool with Kevin Farris (center left) while Kraig Smith and Buck Ward (right) converse at the the Buckhorn Bar & Parlor in Laramie, Wyoming.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -580,7 +586,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Buck Ward</h3>
-		<p class="roadtrip-pullquote">@@pull quote content goes here@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;Hate and friction is everywhere around us. Even here in the bar, we disagree about politics. I think Trump is a big (expletive). He’s out of touch with America and what Americans want. It’s the things he’s saying and not saying that is spurring hate.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -591,8 +597,8 @@
 	<img src="/img/roadtrip/pullquote/martinez_pullquote_laramie_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
-		<h3 class="talkie-head">Buck Ward</h3>
-		<p class="roadtrip-pullquote">@@pull quote content goes here@@</p>
+		<h3 class="talkie-head">Fred Lee</h3>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;The media is making things a bigger deal than they are. Everything becomes more heightened when the media can reach millions of people on their phones.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -603,8 +609,8 @@
 	<img src="/img/roadtrip/pullquote/martinez_pullquote_laramie_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
-		<h3 class="talkie-head">Buck Ward</h3>
-		<p class="roadtrip-pullquote">@@pull quote content goes here@@</p>
+		<h3 class="talkie-head">Logan Lee</h3>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;Being an interracial couple, [Fred and I] see the race thing. Talking about it and hyping it up makes it worse for us. People have made comments to us, but it’s a lot better in Wyoming... Here, there isn’t the history of racial tensions.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -632,18 +638,19 @@
 				<div class="content-stop">
 					<div id="keystone-sd" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Mount Rushmore</h2>
-					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
-					<p>Soundscape video for Mt Rushmore</p>
+					<div class="embed-responsive embed-responsive-16by9">
+  					<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/284083131?color=a10d03" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
 					<br>
 					
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_rushmore_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Jeff & Janet Smith</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;There’s definitely friction and I think sixty percent of our friction is the news. We show all bad and no positive because there are as many positive people in the country as there are negative. —Jeff&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -651,11 +658,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_rushmore_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Charles & Gale Smith</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;“So I think the media has the Trump effect. It’s their fault. And people criticize Trump for tweeting, but it’s the only way he can reach the American people because the media won’t report what he is doing accurately.” —Charles<br><br>“These presidents would agree with a lot of the policies that he’s adapted. I think that most of Americans are behind the president and what he is doing.” —Gale&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -665,8 +672,8 @@
 					<h2 class="text-left">The Corn Palace</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_mitchell_1.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_mitchell_1.jpg" style="width:100%;" alt="With an exterior decorated using corn ears, The World’s Only Corn Palace in Mitchell, South Dakota, attracts around half a million people a year. The exterior murals change every year with a different theme. For 2017, the theme was “South Dakota Weather”.">
+<p><span class="img-caption">With an exterior decorated using corn ears, The World’s Only Corn Palace in Mitchell, South Dakota, attracts around half a million people a year. The exterior murals change every year with a different theme. For 2017, the theme was “South Dakota Weather”.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -675,8 +682,8 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_mitchell_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Lauren and Devon Langston</h3>
-		<p class="roadtrip-talkie-description">Lauren and Devon were visiting the Corn Palace from Virginia.</p>
+		<h3 class="talkie-head">Lauren and Devon Langston</h3>
+		<p class="roadtrip-talkie-description">Lauren and Devon from Virginia are traveling the country in an RV.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -707,8 +714,8 @@
 					<h2 class="text-left">Tekamah, Nebraska</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_tekamah_1.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_tekamah_1.jpg" style="width:100%;" alt="With a slogan of “Looking to the Future”, Tekamah, NE is a small town of 1,852 people northwest of Omaha. ">
+<p><span class="img-caption">With a slogan of “Looking to the Future”, Tekamah, NE is a small town of 1,852 people northwest of Omaha. &nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -717,8 +724,8 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_tekamah_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Frankie McCandless and Keith Terwilliger</h3>
-		<p class="roadtrip-talkie-description">Construction workers in town from Tennessee on a job.</p>
+		<h3 class="talkie-head">Frankie McCandless and Keith Terwilliger</h3>
+		<p class="roadtrip-talkie-description">Frankie(left) and Keith are construction workers in town from Tennessee on a job.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -730,7 +737,7 @@
 	<img src="/img/roadtrip/talkie/martinez_talkie_tekamah_3.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Larry Bucy</h3>
+		<h3 class="talkie-head">Larry Bucy</h3>
 		<p class="roadtrip-talkie-description">A Tekamah native who served in the U.S. Army from 1969 to 1973</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -760,18 +767,19 @@
 				<div class="content-stop">
 					<div id="perry-ia" class="roadtrip-buffer">&nbsp;</div>
 					<h2 class="text-left">Perry, Iowa</h2>
-					<img class="img-fluid" src="http://via.placeholder.com/1200x675"></img>
-					<p>Soundscape video for Perry</p>
+					<div class="embed-responsive embed-responsive-16by9">
+  					<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/284083945?color=a10d03" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
 					<br>
 					
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/lancial_pullquote_perry_4.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Laurie Haynes</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;I am proud of what America was founded to be. I am not very proud of what it is right now.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -779,11 +787,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/lancial_pullquote_perry_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Debra Allen</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;I mean it’s just a people aren’t talking to each other and not trying to get along. You just got to weigh both sides. And you got to look and not make an opinion right away. You got to think about it and listen to both sides.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -791,11 +799,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/martinez_pullquote_perry_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Jerry Roberts</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;I think that we are rapidly approaching the precipice. We haven’t approached or taught this generation or even past generations how to sit down and discuss things and how to work problems through. I think it’s a problem solving situation. And everyone just has their view point and they are not willing to sit down and aren’t willing to participate in discourse. I’m a veteran, so I will feel pride in America. I don’t know what others feel. Sometimes they don’t know enough to stand up and take their hat off when the flag goes by, but at least they show up for the event and that’s a starting point.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -803,11 +811,11 @@
 
 <div class="row">
 	<div class="col-sm-12 col-md-6">
-	<img src="/img/roadtrip/pullquote/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
+	<img src="/img/roadtrip/pullquote/lancial_pullquote_perry_3.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Connie Metzler</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;And then the media will take on something bad that happened and just continually talk about it over and over and over and over and over and over, to where it will get a group of people upset and angry.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 				</div>
@@ -816,8 +824,8 @@
 					<h2 class="text-left">Mustachio's Bar and Grill</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/martinez_carbonhill_1.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/martinez_carbonhill_1.jpg" style="width:100%;" alt="In a village that hasn’t grown or shrunk since it’s founding in the late 1800s, Mustachio’s Bar and Grill is one of two food establishments in Carbon Hill.">
+<p><span class="img-caption">In a village that hasn’t grown or shrunk since it’s founding in the late 1800s, Mustachio’s Bar and Grill is one of two food establishments in Carbon Hill.&nbsp;(Lenny Martinez Dominguez/News21)</span></p>
 					<br>
 					
 
@@ -827,7 +835,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Diane Eartly</h3>
-		<p class="roadtrip-pullquote">@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;There's no like 'I hate you and don't come in here' type thing where they're going to fight in the middle... I know you probably have the diverse people that don't get along and especially with politics or something... they'll just be quieter or they'll just leave.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -839,7 +847,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Stephanie Long</h3>
-		<p class="roadtrip-pullquote">@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;There’s a lot of growing that needs to be done, but I’m hoping [America] will get better.&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -869,8 +877,8 @@
 					<h2 class="text-left">Fremont, Ohio</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/lancial_fremont.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Jim Tuttle/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/lancial_fremont.jpg" style="width:100%;" alt="Built between 1859 and 1865, this 31-room mansion on the Spiegel Grove estate in Fremont, Ohio was home to America's 19th president, Rutherford B. Hayes.">
+<p><span class="img-caption">Built between 1859 and 1865, this 31-room mansion on the Spiegel Grove estate in Fremont, Ohio was home to America's 19th president, Rutherford B. Hayes.&nbsp;(Jim Tuttle/News21)</span></p>
 					<br>
 					
 
@@ -879,8 +887,8 @@
 	<img src="/img/roadtrip/talkie/lancial_talkie_fremont_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Julie & Chandra</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Chandra Palm & Julie Bellfy</h3>
+		<p class="roadtrip-talkie-description">Fremont native Chandra(left) and her friend Julie belive social meida contributes to the divisiveness in America today.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -899,7 +907,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Anthony Caraballo</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -911,7 +919,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Shane Harris Sr.</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -923,7 +931,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Dave Robinson</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -941,7 +949,7 @@
 	<img src="/img/roadtrip/talkie/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet CAROL & BOB</h3>
+		<h3 class="talkie-head">CAROL & BOB</h3>
 		<p class="roadtrip-talkie-description">@@needs a description@@</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -954,7 +962,7 @@
 	<img src="/img/roadtrip/talkie/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet THOMAS</h3>
+		<h3 class="talkie-head">THOMAS</h3>
 		<p class="roadtrip-talkie-description">@@needs a description@@</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -967,7 +975,7 @@
 	<img src="/img/roadtrip/talkie/filler.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet JOHN</h3>
+		<h3 class="talkie-head">JOHN</h3>
 		<p class="roadtrip-talkie-description">@@needs a description@@</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
@@ -1008,7 +1016,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Belinda Asio-Ogaino</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1020,7 +1028,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Ben Keeler</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1032,7 +1040,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Lluvia Medina</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1044,7 +1052,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Peter Robinson</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1074,8 +1082,8 @@
 					<h2 class="text-left">Omelet Shoppe</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_omeletshoppe_1.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_omeletshoppe_1.jpg" style="width:100%;" alt="The Omelet Shoppe is a 24-hour diner lcoated near Interstate 64 in Beckley, West Virginia. The diner is a poplar attraction for local residents. Beckley native George Bailey said he has been getting his morning cup of coffee at the diner for the past three years.">
+<p><span class="img-caption">The Omelet Shoppe is a 24-hour diner lcoated near Interstate 64 in Beckley, West Virginia. The diner is a poplar attraction for local residents. Beckley native George Bailey said he has been getting his morning cup of coffee at the diner for the past three years.&nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					
 
@@ -1084,8 +1092,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_omeletshoppe_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Felicia Robertson</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Felicia Robertson</h3>
+		<p class="roadtrip-talkie-description">Felicia Robertson is a waitress at the Omelet Shoppe.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1097,22 +1105,22 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_omeletshoppe_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet William Bailey</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">William Bailey</h3>
+		<p class="roadtrip-talkie-description">William has been visiting the Omelet Shoppe every day for the past three years.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
 					<br>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_omeletshoppe_murder_2.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_omeletshoppe_murder_2.jpg" style="width:100%;" alt="A woman was murdered at the Travelodge Hotel in Beckley, West Virginia on July 9. Felicia Robertson, a waitress at the Omelete Shoppe next door, attributes the murder to one cause — drugs. The opiod epidemic grips the community of 17,000.">
+<p><span class="img-caption">A woman was murdered at the Travelodge Hotel in Beckley, West Virginia on July 9. Felicia Robertson, a waitress at the Omelete Shoppe next door, attributes the murder to one cause — drugs. The opiod epidemic grips the community of 17,000.&nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					<h2 class="text-left">Brandy’s Catfish and Trout Pond</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_pond.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_pond.jpg" style="width:100%;" alt="Tristan 'Turtle' Hylton, of Beckley, attempts to reel in his pole at Brandy's Catfish and Trout Pond while Leah J. King, Jayden Farnsworth, and Uriah Farnsworth congregate around him awaiting what they hope is a big catch.">
+<p><span class="img-caption">Tristan 'Turtle' Hylton, of Beckley, attempts to reel in his pole at Brandy's Catfish and Trout Pond while Leah J. King, Jayden Farnsworth, and Uriah Farnsworth congregate around him awaiting what they hope is a big catch.&nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					
 
@@ -1121,8 +1129,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_pond_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Jessica Vance</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Jessica Vance</h3>
+		<p class="roadtrip-talkie-description">Jessica Vance, of Beckely, enjoys bonding with her children over fishing at Brandy's Catfish Pond near Bolt, West Virginia.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1150,7 +1158,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Jason Kovach</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1187,8 +1195,8 @@
 					<h2 class="text-left">Van Buren, Arkansas</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_vanburen.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_vanburen.jpg" style="width:100%;" alt="Van Buren, Arkansas is home to a population of 24,000. The Main Street district (pictured) is a popular attraction for tourists who visit the community to take rides on the excursion trains.">
+<p><span class="img-caption">Van Buren, Arkansas is home to a population of 24,000. The Main Street district (pictured) is a popular attraction for tourists who visit the community to take rides on the excursion trains.&nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					
 
@@ -1198,7 +1206,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Couple in Van Buren</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 				</div>
@@ -1236,7 +1244,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Jay Lewis</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1248,7 +1256,7 @@
 	</div>
 	<div class="col-sm-12 col-md-6">
 		<h3 class="talkie-head">Lary Bryant</h3>
-		<p class="roadtrip-pullquote">@@her words@@</p>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@pullquote content goes here@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1258,8 +1266,8 @@
 					<h2 class="text-left">Elk City, Oklahoma</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_elkcity.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_elkcity.jpg" style="width:100%;" alt="Elk City, OK is located on the west side of the state along Route 66.  The city recorded a population of 11,555 in 2017. Stout & Son Pawn Shop (pictured) was started in 1952 by Steve Stout's grandfather. ">
+<p><span class="img-caption">Elk City, OK is located on the west side of the state along Route 66.  The city recorded a population of 11,555 in 2017. Stout & Son Pawn Shop (pictured) was started in 1952 by Steve Stout's grandfather. &nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					
 
@@ -1268,8 +1276,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_elkcity_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Larry Parvin</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Larry Parvin</h3>
+		<p class="roadtrip-talkie-description">Larry Parvin is the Pastor at Main Street Baptist Church in Elk City, Oklahoma.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1281,8 +1289,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_elkcity_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Steve Stout</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Steve Stout</h3>
+		<p class="roadtrip-talkie-description">Steve owns Stout and Son Pawn Shop in Elk City</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1293,7 +1301,7 @@
 					
 
 <img class="img-fluid" src="/img/roadtrip/locations/tuttle_amarillo.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Jim Tuttle/News21)</span></p>
 					<br>
 					
 
@@ -1302,8 +1310,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_amarillo.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Boozefighter Whiff</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Boozefighter Whiff</h3>
+		<p class="roadtrip-talkie-description">Boozefighter Whiff (his biker name) is a psychology professor and has worked in academia for 30 years.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1324,8 +1332,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_abq_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Maya Vigil</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Maya Vigil</h3>
+		<p class="roadtrip-talkie-description">Maya is a college student at the University of New Mexico and and a waitress at Central Grill in Albuquerque, New Mexico. She believes open conversation is the solution to the tensions that exist in America.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1336,8 +1344,8 @@
 					<h2 class="text-left">Grants, New Mexico</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_grants_2.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
-<p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_grants_2.jpg" style="width:100%;" alt="Riverwalk Park is located in Grants, New Mexico along Route 66. Grants is home to a population of approximately 9,000 citizens.">
+<p><span class="img-caption">Riverwalk Park is located in Grants, New Mexico along Route 66. Grants is home to a population of approximately 9,000 citizens.&nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					
 
@@ -1346,8 +1354,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_grants_1.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Melanie Beyale</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Melanie Beyale</h3>
+		<p class="roadtrip-talkie-description">Melanie Beyale, 23, is a member of the Navajo Nation and fearful of the state of the nation.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1359,8 +1367,8 @@
 	<img src="/img/roadtrip/talkie/marlatt_talkie_grants_2.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-xl-6 ">
-		<h3 class="talkie-head">Meet Stone Gonzales</h3>
-		<p class="roadtrip-talkie-description">@@needs a description@@</p>
+		<h3 class="talkie-head">Stone Gonzales</h3>
+		<p class="roadtrip-talkie-description">Stone Gonzales works at the New Mexico Mining Museum and feels that both Democrats and Republicans want change.</p>
 		<button class="btn btn-primary">SOUND CITE &THORN;</button>
 	</div>
 </div><!--end of talkie row-->
@@ -1371,7 +1379,7 @@
 					<h2 class="text-left">Sanders, Arizona</h2>
 					
 
-<img class="img-fluid" src="/img/roadtrip/locations/marlatt_sanders_1.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
+<img class="img-fluid" src="/img/roadtrip/locations/marlatt_sanders_2.jpg" style="width:100%;" alt="@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@">
 <p><span class="img-caption">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;(Tilly Marlatt/News21)</span></p>
 					<br>
 					
@@ -1381,8 +1389,8 @@
 	<img src="/img/roadtrip/pullquote/marlatt_pullquote_sanders.jpg" class="img-fluid" alt="@@needs a caption@@" />
 	</div>
 	<div class="col-sm-12 col-md-6">
-		<h3 class="talkie-head">@@John Smith@@</h3>
-		<p class="roadtrip-pullquote">@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@</p>
+		<h3 class="talkie-head">@@Jane Smith@@</h3>
+		<p class="roadtrip-pullquote"><i class="fas fa-quote-left"></i>&nbsp;@@Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.@@&nbsp;<i class="fas fa-quote-right"></i></p>
 	</div>
 </div><!--end of talkie row-->
 					<br>
@@ -1409,7 +1417,7 @@
 			<div class="col-xs-12 col-lg-7 offset-lg-1">
 				<div class="content-stop">
 					<div id="phoenix-az" class="roadtrip-buffer">&nbsp;</div>
-					<h2 class="text-left">Phoenix Arizona</h2>
+					<h2 class="text-left">Phoenix, Arizona</h2>
 					<div class="missing-content">&nbsp;</div><br>
 					<div class="missing-content">&nbsp;</div><br>
 				</div>
@@ -1417,13 +1425,13 @@
 			<div class="col-lg-3">
 						<div id="map-nav">
 						<a data-toggle="modal" data-target="#navigationModal">
-							<div>
+							<div><br>
 							<p class="text-center">Click here to explore:</p>
 							</div>
 						<div id="map"></div><br>
 						<div class="travel-info">
 							<div class="text-center">
-									<img src="http://localhost:4000/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="highway-sign">
+									<img src="/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="highway-sign">
 							</div>
 							<br>
 							<h4 class="highway-name text-center">Interstate 10 West</span></h4>
@@ -1443,1541 +1451,11 @@
 				<a data-toggle="modal" data-target="#mobileModalNav">
 				<div id="roadtrip-bar-mobile">
 					<br>
-				<h4 class=text-center><img src="http://localhost:4000/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="highway-sign" style="padding-right:10px;height:30px;"><span class="highway-name">Interstate 10 West</span></h4>
+				<h4 class=text-center><img src="/img/roadtrip/signs/png/I-10.png" alt="Interstate 10 West" class="highway-sign" style="padding-right:10px;height:30px;"><span class="highway-name">Interstate 10 West</span></h4>
 				</div>
 				</a>
 			</div>
 		</div>
 	</div> <!--end of container-fluid -->
 
-	<script>
-
-		var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
-		var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
-    var geojson={
-			"type": "FeatureCollection",
-			"features": [
-			{
-			"geometry": {
-			"coordinates": [
-			-112.074037,
-			33.448377
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "1,555,324",
-			"city": "Phoenix",
-			"state": "Arizona",
-			"marker": "phoenix",
-			"pageID": "phoenix-az"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-116.054169,
-			34.135558
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "26,452",
-			"city": "Twentynine Palms",
-			"state": "California",
-			"marker": "twenty-nine-palms",
-			"pageID": "twenty-nine-palms-ca"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-118.006472,
-			36.281883
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "203",
-			"city": "Olancha",
-			"state": "California",
-			"marker": "olancha",
-			"pageID": "olancha-ca"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-118.152789,
-			36.727229
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "---",
-			"city": "Manzanar",
-			"state": "California",
-			"marker": "manzanar",
-			"pageID": "manzanar-ca"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-118.399664,
-			37.361424
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "3760",
-			"city": "Bishop",
-			"state": "California",
-			"marker": "bishop",
-			"pageID": "bishop-ca"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-119.649979,
-			39.309514
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "711",
-			"city": "Virginia City",
-			"state": "Nevada",
-			"marker": "virginia-city",
-			"pageID": "virginia-city-nv"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-119.374057,
-			39.373804
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "1,703",
-			"city": "Stagecoach",
-			"state": "Nevada",
-			"marker": "stagecoach",
-			"pageID": "stagecoach-nv"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-111.891047,
-			40.760779
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "191,446",
-			"city": "Salt Lake City",
-			"state": "Utah",
-			"marker": "salt-lake-city",
-			"pageID": "salt-lake-city-ut"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-109.859034,
-			41.543569
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "86",
-			"city": "Little America",
-			"state": "Wyoming",
-			"marker": "little-america",
-			"pageID": "little-america-wy"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-105.591101,
-			41.311367
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "32,096",
-			"city": "Laramie",
-			"state": "Wyoming",
-			"marker": "laramie",
-			"pageID": "laramie-wy"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-103.418246,
-			43.895544
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "318",
-			"city": "Keystone",
-			"state": "South Dakota",
-			"marker": "keystone",
-			"pageID": "keystone-sd"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-98.029799,
-			43.709428
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "15,610",
-			"city": "Mitchell",
-			"state": "South Dakota",
-			"marker": "mitchell",
-			"pageID": "mitchell-sd"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-96.221128,
-			41.778322
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "1,662",
-			"city": "Tekamah",
-			"state": "Nebraska",
-			"marker": "tekamah",
-			"pageID": "tekamah-ne"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-94.10718,
-			41.838596
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "7,876",
-			"city": "Perry",
-			"state": "Iowa",
-			"marker": "perry",
-			"pageID": "perry-ia"
-
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-88.300063,
-			41.296976
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "380",
-			"city": "Carbon Hill",
-			"state": "Illinois",
-			"marker": "carbon-hill",
-			"pageID": "carbon-hill-il"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-83.121863,
-			41.35033
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "16,388",
-			"city": "Fremont",
-			"state": "Ohio",
-			"marker": "fremont",
-			"pageID": "fremont-oh"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-76.886701,
-			40.273191
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "49,160",
-			"city": "Harrisburg",
-			"state": "Pennsylvania",
-			"marker": "harrisburg",
-			"pageID": "harrisburg-pa"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-77.231095,
-			39.830929
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "7,643",
-			"city": "Gettysburg",
-			"state": "Pennsylvania",
-			"marker": "gettysburg",
-			"pageID": "gettysburg-pa"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-77.036871,
-			38.907192
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "659,009",
-			"city": "Washington",
-			"state": "D.C.",
-			"marker": "washington-dc",
-			"pageID": "dc"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-81.188156,
-			37.77817
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "17,348",
-			"city": "Beckley",
-			"state": "West Virginia",
-			"marker": "beckley",
-			"pageID": "beckley-wv"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-82.910524,
-			37.274667
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "15,884",
-			"city": "Mallie",
-			"state": "Kentucky",
-			"marker": "mallie",
-			"pageID": "mallie-ky"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-84.083265,
-			37.128977
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "8,111",
-			"city": "London",
-			"state": "Kentucky",
-			"marker": "london",
-			"pageID": "london-ky"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-90.04898,
-			35.149534
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "655,857",
-			"city": "Memphis",
-			"state": "Tennessee",
-			"marker": "memphis",
-			"pageID": "memphis-tn"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-94.348268,
-			35.436756
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "23,155",
-			"city": "Van Buren",
-			"state": "Arkansas",
-			"marker": "van-buren",
-			"pageID": "van-buren-ar"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-97.516428,
-			35.46756
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "620,015",
-			"city": "Oklahoma City",
-			"state": "Oklahoma",
-			"marker": "oklahoma-city",
-			"pageID": "oklahoma-city-ok"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-99.404259,
-			35.411994
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "12,426",
-			"city": "Elk City",
-			"state": "Oklahoma",
-			"marker": "elk-city",
-			"pageID": "elk-city-ok"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-101.831297,
-			35.221997
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "197,570",
-			"city": "Amarillo",
-			"state": "Texas",
-			"marker": "amarillo",
-			"pageID": "amarillo-tx"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-106.650422,
-			35.084386
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "556,859",
-			"city": "Albuquerque",
-			"state": "New Mexico",
-			"marker": "albuquerque",
-			"pageID": "albuquerque-nm"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-107.851447,
-			35.14726
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "9,263",
-			"city": "Grants",
-			"state":"New Mexico",
-			"marker": "grants",
-			"pageID": "grants-nm"
-			},
-			"type": "Feature"
-			},
-			{
-			"geometry": {
-			"coordinates": [
-			-109.328794,
-			35.209143
-			],
-			"type": "Point"
-			},
-			"properties": {
-			"population": "574",
-			"city": "Sanders",
-			"state":"Arizona",
-			"marker": "sanders",
-			"pageID": "sanders-az"
-			},  
-			"type": "Feature"
-			}
-			]
-			};;
-
-    mapboxgl.accessToken = 'pk.eyJ1IjoibGVubnltYXJ0aW5lemQiLCJhIjoiY2prMWZqNDJlMDBsMzNrb3h6dXZ1Zm50NyJ9.K_9DxP150GAPZI9CbLsJfQ';
-
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
-      center: [longStart[0],  latStart[0]],
-      interactive: false,
-      zoom: 6
-    });
-
-    map.on('load', function() {
-    	getStops();
-      for(i=0;i<30;i++){
-    		getRouteBetweenStops(i);
-    	}
-    });
-
-
-    var map2 = new mapboxgl.Map({
-      container: 'map2',
-      style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
-      center: [-99.95223783,  38.24814853],
-      minZoom: 3,
-      maxZoom: 24,
-      maxBounds: [[-131,24],[-65,50]],
-      pitchWithRotate: false
-    });
-
-    map2.on('load', function() {
-        	getStops2();
-      		drawRoadTripRoute(longStart,latStart);
-    });
-		$('#navigationModal').on('shown.bs.modal', function () { // chooseLocation is the id of the modal.
-		    map2.resize();
-	 	});
-    
-
-    
-
-    function getRouteBetweenStops(j) {
-      var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
-      var longEnd = [-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794, -112.074037];
-      var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
-      var latEnd = [34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143,33.448377];
-      var routeID = ["route1","route2","route3","route4","route5","route6","route7","route8","route9","route10","route11","route12","route13","route14","route15","route16","route17","route18","route19","route20","route21","route22","route23","route24","route25","route26","route27","route28","route29","route30"];
-
-      var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[j] + ',' + latStart[j] + ';' + longEnd[j] + ',' + latEnd[j] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
-      $.ajax({
-        method:'GET',
-        url: directionsRequest,
-      }).done(function(data) {
-          var route = data.routes[0].geometry;
-        map.addLayer({
-          id: routeID[j],
-          type: 'line',
-          source: {
-            type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry: route
-          }
-          },
-          paint: {
-            'line-width': 5,
-          	'line-color' : '#ba8a18'
-          },
-          layout: {
-          	'visibility': 'none'
-          }
-        });
-      });
-
-      }
-
-    function drawRoadTripRoute(longarray, latarray) {
-		var latStart = latarray;
-		var longStart = longarray;
-		var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[0] + ',' + latStart[0] + ';' + longStart[1] + ',' + latStart[1] + ';' + longStart[2] + ',' + latStart[2] + ';' + longStart[3] + ',' + latStart[3] + ';' + longStart[4] + ',' + latStart[4] + ';' + longStart[5] + ',' + latStart[5] + ';' + longStart[6] + ',' + latStart[6] + ';' + longStart[7] + ',' + latStart[7] + ';' + longStart[8] + ',' + latStart[8] + ';' + longStart[9] + ',' + latStart[9] + ';' + longStart[10] + ',' + latStart[10] + ';' + longStart[11] + ',' + latStart[11] + ';' + longStart[12] + ',' + latStart[12] + ';' + longStart[13] + ',' + latStart[13] + ';' + longStart[14] + ',' + latStart[14] + ';' + longStart[15] + ',' + latStart[15] + ';' + longStart[16] + ',' + latStart[16] + ';' + longStart[17] + ',' + latStart[17] + ';' + longStart[18] + ',' + latStart[18] + ';' + longStart[19] + ',' + latStart[19] + ';' + longStart[20] + ',' + latStart[20] + ';' + longStart[21] + ',' + latStart[21] + ';' + longStart[22] + ',' + latStart[22] + ';' + longStart[23] + ',' + latStart[23] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
-		var directionsRequest2 = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[23] + ',' + latStart[23] + ';' + longStart[24] + ',' + latStart[24] + ';' + longStart[25] + ',' + latStart[25] + ';' + longStart[26] + ',' + latStart[26] + ';' + longStart[27] + ',' + latStart[27] + ';' + longStart[28] + ',' + latStart[28] + ';' + longStart[29] + ',' + latStart[29] + ';' + longStart[0] + ',' + latStart[0] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
-		$.ajax({
-		      method:'GET',
-		      url: directionsRequest,
-		      }).done(function(data) {
-		      var route = data.routes[0].geometry;
-		      map2.addLayer({
-		            id: 'part1',
-		            type: 'line',
-		            source: {
-		                  type: 'geojson',
-		            data: {
-		                  type: 'Feature',
-		                  geometry: route
-		            }
-		            },
-		            paint: {
-		                  'line-width': 5,
-		                  'line-color' : '#171717'
-		            }
-		      });
-		      })
-		      $.ajax({
-		            method:'GET',
-		            url: directionsRequest2,
-		            }).done(function(data) {
-		            var route = data.routes[0].geometry;
-		            map2.addLayer({
-		                  id: 'part2',
-		                  type: 'line',
-		                  source: {
-		                        type: 'geojson',
-		                        data: {
-		                              type: 'Feature',
-		                              geometry: route
-		                        }
-		                  },
-		                  paint: {
-		                        'line-width': 5,
-		                        'line-color' : '#171717'
-		                  }
-		            });
-		            });
-		      }
-        
-    function getStops() {
-    	//console.log("eh3");
-    	geojson.features.forEach(function(marker) {
-    	//console.log(marker.properties.marker);
-    	// create a HTML element for each feature
-    	var el = document.createElement('div');
-    	el.className = 'marker';
-    	el.id = marker.properties.marker;
-    	// make a marker for each feature and add to the map
-    	new mapboxgl.Marker(el)
-    		.setLngLat(marker.geometry.coordinates)
-    		.addTo(map);
-    	});
-    }
-    var cow = "$('#navigationModal').modal('hide');$('.mapboxgl-popup').hide();";
-    function getStops2() {
-    	//console.log("eh3");
-    	geojson.features.forEach(function(marker) {
-    	//console.log(marker.properties.marker);
-    	// create a HTML element for each feature
-    	var el = document.createElement('div');
-    	el.className = 'marker';
-    	// make a marker for each feature and add to the map
-    	new mapboxgl.Marker(el)
-    		.setLngLat(marker.geometry.coordinates)
-		    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    		.setHTML('<div class="roadtrip-popup-content"><h5>' + marker.properties.city + ', <br>'+marker.properties.state+'</h5><p>Population:&nbsp;' + marker.properties.population + '<br><br><a href="#'+marker.properties.pageID+'" class="btn btn-primary btn-sm roadtrip-btn" onclick="'+cow+'">Visit this place</a></p></div>'))
-    		.addTo(map2);
-    	});
-    }
-    // var a = 'href="#'+marker.properties.pageID+'";; $('+'#navigationModal'+').modal('+'hide'+')"
-    // $(".modalcloser").click(function(){
-  		// console.log('mooo');
-  		// $('#navigationModal').modal('hide');
-    // });
-
-			var $stop1 = $('#twenty-nine-palms-ca');
-			var $stop2 = $('#olancha-ca');
-			var $stop3 = $('#manzanar-ca');
-			var $stop4 = $('#bishop-ca');
-			var $stop5 = $('#virginia-city-nv');
-			var $stop6 = $('#stagecoach-nv');
-			var $stop7 = $('#salt-lake-city-ut');
-			var $stop8 = $('#little-america-wy');
-			var $stop9 = $('#laramie-wy');
-			var $stop10 = $('#keystone-sd');
-			var $stop11 = $('#mitchell-sd');
-			var $stop12 = $('#tekamah-ne');
-			var $stop13 = $('#perry-ia');
-			var $stop14 = $('#carbon-hill-il');
-			var $stop15 = $('#fremont-oh');
-			var $stop16 = $('#harrisburg-pa');
-			var $stop17 = $('#gettysburg-pa');
-			var $stop18 = $('#dc');
-			var $stop19 = $('#beckley-wv');
-			var $stop20 = $('#mallie-ky');
-			var $stop21 = $('#london-ky');
-			var $stop22 = $('#memphis-tn');
-			var $stop23 = $('#van-buren-ar');
-			var $stop24 = $('#oklahoma-city-ok');
-			var $stop25 = $('#elk-city-ok');
-			var $stop26 = $('#amarillo-tx');
-			var $stop27 = $('#albuquerque-nm');
-			var $stop28 = $('#grants-nm');
-			var $stop29 = $('#sanders-az');
-			var $stop30 = $('#phoenix-az');
-
-			$stop1.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('waypoint');
-        map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
-        map.setLayoutProperty('route1', 'visibility', 'visible');
-        $('#twenty-nine-palms').addClass('marker-active');
-        $('#city-name').text('Twentyine Palms');
-        $('#state-name').text('California');
-        $('#stop-population').text('26,452');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[0],latStart[0]], zoom: 6, speed:1});
-          map.setLayoutProperty('route1', 'visibility', 'none');
-          $('#twenty-nine-palms').removeClass('marker-active');
-          $('#phoenix').addClass('marker-visited');
-	    		$('#city-name').text('Phoenix');
-	        $('#state-name').text('Arizona');
-	        $('#stop-population').text('1,555,324');
-        }
-        }, {offset: '45%'});
-
-			$stop2.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[2],latStart[2]], zoom: 6, speed:1});
-        map.setLayoutProperty('route2', 'visibility', 'visible');
-        $('#olancha').addClass('marker-active');
-        $('#twenty-nine-palms').removeClass('marker-active');
-        $('.highway-name').text('Highway 395 North');
-        $('#city-name').text('Olancha');
-        $('#stop-population').text('203');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/US-395.png',
-        	alt:'Highway 395 North'
-        });
-
-
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
-          map.setLayoutProperty('route2', 'visibility', 'none');
-          $('#olancha').removeClass('marker-active');
-      		$('#twenty-nine-palms').addClass('marker-active');
-					$('#city-name').text('Twentyine Palms');
-					$('#stop-population').text('26,452');
-					$('.highway-name').text('Interstate 10 West');
-					$('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-10.png',
-        	alt:'Interstate 10 West'
-        	});
-        }
-        }, {offset: '45%'});
-
-			$stop3.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[3],latStart[3]], zoom: 6, speed:1});
-        map.setLayoutProperty('route3', 'visibility', 'visible');
-        $('#manzanar').addClass('marker-active');
-        $('#olancha').removeClass('marker-active');
-        $('#city-name').text('Manzanar');
-        $('#stop-population').text('---');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[2],latStart[2]], zoom: 6, speed:1});
-          map.setLayoutProperty('route3', 'visibility', 'none');
-          $('#manzanar').removeClass('marker-active');
-      		$('#olancha').addClass('marker-active');
-      		$('#city-name').text('Olancha');
-        	$('#stop-population').text('203');
-        }
-        }, {offset: '45%'});
-
-			$stop4.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[4],latStart[4]], zoom: 6, speed:1});
-        map.setLayoutProperty('route4', 'visibility', 'visible');
-        $('#bishop').addClass('marker-active');
-        $('#manzanar').removeClass('marker-active');
-    		$('#city-name').text('Bishop');
-      	$('#stop-population').text('3,760');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[3],latStart[3]], zoom: 6, speed:1});
-          map.setLayoutProperty('route4', 'visibility', 'none');
-          $('#bishop').removeClass('marker-active');
-      		$('#manzanar').addClass('marker-active');
-      		$('#city-name').text('Manzanar National Historic Site');
-        	$('#stop-population').text('--');
-        }
-        }, {offset: '45%'});
-
-			$stop5.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[5],latStart[5]], zoom: 8, speed:1});
-        map.setLayoutProperty('route5', 'visibility', 'visible');
-        $('#virginia-city').addClass('marker-active');
-        $('#bishop').removeClass('marker-active');
-    		$('#city-name').text('Virginia City');
-    		$('#stop-population').text('711');
-    		$('#state-name').text('Nevada');
-    		$('.highway-name').text('Highway 50 East');
-    		$('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/US-50.png',
-        	alt:'Highway 50 East'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[4],latStart[4]], zoom: 6, speed:1});
-          map.setLayoutProperty('route5', 'visibility', 'none');
-          $('#virginia-city').removeClass('marker-active');
-      		$('#bishop').addClass('marker-active');
-      		$('#city-name').text('Bishop');
-      		$('#stop-population').text('3,760');
-      		$('#state-name').text('California');
-      		$('.highway-name').text('Highway 395 North');
-      		$('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/US-395.png',
-        		alt:'Highway 395 North'
-        	});
-        }
-        }, {offset: '45%'});
-
-			$stop6.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[6],latStart[6]], zoom:8, speed:1});
-        map.setLayoutProperty('route6', 'visibility', 'visible');
-        $('#stagecoach').addClass('marker-active');
-        $('#virginia-city').removeClass('marker-active');
-    		$('#city-name').text('Stagecoach');
-    		$('#stop-population').text('1,703');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[5],latStart[5]], zoom: 8, speed:1});
-          map.setLayoutProperty('route6', 'visibility', 'none');
-          $('#stagecoach').removeClass('marker-active');
-      		$('#virginia-city').addClass('marker-active');
-					$('#city-name').text('Virginia City');
-    			$('#stop-population').text('711');
-        }
-        }, {offset: '45%'});
-
-			$stop7.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[7],latStart[7]], zoom: 6, speed:1});
-        map.setLayoutProperty('route7', 'visibility', 'visible');
-        $('#salt-lake-city').addClass('marker-active');
-        $('#stagecoach').removeClass('marker-active');
-        $('#state-name').text('Utah');
-        $('#city-name').text('Salt Lake City');
-        $('#stop-population').text('191,446');
-        $('.highway-name').text('Interstate 80 East');
-    		$('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-80.png',
-        	alt:'Interstate 80 East'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[6],latStart[6]], zoom: 8, speed:1});
-          map.setLayoutProperty('route7', 'visibility', 'none');
-          $('#stagecoach').removeClass('marker-active');
-      		$('#salt-lake-city').addClass('marker-active');
-      		$('#city-name').text('Stagecoach');
-    			$('#stop-population').text('1,703');
-    			$('#state-name').text('Nevada');
-    			$('.highway-name').text('Highway 50 East');
-	    		$('.highway-sign').attr({
-	        	src:'http://localhost:4000/img/roadtrip/signs/png/US-50.png',
-	        	alt:'Highway 50 East'
-	        });
-        }
-        }, {offset: '45%'});
-
-			$stop8.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[8],latStart[8]], zoom: 6, speed:1});
-        map.setLayoutProperty('route8', 'visibility', 'visible');
-        $('#little-america').addClass('marker-active');
-        $('#salt-lake-city').removeClass('marker-active');
-        $('#state-name').text('Wyoming');
-        $('#city-name').text('Little America');
-        $('#stop-population').text('86');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[7],latStart[7]], zoom: 6, speed:1});
-          map.setLayoutProperty('route8', 'visibility', 'none');
-          $('#little-america').removeClass('marker-active');
-      		$('#salt-lake-city').addClass('marker-active');
-      		$('#state-name').text('Utah');
-	        $('#city-name').text('Salt Lake City');
-	        $('#stop-population').text('191,446');
-        }
-        }, {offset: '45%'});
-
-			$stop9.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[9],latStart[9]], zoom: 6, speed:1});
-        map.setLayoutProperty('route9', 'visibility', 'visible');
-        $('#laramie').addClass('marker-active');
-        $('#little-america').removeClass('marker-active');
-				$('#city-name').text('Laramie');
-				$('#stop-population').text('32,096');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[8],latStart[8]], zoom: 6, speed:1});
-          map.setLayoutProperty('route9', 'visibility', 'none');
-          $('#laramie').removeClass('marker-active');
-      		$('#little-america').addClass('marker-active');
-	        $('#city-name').text('Little America');
-        	$('#stop-population').text('86');
-        }
-        }, {offset: '45%'});
-
-			$stop10.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[10],latStart[10]], zoom: 6, speed:1});
-        map.setLayoutProperty('route10', 'visibility', 'visible');
-        $('#keystone').addClass('marker-active');
-        $('#laramie').removeClass('marker-active');
-        $('#state-name').text('South Dakota');
-        $('#city-name').text('Keystone');
-        $('#stop-population').text('318');
-        $('.highway-name').text('Interstate 90 East');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-90.png',
-        	alt:'Interstate 90 East'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[9],latStart[9]], zoom: 6, speed:1});
-          map.setLayoutProperty('route10', 'visibility', 'none');
-          $('#keystone').removeClass('marker-active');
-      		$('#laramie').addClass('marker-active');
-					$('#city-name').text('Laramie');
-					$('#stop-population').text('32,096');
-					$('.highway-name').text('Interstate 80 East');
-					$('#state-name').text('Wyoming');
-	        $('.highway-sign').attr({
-	        	src:'http://localhost:4000/img/roadtrip/signs/png/I-80.png',
-	        	alt:'Interstate 80 East'
-	        });
-        }
-        }, {offset: '45%'});
-
-			$stop11.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[11],latStart[11]], zoom: 6, speed:1});
-        map.setLayoutProperty('route11', 'visibility', 'visible');
-        $('#mitchell').addClass('marker-active');
-        $('#keystone').removeClass('marker-active');
-        $('#city-name').text('Mitchell');
-        $('#stop-population').text('15,610');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[10],latStart[10]], zoom: 6, speed:1});
-          map.setLayoutProperty('route11', 'visibility', 'none');
-          $('#mitchell').removeClass('marker-active');
-      		$('#keystone').addClass('marker-active');
-					$('#city-name').text('Keystone');
-					$('#stop-population').text('318');
-        }
-        }, {offset: '45%'});
-
-			$stop12.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[12],latStart[12]], zoom: 6, speed:1});
-        map.setLayoutProperty('route12', 'visibility', 'visible');
-        $('#tekamah').addClass('marker-active');
-        $('#mitchell').removeClass('marker-active');
-        $('#state-name').text('Nebraska');
-        $('#city-name').text('Tekamah');
-        $('.highway-name').text('Highway 79 South');
-        $('#stop-population').text('1,662');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/SD-79.png',
-        	alt:'Highway 79 South'
-        });
-
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[11],latStart[11]], zoom: 6, speed:1});
-          map.setLayoutProperty('route12', 'visibility', 'none');
-          $('#tekamah').removeClass('marker-active');
-      		$('#mitchell').addClass('marker-active');
-					$('#city-name').text('Mitchell');
-					$('#stop-population').text('318');
-					$('.highway-name').text('Interstate 90 East');
-					$('#state-name').text('South Dakota');
-					$('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/I-90.png',
-        		alt:'Interstate 90 East'
-        	});
-        }
-        }, {offset: '45%'});
-
-			$stop13.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[13],latStart[13]], zoom: 6, speed:1});
-        map.setLayoutProperty('route13', 'visibility', 'visible');
-        $('#perry').addClass('marker-active');
-        $('#tekamah').removeClass('marker-active');
-        $('#state-name').text('Iowa');
-        $('#city-name').text('Perry');
-        $('.highway-name').text('Interstate 80 East');
-        $('#stop-population').text('7,876');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-80.png',
-        	alt:'Interstate 80 East'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[12],latStart[12]], zoom: 6, speed:1});
-          map.setLayoutProperty('route13', 'visibility', 'none');
-          $('#perry').removeClass('marker-active');
-      		$('#tekamah').addClass('marker-active');
-	        $('#state-name').text('Nebraska');
-	        $('#city-name').text('Tekamah');
-	        $('.highway-name').text('Highway 79 South');
-	        $('#stop-population').text('1,662');
-        	$('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/SD-79.png',
-        		alt:'Highway 79 South'
-        	});
-        }
-        }, {offset: '45%'});
-
-			$stop14.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[14],latStart[14]], zoom: 6, speed:1});
-        map.setLayoutProperty('route14', 'visibility', 'visible');
-        $('#carbon-hill').addClass('marker-active');
-        $('#perry').removeClass('marker-active');
-        $('#state-name').text('Illinois');
-	      $('#city-name').text('Carbon Hill');
-	      $('#stop-population').text('380');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[13],latStart[13]], zoom: 6, speed:1});
-          map.setLayoutProperty('route14', 'visibility', 'none');
-          $('#carbon-hill').removeClass('marker-active');
-      		$('#perry').addClass('marker-active');
-					$('#state-name').text('Iowa');
-					$('#city-name').text('Perry');
-					$('#stop-population').text('7,876');
-        }
-        }, {offset: '45%'});
-
-			$stop15.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[15],latStart[15]], zoom: 6, speed:1});
-        map.setLayoutProperty('route15', 'visibility', 'visible');
-        $('#fremont').addClass('marker-active');
-        $('#carbon-hill').removeClass('marker-active');
-    		$('#state-name').text('Ohio');
-      	$('#city-name').text('Fremont');
-      	$('#stop-population').text('16,388');
-      	$('.highway-name').text('Interstate 90 East');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-90.png',
-        	alt:'Interstate 90 East'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[14],latStart[14]], zoom: 6, speed:1});
-          map.setLayoutProperty('route15', 'visibility', 'none');
-          $('#fremont').removeClass('marker-active');
-      		$('#carbon-hill').addClass('marker-active');
-      		$('#state-name').text('Illinois');
-	      	$('#city-name').text('Carbon Hill');
-	      	$('#stop-population').text('380');
-	      	$('.highway-name').text('Interstate 80 East');
-        	$('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/I-80.png',
-        		alt:'Interstate 80 East'
-        	});
-        }
-        }, {offset: '45%'});
-
-			$stop16.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[16],latStart[16]], zoom: 6, speed:1});
-        map.setLayoutProperty('route16', 'visibility', 'visible');
-        $('#harrisburg').addClass('marker-active');
-        $('#fremont').removeClass('marker-active');
-    		$('#state-name').text('Pennsylvania');
-      	$('#city-name').text('Harrisburg');
-      	$('#stop-population').text('49,160');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[15],latStart[15]], zoom: 6, speed:1});
-          map.setLayoutProperty('route16', 'visibility', 'none');
-          $('#harrisburg').removeClass('marker-active');
-      		$('#fremont').addClass('marker-active');
-					$('#state-name').text('Ohio');
-					$('#city-name').text('Fremont');
-					$('#stop-population').text('16,388');
-        }
-        }, {offset: '45%'});
-
-			$stop17.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[17],latStart[17]], zoom: 6, speed:1});
-        map.setLayoutProperty('route17', 'visibility', 'visible');
-        $('#gettysburg').addClass('marker-active');
-        $('#harrisburg').removeClass('marker-active');
-      	$('#city-name').text('Gettysburg');
-      	$('#stop-population').text('7,643');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[16],latStart[16]], zoom: 6, speed:1});
-          map.setLayoutProperty('route17', 'visibility', 'none');
-          $('#gettysburg').removeClass('marker-active');
-      		$('#harrisburg').addClass('marker-active');
-      		$('#city-name').text('Harrisburg');
-      		$('#stop-population').text('49,160');
-        }
-        }, {offset: '45%'});
-
-			$stop18.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[18],latStart[18]], zoom: 6, speed:1});
-        map.setLayoutProperty('route18', 'visibility', 'visible');
-        $('#washington-dc').addClass('marker-active');
-        $('#gettysburg').removeClass('marker-active');
-        $('#state-name').text('District of Columbia');
-      	$('#city-name').text('Washington');
-      	$('#stop-population').text('659,009');
-      	$('.highway-name').text('Interstate 270 South');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-270.png',
-        	alt:'Interstate 270 South'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[17],latStart[17]], zoom: 6, speed:1});
-          map.setLayoutProperty('route18', 'visibility', 'none');
-          $('#washington-dc').removeClass('marker-active');
-      		$('#gettysburg').addClass('marker-active');
-					$('#state-name').text('District of Columbia');
-					$('#city-name').text('Gettysburg');
-					$('#stop-population').text('7,643');
-					$('.highway-name').text('Interstate 90 East');
-	        $('.highway-sign').attr({
-	        	src:'http://localhost:4000/img/roadtrip/signs/png/I-90.png',
-	        	alt:'Interstate 90 East'
-	        });
-        }
-        }, {offset: '45%'});
-
-			$stop19.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[19],latStart[19]], zoom: 6, speed:1});
-        map.setLayoutProperty('route19', 'visibility', 'visible');
-        $('#beckley').addClass('marker-active');
-        $('#washington-dc').removeClass('marker-active');
-        $('#state-name').text('West Virginia');
-      	$('#city-name').text('Beckley');
-      	$('#stop-population').text('17,348');
-      	$('.highway-name').text('Interstate 64 West');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-64.png',
-        	alt:'Interstate 64 West'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[18],latStart[18]], zoom: 6, speed:1});
-          map.setLayoutProperty('route19', 'visibility', 'none');
-          $('#beckley').removeClass('marker-active');
-      		$('#washington-dc').addClass('marker-active'); 
-					$('#state-name').text('District of Columbia');
-					$('#city-name').text('Washington');
-					$('#stop-population').text('659,009');
-					$('.highway-name').text('Interstate 270 South');
-	        $('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/I-270.png',
-        		alt:'Interstate 270 South'
-        	});				
-        }
-        }, {offset: '45%'});
-
-			$stop20.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[20],latStart[20]], zoom: 6, speed:1});
-        map.setLayoutProperty('route20', 'visibility', 'visible');
-        $('#mallie').addClass('marker-active');
-        $('#beckley').removeClass('marker-active');
-        $('#state-name').text('Kentucky');
-      	$('#city-name').text('Mallie');
-      	$('#stop-population').text('15,884');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[19],latStart[19]], zoom: 6, speed:1});
-          map.setLayoutProperty('route20', 'visibility', 'none');
-          $('#mallie').removeClass('marker-active');
-      		$('#beckley').addClass('marker-active');
-					$('#state-name').text('West Virginia');
-					$('#city-name').text('Beckley');
-					$('#stop-population').text('17,348');
-        }
-        }, {offset: '45%'});
-
-			$stop21.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[21],latStart[21]], zoom: 6, speed:1});
-        map.setLayoutProperty('route21', 'visibility', 'visible');
-        $('#london').addClass('marker-active');
-        $('#mallie').removeClass('marker-active');
-        $('#city-name').text('London');
-      	$('#stop-population').text('8,111');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[20],latStart[20]], zoom: 6, speed:1});
-          map.setLayoutProperty('route21', 'visibility', 'none');
-          $('#london').removeClass('marker-active');
-      		$('#mallie').addClass('marker-active');
-      		$('#city-name').text('Mallie');
-      		$('#stop-population').text('15,884'); 
-        }
-        }, {offset: '45%'});
-
-			$stop22.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[22],latStart[22]], zoom: 6, speed:1});
-        map.setLayoutProperty('route22', 'visibility', 'visible');
-        $('#memphis').addClass('marker-active');
-        $('#london').removeClass('marker-active');
-        $('#city-name').text('Memphis');
-        $('#state-name').text('Tennessee');
-        $('.highway-name').text('Interstate 40 West');
-      	$('#stop-population').text('655,857');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/I-40.png',
-        	alt:'Interstate 40 West'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[21],latStart[21]], zoom: 6, speed:1});
-          map.setLayoutProperty('route22', 'visibility', 'none');
-          $('#memphis').removeClass('marker-active');
-      		$('#london').addClass('marker-active');
-        	$('#city-name').text('London');
-      		$('#stop-population').text('8,111');
-      		$('#state-name').text('Kentucky');
-      		$('.highway-name').text('Interstate 64 West');
-          $('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/I-64.png',
-        		alt:'Interstate 64 West'
-       	 	});    		
-        }
-        }, {offset: '45%'});
-
-			$stop23.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[23],latStart[23]], zoom: 6, speed:1});
-        map.setLayoutProperty('route23', 'visibility', 'visible');
-        $('#van-buren').addClass('marker-active');
-        $('#memphis').removeClass('marker-active');
-        $('#city-name').text('Van Buren');
-        $('#state-name').text('Arkansas');
-      	$('#stop-population').text('23,1555');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[22],latStart[22]], zoom: 6, speed:1});
-          map.setLayoutProperty('route23', 'visibility', 'none');
-          $('#van-buren').removeClass('marker-active');
-      		$('#memphis').addClass('marker-active');
-					$('#city-name').text('Memphis');
-					$('#state-name').text('Tennessee');
-					$('#stop-population').text('655,857');
-        }
-        }, {offset: '45%'});
-
-			$stop24.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[24],latStart[24]], zoom: 6, speed:1});
-        map.setLayoutProperty('route24', 'visibility', 'visible');
-        $('#oklahoma-city').addClass('marker-active');
-        $('#van-buren').removeClass('marker-active');
-        $('#city-name').text('Oklahoma City');
-        $('#state-name').text('Oklahoma');
-      	$('#stop-population').text('620,015');
-      	$('.highway-name').text('Route 66 West');
-        $('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/US-66.png',
-        	alt:'Route 66 West'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[23],latStart[23]], zoom: 6, speed:1});
-          map.setLayoutProperty('route24', 'visibility', 'none');
-          $('#oklahoma-city').removeClass('marker-active');
-      		$('#van-buren').addClass('marker-active');
-	        $('#city-name').text('Van Buren');
-        	$('#state-name').text('Arkansas');
-      		$('#stop-population').text('23,1555');
-      		$('.highway-name').text('Interstate 40 West');
-	        $('.highway-sign').attr({
-	        	src:'http://localhost:4000/img/roadtrip/signs/png/I-40.png',
-	        	alt:'Interstate 40 West'
-	        });
-        }
-        }, {offset: '45%'});
-
-			$stop25.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[25],latStart[25]], zoom: 6, speed:1});
-        map.setLayoutProperty('route25', 'visibility', 'visible');
-        $('#elk-city').addClass('marker-active');
-        $('#oklahoma-city').removeClass('marker-active');
-				$('#city-name').text('Elk City');
-      	$('#stop-population').text('12,426');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[24],latStart[24]], zoom: 6, speed:1});
-          map.setLayoutProperty('route25', 'visibility', 'none');
-          $('#elk-city').removeClass('marker-active');
-      		$('#oklahoma-city').addClass('marker-active');
-					$('#city-name').text('Oklahoma City');
-					$('#stop-population').text('620,015');
-        }
-        }, {offset: '45%'});
-
-			$stop26.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[26],latStart[26]], zoom: 6, speed:1});
-        map.setLayoutProperty('route26', 'visibility', 'visible');
-        $('#amarillo').addClass('marker-active');
-        $('#elk-city').removeClass('marker-active');
-        $('#city-name').text('Amarillo');
-        $('#state-name').text('Texas');
-      	$('#stop-population').text('197,570');
-
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[25],latStart[25]], zoom: 6, speed:1});
-          map.setLayoutProperty('route26', 'visibility', 'none');
-          $('#amarillo').removeClass('marker-active');
-      		$('#elk-city').addClass('marker-active');
-					$('#city-name').text('Elk City');
-					$('#stop-population').text('12,426');
-					$('#state-name').text('Oklahoma');
-        }
-        }, {offset: '45%'});
-
-			$stop27.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[27],latStart[27]], zoom: 6, speed:1});
-        map.setLayoutProperty('route27', 'visibility', 'visible');
-        $('#albuquerque').addClass('marker-active');
-        $('#amarillo').removeClass('marker-active');
-        $('#city-name').text('Albuquerque');
-        $('#state-name').text('New Mexico');
-      	$('#stop-population').text('556,859');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[26],latStart[26]], zoom: 6, speed:1});
-          map.setLayoutProperty('route27', 'visibility', 'none');
-          $('#albuquerque').removeClass('marker-active');
-      		$('#amarillo').addClass('marker-active');
-					$('#city-name').text('Amarillo');
-					$('#state-name').text('Texas');
-					$('#stop-population').text('197,570');
-        }
-        }, {offset: '45%'});
-
-			$stop28.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[28],latStart[28]], zoom: 6, speed:1});
-        map.setLayoutProperty('route28', 'visibility', 'visible');
-        $('#grants').addClass('marker-active');
-        $('#albuquerque').removeClass('marker-active');
-        $('#city-name').text('Grants');
-      	$('#stop-population').text('9,263');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[27],latStart[27]], zoom: 6, speed:1});
-          map.setLayoutProperty('route28', 'visibility', 'none');
-          $('#grants').removeClass('marker-active');
-      		$('#albuquerque').addClass('marker-active');
-					$('#city-name').text('Albuquerque');
-					$('#stop-population').text('556,859');
-        }
-        }, {offset: '45%'});
-
-			$stop29.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[29],latStart[29]], zoom: 6, speed:1});
-        map.setLayoutProperty('route29', 'visibility', 'visible');
-        $('#sanders').addClass('marker-active');
-        $('#grants').removeClass('marker-active');
-        $('#city-name').text('Sanders');
-        $('#state-name').text('Arizona');
-      	$('#stop-population').text('574');
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[28],latStart[28]], zoom: 6, speed:1});
-          map.setLayoutProperty('route29', 'visibility', 'none');
-          $('#sanders').removeClass('marker-active');
-      		$('#grants').addClass('marker-active');
-					$('#city-name').text('Grants');
-					$('#stop-population').text('9,263'); 
-        }
-        }, {offset: '45%'});
-
-			$stop30.waypoint(function(direction) {    	
-    	if(direction == 'down')
-        {
-        console.log('going through');
-        map.flyTo({center: [longStart[0],latStart[0]], zoom: 6, speed:1});
-        map.setLayoutProperty('route30', 'visibility', 'visible');
-        $('#phoenix').addClass('marker-active');
-        $('#sanders').removeClass('marker-active');
-				$('#city-name').text('Phoenix');
-    		$('#stop-population').text('26452');
-    		$('.highway-name').text('Highway 87 South');
-    		$('.highway-sign').attr({
-        	src:'http://localhost:4000/img/roadtrip/signs/png/AZ-87.png',
-        	alt:'Highway 87 South'
-        });
-    	} else
-        {
-          console.log('going back');
-          map.flyTo({center: [longStart[29],latStart[29]], zoom: 6, speed:1});
-          map.setLayoutProperty('route30', 'visibility', 'none');
-          $('#phoenix').removeClass('marker-active');
-      		$('#sanders').addClass('marker-active');
-					$('#city-name').text('Sanders');
-        	$('.highway-name').text('Route 66 West');
-      		$('#stop-population').text('574');
-      		$('.highway-sign').attr({
-        		src:'http://localhost:4000/img/roadtrip/signs/png/US-66.png',
-        		alt:'Route 66 West'
-        	});
-        }
-        }, {offset: '50%'});
-    </script>
+	

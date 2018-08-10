@@ -15,11 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,600,700,800" rel="stylesheet">
 
 
+
+
     <script src="{{ site.url }}/js/jquery.min.js"></script>
 	<script src="{{ site.url }}/js/bootstrap.min.js"></script>
     <script src="{{ site.url }}/js/jquery.waypoints.js"></script>  <!--Lenny added this-->
     <script src="{{ site.url }}/js/mapbox-gl.js"></script> <!--Lenny added this-->
-
+    <script src="{{ site.url }}/js/roadtrip.js"></script>
     <style>
     
         @font-face {
@@ -35,6 +37,12 @@
                  url({{ site.url }}/fonts/AvenirNext-Bold-01.ttf) format('truetype');
             font-weight: 600;
                 }   
+        @font-face {
+            font-family: AvenirNext-Regular;
+            src: url({{ site.url }}/fonts/AvenirNext-Regular.woff) format('woff'),
+                 url({{ site.url }}/fonts/AvenirNext-Regular.ttf) format('truetype');
+            font-weight: 400;
+                } 
     </style>  
        {% include nav.html %}
   </head>

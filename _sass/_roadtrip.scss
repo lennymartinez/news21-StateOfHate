@@ -3,6 +3,7 @@ $bodytext: 'EB Garamond',  Georgia, Times, serif;
 $font-frank: 'Frank Ruhl Libre', Georgia, Times, serif;;
 $font-avheavy: 'AvenirNext-Heavy', arial, sans-serif;
 $font-avbold: 'AvenirNext-Bold', arial, sans-serif;
+$font-avregular: 'AvenirNext-Regular', arial, sans-serif;
 $font-robomono: 'Roboto Mono', monospace;
 $font-oswald: 'Oswald', helvetica, arial, sans-serif;
 $font-garamond: 'EB Garamond',  Georgia, Times, serif;
@@ -34,7 +35,7 @@ $font-garamond: 'EB Garamond',  Georgia, Times, serif;
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden !important;
-  background-color: #F9423A;
+  background-color: #A10D03;
   width: 10px;
   height: 10px;
 }
@@ -88,10 +89,12 @@ padding-right: 0px !important;
 
 .img-caption {
 	font-style: italic; 
+	font-size: 1.15rem;
 }
 
 #roadtrip-page {
 	font-family: $font-garamond;
+	line-height: 1.5 !important;
 
 	h1, h2, h3{
 		font-family: $font-avheavy;
@@ -112,6 +115,8 @@ padding-right: 0px !important;
 
 	.talkie-head {
 	font-family: $font-oswald;
+	font-weight: 700;
+	letter-spacing: 0.01rem;
 	}
 
 	#roadtrip-bar-mobile{
@@ -193,7 +198,7 @@ padding-right: 0px !important;
 }
 
 .roadtrip-buffer {
-	height:120px !important;
+	height:75px !important;
 }
 
 .roadtrip-cover-info {
@@ -210,4 +215,17 @@ padding-right: 0px !important;
 		font-size: 1.25rem !important;
 		font-family: $font-robomono;
 	}
+}
+
+.roadtrip-pullquote {
+	font-family: $font-avregular;
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 1.5 !important;
+}
+
+.roadtrip-talkie-description {
+	font-family: $font-avregular;
+	font-size: 1.5rem;
+	font-weight: 500;
 }

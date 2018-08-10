@@ -1,0 +1,73 @@
+{% comment %}
+
+To include in story: {% include s-img-mid-2up-1caption.html image1="coast" caption="This is the caption. (Bob Sartre | News21" image2="coast2" %}
+
+NOTE: If the caption(s) have a soundcite, invoke as so:
+
+{% include s-img-mid-2up-1caption.html image1="coast" caption="This is the caption. (Bob Sartre | News21" image2="coast2"  %}
+
+Put images in /img/single/
+
+
+{% endcomment %}
+
+{% include boxbreaker.html %}
+
+<div class="container pusher">
+<div class="row">
+<!-- <div class="col-sm-11 col-sm-offset-1"> -->
+
+<div class="col-xs-12 col-md-5 offset-md-1">
+
+<a data-target="#{{ include.image1 }}" data-toggle="modal" class="enlargable"><img src="/img/single/{{ include.image1 }}.jpg" class="img-fluid" style="cursor: pointer;" alt="{{ include.caption1 }}" />
+<span class="enlarger"><img src="/img/logos/enlarge.png" width="20" height="20" alt="Enlarge" /></span>
+</a>
+
+
+</div>
+<div class="col-xs-12 col-md-5">
+<a data-target="#{{ include.image2 }}" data-toggle="modal" class="enlargable"><img src="/img/single/{{ include.image2 }}.jpg" class="img-fluid no-cap-second-image" style="cursor: pointer;" alt="{{ include.caption2 }}" />
+<span class="enlarger"><img src="/img/logos/enlarge.png" width="20" height="20" alt="Enlarge" /></span>
+</a>
+
+</div>
+
+
+<!-- </div> -->
+
+</div>
+<div class="row">
+<div class="col-xs-12 offset-md-1 col-md-10">
+<p class="caption"> {{ include.caption }} </p>    
+</div>    
+</div>
+</div>
+
+<!-- Modal -->
+<div tabindex="-1" class="img-modal modal fade" id="{{ include.image1}}" role="dialog" aria-hidden="true" aria-labelledby="image">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" aria-hidden="true" type="button" data-dismiss="modal" style="color:white;">×</button>
+
+      </div>
+      <img src="/img/single/{{ include.image1 }}.jpg" class="img-fluid"  alt="{{ include.caption1 }}" />
+      <p class="caption">{{ include.caption }}</p>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div tabindex="-1" class="img-modal modal fade" id="{{ include.image2}}" role="dialog" aria-hidden="true" aria-labelledby="image">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" aria-hidden="true" type="button" data-dismiss="modal" style="color:white;">×</button>
+
+      </div>
+      <img src="/img/single/{{ include.image2 }}.jpg" class="img-fluid"  alt="{{ include.caption2 }}" />
+      <p class="caption">{{ include.caption }}</p>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{% include boxenter.html %}
